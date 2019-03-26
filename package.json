@@ -1,7 +1,33 @@
 {
   "name": "concordialang-ui-html",
-  "version": "0.0.0",
-  "bugs": "https://github.com/WillianGoncalves/concordialang-ui-html/issues",
+  "version": "0.1.0",
+  "license": "AGPL-3.0",
+  "readme": "README.md",
+  "homepage": "https://github.com/concordialang/ui-html",
+  "bugs": "https://github.com/concordialang/ui-html/issues",
+  "repository": "WillianGoncalves/concordialang-ui-html",
+  "keywords": [
+    "oclif-plugin"
+  ],
+  "files": [
+    "/lib",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json"
+  ],
+  "scripts": {
+    "postpack": "rimraf oclif.manifest.json",
+    "posttest": "tslint -p test -t stylish",
+    "prepack": "rimraf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
+    "test": "nyc --extension .ts mocha --forbid-only \"test/**/*.test.ts\"",
+    "version": "oclif-dev readme && git add README.md"
+  },
+  "oclif": {
+    "commands": "./lib/commands",
+    "bin": "html",
+    "devPlugins": [
+      "@oclif/plugin-help"
+    ]
+  },
   "dependencies": {
     "@oclif/command": "^1.5.12",
     "@oclif/config": "^1.12.9",
@@ -26,30 +52,5 @@
   },
   "engines": {
     "node": ">=8.0.0"
-  },
-  "files": [
-    "/lib",
-    "/npm-shrinkwrap.json",
-    "/oclif.manifest.json"
-  ],
-  "homepage": "https://github.com/WillianGoncalves/concordialang-ui-html",
-  "keywords": [
-    "oclif-plugin"
-  ],
-  "license": "MIT",
-  "oclif": {
-    "commands": "./lib/commands",
-    "bin": "oclif-example",
-    "devPlugins": [
-      "@oclif/plugin-help"
-    ]
-  },
-  "repository": "WillianGoncalves/concordialang-ui-html",
-  "scripts": {
-    "postpack": "rimraf oclif.manifest.json",
-    "posttest": "tslint -p test -t stylish",
-    "prepack": "rimraf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
-    "test": "nyc --extension .ts mocha --forbid-only \"test/**/*.test.ts\"",
-    "version": "oclif-dev readme && git add README.md"
   }
 }
