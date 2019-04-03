@@ -31,6 +31,7 @@
   "dependencies": {
     "@oclif/command": "^1.5.12",
     "@oclif/config": "^1.12.9",
+    "fs": "0.0.1-security",
     "tslib": "^1.9.3"
   },
   "devDependencies": {

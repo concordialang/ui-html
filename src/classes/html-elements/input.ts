@@ -2,27 +2,36 @@ import {HtmlElement} from './html-element'
 
 export class Input extends HtmlElement {
   private readonly DATA_TYPES = ['string', 'integer', 'double', 'date', 'time', 'datetime']
-  private readonly VALID_PROPERTIES = ['id', 'editable', 'minlength', 'maxlength', 'required', 'format', 'value']
+  private readonly VALID_PROPERTIES = ['id', 'editable', 'minlength', 'maxlength', 'required', 'format']
 
-  constructor(props: any) {
-    super(props)
+  constructor(props: any, name?: string) {
+    super(props, name)
   }
 
   public toString(): string {
     const inputType = this.getType(this.props.datatype as string)
     const properties = this.getProperties()
-    return `<input ${inputType} ${properties}/>`
+    const label = (this.name) ? `<label for="${this.name}">${this.name}</label>` : '' 
+
+    return `${label} <input ${inputType} ${properties}/>`
   }
 
   private getType(datatype: string): string {
     let typeProperty = 'text'
 
     switch (datatype) {
-    case 'string': typeProperty = 'text'; break
-    case 'integer':
-    case 'double': typeProperty = 'number'; break
-    case 'time': typeProperty = 'time'; break
-    case 'datetime': typeProperty = 'datetime-local'
+      case 'string': 
+        typeProperty = 'text'
+        break
+      case 'integer':
+      case 'double':
+        typeProperty = 'number'
+        break
+      case 'time':
+        typeProperty = 'time'
+        break
+      case 'datetime':
+        typeProperty = 'datetime-local'
     }
 
     return `type="${typeProperty}"`
