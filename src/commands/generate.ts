@@ -1,8 +1,7 @@
 import {Command, flags} from '@oclif/command'
-import { ProcessResult } from '../../../ui-core/src'
+import {ProcessResult} from 'concordialang-ui-core'
 
 import Generator from '../classes/generator'
-import { HtmlElement } from '../classes/html-elements';
 
 export default class Generate extends Command {
   static description = 'Generate html files'
@@ -18,7 +17,8 @@ export default class Generate extends Command {
     if (flags.features) {
       const processResult: ProcessResult = JSON.parse(flags.features) as ProcessResult
       const generator = new Generator()
-      await generator.generate(processResult.features)
+      const result = await generator.generate(processResult.features)
+      this.log(JSON.stringify(result))
     }
   }
 }

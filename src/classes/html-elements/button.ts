@@ -1,6 +1,6 @@
-import {HtmlElement} from './html-element'
+import {Widget} from 'concordialang-ui-core'
 
-export class Button extends HtmlElement {
+export class Button extends Widget {
   private readonly DATA_TYPES = ['button', 'submit', 'reset']
   private readonly VALID_PROPERTIES = ['id', 'disabled', 'value']
 
@@ -8,7 +8,7 @@ export class Button extends HtmlElement {
     super(props, name)
   }
 
-  public toString(): string {
+  public renderToString(): string {
     const inputType = this.getType(this.props.datatype as string)
     const properties = this.getProperties()
 
@@ -16,7 +16,6 @@ export class Button extends HtmlElement {
   }
 
   private getType(datatype: string): string {
-
     return `type="${datatype || 'button'}"`
   }
 
