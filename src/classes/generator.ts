@@ -3,7 +3,7 @@ import {createFile, Feature, Prototyper, Widget} from 'concordialang-ui-core'
 import ElementFactory from './element-factory'
 
 export default class Generator implements Prototyper {
-  public async generate(features: Feature[]): Promise<string[]> {
+  public generate(features: Feature[]): Promise<string[]> {
     const factory = new ElementFactory()
     let outputFiles: Promise<string>[] = []
 

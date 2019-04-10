@@ -1,11 +1,11 @@
 import {Widget} from 'concordialang-ui-core'
 
 const enum DATA_TYPES {
-  STRING = 'string',
-  INTEGER = 'integer',
-  DOUBLE = 'double',
-  DATE = 'date',
-  TIME = 'time',
+  STRING   = 'string',
+  INTEGER  = 'integer',
+  DOUBLE   = 'double',
+  DATE     = 'date',
+  TIME     = 'time',
   DATETIME = 'datetime'
 }
 
@@ -28,18 +28,11 @@ export class Input extends Widget {
     let typeProperty = 'text'
 
     switch (datatype) {
-    case DATA_TYPES.STRING:
-      typeProperty = 'text'
-      break
-    case DATA_TYPES.INTEGER:
-    case DATA_TYPES.DOUBLE:
-      typeProperty = 'number'
-      break
-    case DATA_TYPES.TIME:
-      typeProperty = 'time'
-      break
-    case DATA_TYPES.DATETIME:
-      typeProperty = 'datetime-local'
+      case DATA_TYPES.STRING:   typeProperty = 'text'; break
+      case DATA_TYPES.INTEGER:
+      case DATA_TYPES.DOUBLE:   typeProperty = 'number'; break
+      case DATA_TYPES.TIME:     typeProperty = 'time'; break
+      case DATA_TYPES.DATETIME: typeProperty = 'datetime-local'
     }
 
     return `type="${typeProperty}"`
