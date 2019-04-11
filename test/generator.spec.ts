@@ -1,4 +1,4 @@
-// Precisa instalar:
+// It needs to install:
 // npm i --save-dev jest @types/ts-jest memfs html-minifier
 //
 import { vol, fs } from 'memfs';
@@ -27,9 +27,7 @@ describe( 'Generator', () => {
         expect( files ).toHaveLength( htmls.length );
 
         for ( let i in files ) {
-            const file: string = files[ i ];
-            const expectedHtml: string = htmls[ i ];
-            this.expectFileHasHtml( file, expectedHtml );
+            this.expectFileHasHtml( files[ i ], htmls[ i ] );
         }
     }
 
