@@ -1,27 +1,36 @@
-import {Feature, Prototyper} from '/home/willian/Projects/tcc/ui-core'
+import {createFile, Feature, Prototyper, Widget} from 'concordialang-ui-core'
 
 import ElementFactory from './element-factory'
-import {HtmlElement} from './html-elements'
 
 export default class Generator implements Prototyper {
   public generate(features: Feature[]): Promise<string[]> {
     const factory = new ElementFactory()
-    let result: string[] = [] // just to print the output
+    let outputFiles: Promise<string>[] = []
 
     for (let feature of features) {
-      const elements: HtmlElement[] = []
+      const elements: Widget[] = []
 
-      for (let element of feature.elements) {
+      for (let element of feature.uiElements) {
         const htmlElement = factory.create(element)
         elements.push(htmlElement)
-        result.push(htmlElement.toString())
       }
 
-      //write file
+      outputFiles.push(this.createHtmlFile(feature.name, elements))
     }
 
-    return new Promise((resolve, reject) => {
-      resolve(result)
-    })
+    return Promise.all(outputFiles)
+  }
+
+  private createHtmlFile(fileName: string, elements: Widget[]): Promise<string> {
+    const fileExtension = '.html'
+
+    //TODO format content
+    let content = elements.reduce((result, element) => {
+      return result + element.renderToString() + '\n'
+    }, '')
+
+    content = `<div>${content}</div>`
+
+    return createFile(fileName, content, fileExtension)
   }
 }
