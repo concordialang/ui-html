@@ -22,10 +22,8 @@ describe( 'Generator', () => {
     } );
 
     expectFeaturesProduceHtml( features: Feature[], htmls: string[] ): void {
-
         const files: string[] = await generator.generate( features );
         expect( files ).toHaveLength( htmls.length );
-
         for ( let i in files ) {
             this.expectFileHasHtml( files[ i ], htmls[ i ] );
         }
@@ -33,17 +31,17 @@ describe( 'Generator', () => {
 
     expectFileHasHtml( filePath: string, html: string ): void {
         const expected = minify( html );
-        const produced = await fs.readFile( firstFile );
-        expected( minify( produced ) ).toEqual( expected );
+        const produced = minify( await fs.readFile( firstFile ) );
+        expected( produced ).toEqual( expected );
     }
 
     it( 'produces an HTML file from a single button', async () => {
         const features: Features = [  /* algo aqui */ ];
-        const htmls: string[] = [ minify(`
+        const htmls: string[] = [ `
         <html>
             ... colocar aqui o que se espera gerar
         </html>
-        `) ];
+        ` ];
         expectFeaturesProduceHtml( features, htmls );
     } );
 
