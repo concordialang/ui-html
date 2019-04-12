@@ -1,4 +1,5 @@
 import {createFile, Feature, Prototyper, Widget} from 'concordialang-ui-core'
+const pretty = require('pretty')
 
 import ElementFactory from './element-factory'
 
@@ -8,13 +9,7 @@ export default class Generator implements Prototyper {
     let outputFiles: Promise<string>[] = []
 
     for (let feature of features) {
-      const elements: Widget[] = []
-
-      for (let element of feature.uiElements) {
-        const htmlElement = factory.create(element)
-        elements.push(htmlElement)
-      }
-
+      const elements: Widget[] = feature.uiElements.map(uiElement => (factory.create(uiElement)))
       outputFiles.push(this.createHtmlFile(feature.name, elements))
     }
 
@@ -29,7 +24,7 @@ export default class Generator implements Prototyper {
       return result + element.renderToString() + '\n'
     }, '')
 
-    content = `<div>${content}</div>`
+    content = pretty(`<div>${content}</div>`, {ocd: true})
 
     return createFile(fileName, content, fileExtension)
   }
