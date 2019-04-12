@@ -1,11 +1,16 @@
+# This project uses EditorConfig (http://editorconfig.org) to standardize
+# tabulation, charset and other attributes of source files. Please head to
+# http://editorconfig.org/#download to check if your editor comes with
+# EditorConfig bundled or to download a plugin.
+
 root = true
 
 [*]
+charset = utf-8
+indent_style = tab
+indent_size = 4
+trim_trailing_whitespace = true
+
+[{package.json,*.yml,*.md,*.html}]
 indent_style = space
 indent_size = 2
-charset = utf-8
-trim_trailing_whitespace = true
-insert_final_newline = true
-
-[*.md]
-trim_trailing_whitespace = false
