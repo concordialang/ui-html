@@ -19,9 +19,10 @@ export class Input extends Widget {
   public renderToString(): string {
     const inputType = this.getType(this.props.datatype as string)
     const properties = this.getProperties()
-    const label = (this.name) ? `<label for="${this.name}">${this.name}</label>` : ''
+    const input = `<input ${inputType} ${properties}/>\n`
+    const label = this.createLabel()
 
-    return `${label} <input ${inputType} ${properties}/>`
+    return `<div>\n${label + input}</div>`
   }
 
   private getType(datatype: string): string {
@@ -46,5 +47,11 @@ export class Input extends Widget {
     }, '')
 
     return strProps
+  }
+
+  private createLabel(): string {
+    if (!this.name) return ''
+    if (this.props.id) return `<label for="${this.props.id}">${this.name}</label>\n`
+    return `<label>${this.name}</label>\n`
   }
 }
