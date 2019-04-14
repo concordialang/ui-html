@@ -1,28 +1,58 @@
 {
   "name": "concordialang-ui-html",
   "version": "0.1.0",
+  "description": "HTML plugin for the Concordia UI Prototyper",
   "license": "AGPL-3.0",
+  "author": "The Concordia UI Prototyper Team",
   "readme": "README.md",
   "homepage": "https://github.com/concordialang/ui-html",
   "bugs": "https://github.com/concordialang/ui-html/issues",
-  "repository": "WillianGoncalves/concordialang-ui-html",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/concordialang/ui-html.git"
+  },
   "keywords": [
-    "oclif-plugin"
+    "concordia",
+    "concordia-lang",
+    "concordialang",
+    "ui",
+    "user-interface",
+    "plugin",
+    "html",
+    "ui-html"
   ],
+  "main": "dist",
+  "types": "dist",
   "files": [
-    "/lib",
+    "dist/*",
     "/npm-shrinkwrap.json",
     "/oclif.manifest.json"
   ],
   "scripts": {
     "postpack": "rimraf oclif.manifest.json",
     "posttest": "tslint -p test -t stylish",
-    "prepack": "rimraf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
-    "test": "nyc --extension .ts mocha --forbid-only \"test/**/*.test.ts\"",
+    "build": "rimraf dist && tsc && oclif-dev manifest",
+    "prepack": "npm run build && oclif-dev readme",
+    "test": "jest --passWithNoTests",
     "version": "oclif-dev readme && git add README.md"
   },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
+    "testRegex": "test/.+\\.spec\\.ts$",
+    "globals": {
+      "ts-jest": {
+        "diagnostics": false
+      }
+    }
+  },
   "oclif": {
-    "commands": "./lib/commands",
+    "commands": "./dist/commands",
     "bin": "html",
     "devPlugins": [
       "@oclif/plugin-help"
@@ -31,22 +61,21 @@
   "dependencies": {
     "@oclif/command": "^1.5.12",
     "@oclif/config": "^1.12.12",
-    "concordialang-ui-core": "git+ssh://git@github.com/concordialang/ui-core.git",
+    "concordialang-ui-core": "^0.1.0",
     "tslib": "^1.9.3"
   },
   "devDependencies": {
     "@oclif/dev-cli": "^1.22.0",
     "@oclif/plugin-help": "^2.1.6",
-    "@oclif/test": "^1.2.4",
     "@oclif/tslint": "^3.1.1",
-    "@types/chai": "^4.1.7",
-    "@types/mocha": "^5.2.6",
+    "@types/html-minifier": "^3.5.3",
+    "@types/jest": "^24.0.11",
     "@types/node": "^10.14.4",
-    "chai": "^4.2.0",
-    "globby": "^8.0.2",
-    "mocha": "^5.2.0",
-    "nyc": "^13.3.0",
+    "html-minifier": "^4.0.0",
+    "jest": "^24.7.1",
+    "memfs": "^2.15.2",
     "rimraf": "^2.6.3",
+    "ts-jest": "^24.0.2",
     "ts-node": "^8.0.3",
     "tslint": "^5.15.0",
     "typescript": "^3.4.2"

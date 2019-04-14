@@ -1,48 +1,50 @@
-// It needs to install:
-// npm i --save-dev jest @types/ts-jest memfs html-minifier
-//
-import { vol, fs } from 'memfs';
-import { minify } from 'html-minifier';
-import Generator from '../src/classes/generator';
+import { Feature } from 'concordialang-ui-core'
+import { minify } from 'html-minifier'
+import { fs, vol } from 'memfs'
+import { promisify } from 'util'
 
-describe( 'Generator', () => {
+import Generator from '../src/generator'
 
-    const CURRENT_DIR: string = process.cwd();
+describe('Generator', () => {
 
-    let generator: Generator;
+    const CURRENT_DIR: string = process.cwd()
 
-    beforeEach( () => {
-       vol.mkdirpSync( CURRENT_DIR, { recursive: true } ); // Synchronize with the current fs structure
-       generator = new Generator( fs ); // Cria com o fs em memória
-    } );
+    let generator: Generator | null
 
-    afterEach( () => {
-        generator = null;
-        vol.reset(); // Erase in-memory structure
-    } );
+    beforeEach(() => {
+        vol.mkdirpSync(CURRENT_DIR) // Synchronize with the current fs structure
+        generator = new Generator(fs) // In-memory fs
+    })
 
-    expectFeaturesProduceHtml( features: Feature[], htmls: string[] ): void {
-        const files: string[] = await generator.generate( features );
-        expect( files ).toHaveLength( htmls.length );
-        for ( let i in files ) {
-            this.expectFileHasHtml( files[ i ], htmls[ i ] );
+    afterEach(() => {
+        vol.reset() // Erase in-memory structure
+        generator = null
+    })
+
+    async function expectFeaturesToProduceHtml(features: Feature[], htmls: string[]): Promise<void> {
+        if (! generator) {
+            generator = new Generator(fs)
+        }
+        const files: string[] = await generator.generate(features)
+        expect(files).toHaveLength(htmls.length)
+        // tslint:disable-next-line:forin
+        for (let i in files) {
+            await expectFileToHaveHtml(files[i], htmls[i])
         }
     }
 
-    expectFileHasHtml( filePath: string, html: string ): void {
-        const expected = minify( html );
-        const produced = minify( await fs.readFile( firstFile ) );
-        expected( produced ).toEqual( expected );
+    async function expectFileToHaveHtml(filePath: string, html: string): Promise<void> {
+        const expected: string = minify(html)
+        const readF = promisify(fs.readFile)
+        const content: string = await readF(filePath)
+        const produced: string = minify(content)
+        expect(produced).toEqual(expected)
     }
 
-    it( 'produces an HTML file from a single button', async () => {
-        const features: Features = [  /* algo aqui */ ];
-        const htmls: string[] = [ `
-        <html>
-            ... colocar aqui o que se espera gerar
-        </html>
-        ` ];
-        expectFeaturesProduceHtml( features, htmls );
-    } );
+    it('produces an HTML file from a single button', async () => {
+        const features: Feature[] = [  /* something here */ ]
+        const htmls: string[] = [ /* put the expected html here */];
+        await expectFeaturesToProduceHtml(features, htmls)
+    })
 
-} );
+})
