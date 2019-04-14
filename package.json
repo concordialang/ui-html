@@ -34,7 +34,8 @@
     "build": "rimraf dist && tsc && oclif-dev manifest",
     "prepack": "npm run build && oclif-dev readme",
     "test": "jest --passWithNoTests",
-    "version": "oclif-dev readme && git add README.md"
+    "version": "oclif-dev readme && git add README.md",
+    "postversion": "git push && git push --tags"
   },
   "jest": {
     "transform": {
