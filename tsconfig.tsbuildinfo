@@ -1,0 +1,2083 @@
+{
+  "program": {
+    "fileInfos": {
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es6.d.ts": {
+        "version": "c180f01a2aaac7d733001fa1db20f881dc83cf33096b674a1546ca26762e69da",
+        "signature": "c180f01a2aaac7d733001fa1db20f881dc83cf33096b674a1546ca26762e69da"
+      },
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es5.d.ts": {
+        "version": "c8665e66018917580e71792b91022bcaf53fb946fab4aaf8dfb0738ed564db88",
+        "signature": "c8665e66018917580e71792b91022bcaf53fb946fab4aaf8dfb0738ed564db88"
+      },
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2015.d.ts": {
+        "version": "7994d44005046d1413ea31d046577cdda33b8b2470f30281fd9c8b3c99fe2d96",
+        "signature": "7994d44005046d1413ea31d046577cdda33b8b2470f30281fd9c8b3c99fe2d96"
+      },
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2016.d.ts": {
+        "version": "5f217838d25704474d9ef93774f04164889169ca31475fe423a9de6758f058d1",
+        "signature": "5f217838d25704474d9ef93774f04164889169ca31475fe423a9de6758f058d1"
+      },
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2017.d.ts": {
+        "version": "459097c7bdd88fc5731367e56591e4f465f2c9de81a35427a7bd473165c34743",
+        "signature": "459097c7bdd88fc5731367e56591e4f465f2c9de81a35427a7bd473165c34743"
+      },
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2018.d.ts": {
+        "version": "2edd3ddf436ef8e12df876dcae4ecd6a8748577944c477bf4b20d5596e0c9843",
+        "signature": "2edd3ddf436ef8e12df876dcae4ecd6a8748577944c477bf4b20d5596e0c9843"
+      },
+      "c:/code/ui-html/node_modules/typescript/lib/lib.dom.d.ts": {
+        "version": "6994c583b66862deca24d7bbf77297d95b9d3da8160dbd9beef6b847cf7c1376",
+        "signature": "6994c583b66862deca24d7bbf77297d95b9d3da8160dbd9beef6b847cf7c1376"
+      },
+      "c:/code/ui-html/node_modules/typescript/lib/lib.dom.iterable.d.ts": {
+        "version": "4c892766803cef795d73d69aee436dc7a80157163e0cf35e6d0e86917cbd42f3",
+        "signature": "4c892766803cef795d73d69aee436dc7a80157163e0cf35e6d0e86917cbd42f3"
+      },
+      "c:/code/ui-html/node_modules/typescript/lib/lib.webworker.importscripts.d.ts": {
+        "version": "fe4e59403e34c7ff747abe4ff6abbc7718229556d7c1a5b93473fb53156c913b",
+        "signature": "fe4e59403e34c7ff747abe4ff6abbc7718229556d7c1a5b93473fb53156c913b"
+      },
+      "c:/code/ui-html/node_modules/typescript/lib/lib.scripthost.d.ts": {
+        "version": "b9faa17292f17d2ad75e34fac77dd63a6403af1dba02d39cd0cbb9ffdf3de8b9",
+        "signature": "b9faa17292f17d2ad75e34fac77dd63a6403af1dba02d39cd0cbb9ffdf3de8b9"
+      },
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2015.core.d.ts": {
+        "version": "384f66a3422d80014c51de2682159bb26f1e35854029880ccd5f6d1f00e6a36d",
+        "signature": "384f66a3422d80014c51de2682159bb26f1e35854029880ccd5f6d1f00e6a36d"
+      },
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2015.collection.d.ts": {
+        "version": "dd94d8ef48c562389eb58af8df3a3a34d11367f7c818192aa5f16470d469e3f0",
+        "signature": "dd94d8ef48c562389eb58af8df3a3a34d11367f7c818192aa5f16470d469e3f0"
+      },
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2015.generator.d.ts": {
+        "version": "828413486bdcaa342558e8e4570b1b287b776cb61b4b70b0214bd10c5d9a94c3",
+        "signature": "828413486bdcaa342558e8e4570b1b287b776cb61b4b70b0214bd10c5d9a94c3"
+      },
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2015.iterable.d.ts": {
+        "version": "4d1f39313a169b8599b8817688f504b56ba8204c2ebafd03f66ff77ddb1899a4",
+        "signature": "4d1f39313a169b8599b8817688f504b56ba8204c2ebafd03f66ff77ddb1899a4"
+      },
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2015.promise.d.ts": {
+        "version": "7c07d934680d0e33275a44d22fb11a4ff31d46c8c26a8d056828a478753f1efe",
+        "signature": "7c07d934680d0e33275a44d22fb11a4ff31d46c8c26a8d056828a478753f1efe"
+      },
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2015.proxy.d.ts": {
+        "version": "5e72f949a89717db444e3bd9433468890068bb21a5638d8ab15a1359e05e54fe",
+        "signature": "5e72f949a89717db444e3bd9433468890068bb21a5638d8ab15a1359e05e54fe"
+      },
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2015.reflect.d.ts": {
+        "version": "f5b242136ae9bfb1cc99a5971cccc44e99947ae6b5ef6fd8aa54b5ade553b976",
+        "signature": "f5b242136ae9bfb1cc99a5971cccc44e99947ae6b5ef6fd8aa54b5ade553b976"
+      },
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2015.symbol.d.ts": {
+        "version": "9ae2860252d6b5f16e2026d8a2c2069db7b2a3295e98b6031d01337b96437230",
+        "signature": "9ae2860252d6b5f16e2026d8a2c2069db7b2a3295e98b6031d01337b96437230"
+      },
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts": {
+        "version": "3e0a459888f32b42138d5a39f706ff2d55d500ab1031e0988b5568b0f67c2303",
+        "signature": "3e0a459888f32b42138d5a39f706ff2d55d500ab1031e0988b5568b0f67c2303"
+      },
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2016.array.include.d.ts": {
+        "version": "3f96f1e570aedbd97bf818c246727151e873125d0512e4ae904330286c721bc0",
+        "signature": "3f96f1e570aedbd97bf818c246727151e873125d0512e4ae904330286c721bc0"
+      },
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2017.object.d.ts": {
+        "version": "ff8ad203e83338289b0f5defc1a5b5c253fb7d251b464db497383f915a0df3f4",
+        "signature": "ff8ad203e83338289b0f5defc1a5b5c253fb7d251b464db497383f915a0df3f4"
+      },
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts": {
+        "version": "b8667586a618c5cf64523d4e500ae39e781428abfb28f3de441fc66b56144b6f",
+        "signature": "b8667586a618c5cf64523d4e500ae39e781428abfb28f3de441fc66b56144b6f"
+      },
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2017.string.d.ts": {
+        "version": "21df2e0059f14dcb4c3a0e125859f6b6ff01332ee24b0065a741d121250bc71c",
+        "signature": "21df2e0059f14dcb4c3a0e125859f6b6ff01332ee24b0065a741d121250bc71c"
+      },
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2017.intl.d.ts": {
+        "version": "c1759cb171c7619af0d2234f2f8fb2a871ee88e956e2ed91bb61778e41f272c6",
+        "signature": "c1759cb171c7619af0d2234f2f8fb2a871ee88e956e2ed91bb61778e41f272c6"
+      },
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2017.typedarrays.d.ts": {
+        "version": "28569d59e07d4378cb3d54979c4c60f9f06305c9bb6999ffe6cab758957adc46",
+        "signature": "28569d59e07d4378cb3d54979c4c60f9f06305c9bb6999ffe6cab758957adc46"
+      },
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2018.asynciterable.d.ts": {
+        "version": "42102aaeb1bfec213be1e9777466a6d551eeba8567fed18c0cdbca8c35e3c6e4",
+        "signature": "42102aaeb1bfec213be1e9777466a6d551eeba8567fed18c0cdbca8c35e3c6e4"
+      },
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2018.intl.d.ts": {
+        "version": "1b820b57379c726f94af50cd60053674af53ff9d079c1563cc70071e8b757dd0",
+        "signature": "1b820b57379c726f94af50cd60053674af53ff9d079c1563cc70071e8b757dd0"
+      },
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2018.promise.d.ts": {
+        "version": "efe049114bad1035b0aa9a4a0359f50ab776e3897c411521e51d3013079cbd62",
+        "signature": "efe049114bad1035b0aa9a4a0359f50ab776e3897c411521e51d3013079cbd62"
+      },
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2018.regexp.d.ts": {
+        "version": "e7780d04cd4120ee554c665829db2bbdd6b947cbaa3c150b7d9ea74df3beb2e8",
+        "signature": "e7780d04cd4120ee554c665829db2bbdd6b947cbaa3c150b7d9ea74df3beb2e8"
+      },
+      "c:/code/ui-html/node_modules/typescript/lib/lib.esnext.intl.d.ts": {
+        "version": "f6e0c89daaf72eac38dfb1d5ef0972183f7f26a68da15bfe5bcb7cfccf0c7db8",
+        "signature": "f6e0c89daaf72eac38dfb1d5ef0972183f7f26a68da15bfe5bcb7cfccf0c7db8"
+      },
+      "c:/code/ui-html/node_modules/typescript/lib/lib.esnext.bigint.d.ts": {
+        "version": "63b66918290d794f73832a6d0325be5026236674fe8c0cb0b68d162000d7bbe8",
+        "signature": "63b66918290d794f73832a6d0325be5026236674fe8c0cb0b68d162000d7bbe8"
+      },
+      "c:/code/ui-html/node_modules/tslib/tslib.d.ts": {
+        "version": "8a0a25ded65c0cb7b03c0109bc6ca580eeb8435bb073c5fb89cd043c9a1ee42e",
+        "signature": "8a0a25ded65c0cb7b03c0109bc6ca580eeb8435bb073c5fb89cd043c9a1ee42e"
+      },
+      "c:/code/ui-html/node_modules/concordialang-ui-core/dist/interfaces/ast-mappings/document.d.ts": {
+        "version": "d29061ca2e489d1f0b0490c676d962acf9660f110156ecfb6897c35e0be688e7",
+        "signature": "d29061ca2e489d1f0b0490c676d962acf9660f110156ecfb6897c35e0be688e7"
+      },
+      "c:/code/ui-html/node_modules/concordialang-ui-core/dist/interfaces/ast-mappings/ui-element.d.ts": {
+        "version": "fbe4c4bf2822ef094b45d3152f943de8a821c49e90ae1cd176f2f067ac45f0cb",
+        "signature": "fbe4c4bf2822ef094b45d3152f943de8a821c49e90ae1cd176f2f067ac45f0cb"
+      },
+      "c:/code/ui-html/node_modules/concordialang-ui-core/dist/interfaces/ast-mappings/feature.d.ts": {
+        "version": "9d51b66aa5e4c15fc3d20619beca02939346c78149d26e914e268a7e9fda6ead",
+        "signature": "9d51b66aa5e4c15fc3d20619beca02939346c78149d26e914e268a7e9fda6ead"
+      },
+      "c:/code/ui-html/node_modules/concordialang-ui-core/dist/interfaces/ast-mappings/index.d.ts": {
+        "version": "8f85a277ffc7f6cb6508ae8232231b927dba2560384007e570afd5c367dca398",
+        "signature": "8f85a277ffc7f6cb6508ae8232231b927dba2560384007e570afd5c367dca398"
+      },
+      "c:/code/ui-html/node_modules/concordialang-ui-core/dist/interfaces/prototyper.d.ts": {
+        "version": "54657ff0898eadb6d6b81ae58371c4b4fae0daeb7f55018d752a62785b6ea504",
+        "signature": "54657ff0898eadb6d6b81ae58371c4b4fae0daeb7f55018d752a62785b6ea504"
+      },
+      "c:/code/ui-html/node_modules/concordialang-ui-core/dist/interfaces/process-result.d.ts": {
+        "version": "6c45eb5ef6ad59ca4cc6051ee6f65b016abf95104b11f6048258aab045303f30",
+        "signature": "6c45eb5ef6ad59ca4cc6051ee6f65b016abf95104b11f6048258aab045303f30"
+      },
+      "c:/code/ui-html/node_modules/concordialang-ui-core/dist/interfaces/index.d.ts": {
+        "version": "be53ba08f478806582265fb51ecb7f2093b2ced8745eb8029cc358b90221757b",
+        "signature": "be53ba08f478806582265fb51ecb7f2093b2ced8745eb8029cc358b90221757b"
+      },
+      "c:/code/ui-html/node_modules/concordialang-ui-core/dist/ast-processor.d.ts": {
+        "version": "84e2c307dec11fcee1e4d7af0361b99311efd85befe32b960cdcdd338738ed36",
+        "signature": "84e2c307dec11fcee1e4d7af0361b99311efd85befe32b960cdcdd338738ed36"
+      },
+      "c:/code/ui-html/node_modules/concordialang-ui-core/dist/classes/widget.d.ts": {
+        "version": "08a9c8d4488e1d46530e5e5973e168711cd664595c9d181ba074d542a5dbe960",
+        "signature": "08a9c8d4488e1d46530e5e5973e168711cd664595c9d181ba074d542a5dbe960"
+      },
+      "c:/code/ui-html/node_modules/concordialang-ui-core/dist/classes/index.d.ts": {
+        "version": "d561c064f22014bdc82281da38faafde73cf573beae37d15578a89a424d52d0e",
+        "signature": "d561c064f22014bdc82281da38faafde73cf573beae37d15578a89a424d52d0e"
+      },
+      "c:/code/ui-html/node_modules/concordialang-ui-core/dist/utils/create-file.d.ts": {
+        "version": "48900bc61c36ff4a40a92844f70d8a12c3a18f9095e858fea03b68d028f53954",
+        "signature": "48900bc61c36ff4a40a92844f70d8a12c3a18f9095e858fea03b68d028f53954"
+      },
+      "c:/code/ui-html/node_modules/concordialang-ui-core/dist/utils/index.d.ts": {
+        "version": "c9a778592742c59c61aa3fd3806a6363ea667eab8357c856222180e3d69c6dfa",
+        "signature": "c9a778592742c59c61aa3fd3806a6363ea667eab8357c856222180e3d69c6dfa"
+      },
+      "c:/code/ui-html/node_modules/concordialang-ui-core/dist/index.d.ts": {
+        "version": "9b77623c258b4c43874b69a4420a6508efa24ab154d03cff296a8b7ced7eb324",
+        "signature": "9b77623c258b4c43874b69a4420a6508efa24ab154d03cff296a8b7ced7eb324"
+      },
+      "c:/code/ui-html/src/widgets/prop.ts": {
+        "version": "2bc9210d0c58aa5b5df48ffa96655b06132c8dc159c939b551faf449bff30e76",
+        "signature": "eb0320d1622ae03bf7f39f7db164b295b06134ed868c87ad34d231b33eefc862"
+      },
+      "c:/code/ui-html/src/widgets/button.ts": {
+        "version": "708241776c87017a5ae81137b41128459c16c0745de49a4ce481d2c555f68629",
+        "signature": "819d512fdf910d776b5a02742c63ad516e4007a0ce10a1735594e9856c87bec3"
+      },
+      "c:/code/ui-html/src/widgets/input.ts": {
+        "version": "475f9679836c73a2fb44f979767c56d425bbea2733ed6381816fbc0f3887ba6f",
+        "signature": "2df127c8bed3cae641ac993ec42d059a779fc1dae5cbce0f6797abdd4c43b043"
+      },
+      "c:/code/ui-html/src/widgets/widget-factory.ts": {
+        "version": "7dd75e5f487716fbd4fd2828e4da3c2bb67f94d4fbf615554ca7f63382e3021c",
+        "signature": "70f27d98d1eb428a538a9e1539ace15475b90dbd8523af192ab8a9c5454ffc40"
+      },
+      "c:/code/ui-html/src/generator.ts": {
+        "version": "c6505bf79aed00f2e245fe90261105e27cb1d359c169fca6f0a37a66910773ae",
+        "signature": "b11b18d2805191e9611e511bdd5891366b3a3a1056fa8b0ab459189d24c23bee"
+      },
+      "c:/code/ui-html/src/index.ts": {
+        "version": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "signature": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "c:/code/ui-html/node_modules/@oclif/parser/lib/args.d.ts": {
+        "version": "b8fac2a2a066d140f34e5e0c698440f1f8c8a94eea2c95d156ce821ed53336e2",
+        "signature": "b8fac2a2a066d140f34e5e0c698440f1f8c8a94eea2c95d156ce821ed53336e2"
+      },
+      "c:/code/ui-html/node_modules/@oclif/parser/lib/alphabet.d.ts": {
+        "version": "2f79c688ac24759632fe8dda94c822d169cbe2a11f37fe6de1588d653af051ca",
+        "signature": "2f79c688ac24759632fe8dda94c822d169cbe2a11f37fe6de1588d653af051ca"
+      },
+      "c:/code/ui-html/node_modules/@oclif/parser/lib/flags.d.ts": {
+        "version": "6759bd60667a692ca4036415ce891308eae0038c3ec26410e26f59bccf38f0ca",
+        "signature": "6759bd60667a692ca4036415ce891308eae0038c3ec26410e26f59bccf38f0ca"
+      },
+      "c:/code/ui-html/node_modules/@oclif/parser/lib/metadata.d.ts": {
+        "version": "ebdcf50c5fdb4f68caf05066fb3bd839436a3c39c3154d65dd81a8855382b5e5",
+        "signature": "ebdcf50c5fdb4f68caf05066fb3bd839436a3c39c3154d65dd81a8855382b5e5"
+      },
+      "c:/code/ui-html/node_modules/@oclif/parser/lib/parse.d.ts": {
+        "version": "ee66d834ddc05efda67651fd52023eef1c8b471e20ec2baee05043f1f62ef635",
+        "signature": "ee66d834ddc05efda67651fd52023eef1c8b471e20ec2baee05043f1f62ef635"
+      },
+      "c:/code/ui-html/node_modules/@oclif/parser/lib/help.d.ts": {
+        "version": "34e73f0523e9afb52074fcec0844a6334d48bdb2977f944b3e6648da99755bba",
+        "signature": "34e73f0523e9afb52074fcec0844a6334d48bdb2977f944b3e6648da99755bba"
+      },
+      "c:/code/ui-html/node_modules/@oclif/parser/lib/index.d.ts": {
+        "version": "710da65a65a2662a3d39d3d5e978a1ba9a07b5f95e77e49070addfb61998c18f",
+        "signature": "710da65a65a2662a3d39d3d5e978a1ba9a07b5f95e77e49070addfb61998c18f"
+      },
+      "c:/code/ui-html/node_modules/@oclif/config/lib/command.d.ts": {
+        "version": "bf67e5f33b4258a5ac05488de04a86871df56175cfa36b0c66587284969a9749",
+        "signature": "bf67e5f33b4258a5ac05488de04a86871df56175cfa36b0c66587284969a9749"
+      },
+      "c:/code/ui-html/node_modules/@oclif/config/lib/hooks.d.ts": {
+        "version": "b05352898b844a87fd8ef31b0420dfa584b2c058e39677bd51e0d942af1afe60",
+        "signature": "b05352898b844a87fd8ef31b0420dfa584b2c058e39677bd51e0d942af1afe60"
+      },
+      "c:/code/ui-html/node_modules/@oclif/config/lib/pjson.d.ts": {
+        "version": "1e1fa6121eed38a97f548077cd06a16afba9a62e9cc7945d69c0c867449abdbd",
+        "signature": "1e1fa6121eed38a97f548077cd06a16afba9a62e9cc7945d69c0c867449abdbd"
+      },
+      "c:/code/ui-html/node_modules/@oclif/config/lib/manifest.d.ts": {
+        "version": "4108bca6ec2cc28598948e80fca629bb096ca3371091ee3bbca6f87c8a8ff3e1",
+        "signature": "4108bca6ec2cc28598948e80fca629bb096ca3371091ee3bbca6f87c8a8ff3e1"
+      },
+      "c:/code/ui-html/node_modules/@oclif/config/lib/topic.d.ts": {
+        "version": "bd80422c68e0575fee07883efc93fdbf32da39f76ab8479d56eba05e7fac8363",
+        "signature": "bd80422c68e0575fee07883efc93fdbf32da39f76ab8479d56eba05e7fac8363"
+      },
+      "c:/code/ui-html/node_modules/@oclif/config/lib/plugin.d.ts": {
+        "version": "a32bf18b0d7717fbd6217fe18835f32924cd58ac978bdcb88f3fb9577ff6bb05",
+        "signature": "a32bf18b0d7717fbd6217fe18835f32924cd58ac978bdcb88f3fb9577ff6bb05"
+      },
+      "c:/code/ui-html/node_modules/@oclif/config/lib/config.d.ts": {
+        "version": "6a30fa9391f874f455bdf5e6216b3fe46112f6cb7063af7c675e5def6c11909d",
+        "signature": "6a30fa9391f874f455bdf5e6216b3fe46112f6cb7063af7c675e5def6c11909d"
+      },
+      "c:/code/ui-html/node_modules/@oclif/config/lib/index.d.ts": {
+        "version": "03d343b7b13b8809088b45ab0f6f442adc2b49e2a77ab375d205d018f0d56785",
+        "signature": "03d343b7b13b8809088b45ab0f6f442adc2b49e2a77ab375d205d018f0d56785"
+      },
+      "c:/code/ui-html/node_modules/@oclif/command/lib/flags.d.ts": {
+        "version": "013c7f4547d58905da988f8920ab744c454b12c5a1e1fa9108f4d7d67de92998",
+        "signature": "013c7f4547d58905da988f8920ab744c454b12c5a1e1fa9108f4d7d67de92998"
+      },
+      "c:/code/ui-html/node_modules/@oclif/command/lib/command.d.ts": {
+        "version": "c19143f1dc63c07fb2dcd98e96b2e2e706fcf85bec8dd27effdf740e86ee3a25",
+        "signature": "c19143f1dc63c07fb2dcd98e96b2e2e706fcf85bec8dd27effdf740e86ee3a25"
+      },
+      "c:/code/ui-html/node_modules/@oclif/command/lib/main.d.ts": {
+        "version": "fc1f16ae8cc4ba5bd55869f317a0c2ec0775f47b61b7d61c691bd9b5fc602208",
+        "signature": "fc1f16ae8cc4ba5bd55869f317a0c2ec0775f47b61b7d61c691bd9b5fc602208"
+      },
+      "c:/code/ui-html/node_modules/@oclif/command/lib/index.d.ts": {
+        "version": "778d7164f3612aad776e12987f46889f3fe3541e5d9aed5f673daed728b643d5",
+        "signature": "778d7164f3612aad776e12987f46889f3fe3541e5d9aed5f673daed728b643d5"
+      },
+      "c:/code/ui-html/src/commands/generate.ts": {
+        "version": "ff9c90ed79820a0186c8747f1ba09e8eb6fe273136e96997b326ebcba44cb917",
+        "signature": "d6d8b353d10f371ddbd4b1102da0b2d38971dce73bcf4e13bdec363bdd6cf85a"
+      },
+      "c:/code/ui-html/node_modules/@babel/types/lib/index.d.ts": {
+        "version": "dfbcc61eedeb125ba4f12231aaf50c7d30f36f82901b92cbd85530b44de15b68",
+        "signature": "dfbcc61eedeb125ba4f12231aaf50c7d30f36f82901b92cbd85530b44de15b68"
+      },
+      "c:/code/ui-html/node_modules/@types/babel__generator/index.d.ts": {
+        "version": "19fb2161edf60fbe73ee3650c1cee889df0525ed852eff2d5fa6e5480c132ae3",
+        "signature": "19fb2161edf60fbe73ee3650c1cee889df0525ed852eff2d5fa6e5480c132ae3"
+      },
+      "c:/code/ui-html/node_modules/@types/babel__traverse/index.d.ts": {
+        "version": "30b805fe6d4272d147fea35fd859bc5f3e13b7c9d762bd35948fe842919452a5",
+        "signature": "30b805fe6d4272d147fea35fd859bc5f3e13b7c9d762bd35948fe842919452a5"
+      },
+      "c:/code/ui-html/node_modules/@babel/parser/typings/babel-parser.d.ts": {
+        "version": "ad5052782ad2d8a9d5db8e2a24216dac0ae66eb50f884851306777a47e23de9f",
+        "signature": "ad5052782ad2d8a9d5db8e2a24216dac0ae66eb50f884851306777a47e23de9f"
+      },
+      "c:/code/ui-html/node_modules/@types/babel__template/index.d.ts": {
+        "version": "3e0a34f7207431d967dc32d593d1cda0c23975e9484bc8895b39d96ffca4a0d8",
+        "signature": "3e0a34f7207431d967dc32d593d1cda0c23975e9484bc8895b39d96ffca4a0d8"
+      },
+      "c:/code/ui-html/node_modules/@types/babel__core/index.d.ts": {
+        "version": "80e6d098a9998f0523ef6fc423449017dab64c61610c770563617d59bf2902ed",
+        "signature": "80e6d098a9998f0523ef6fc423449017dab64c61610c770563617d59bf2902ed"
+      },
+      "c:/code/ui-html/node_modules/@types/node/globals.d.ts": {
+        "version": "1bba2fc2e58c0340b92eeb9185be6e75e27d52f10a315aa65810a19b3277f1c7",
+        "signature": "1bba2fc2e58c0340b92eeb9185be6e75e27d52f10a315aa65810a19b3277f1c7"
+      },
+      "c:/code/ui-html/node_modules/@types/node/assert.d.ts": {
+        "version": "e37e4814461321ef67cbb2f4c9def6be18ff85670e6c665131b320e052905b75",
+        "signature": "e37e4814461321ef67cbb2f4c9def6be18ff85670e6c665131b320e052905b75"
+      },
+      "c:/code/ui-html/node_modules/@types/node/async_hooks.d.ts": {
+        "version": "138476cfdccbb9e2c7e06602bc216af843a56c4f3469a79106bc660ba94bd66a",
+        "signature": "138476cfdccbb9e2c7e06602bc216af843a56c4f3469a79106bc660ba94bd66a"
+      },
+      "c:/code/ui-html/node_modules/@types/node/buffer.d.ts": {
+        "version": "fe892fea1e75a442fffb4a604d7eeb451e858787a9f2f01c4e83bf12a3b5048d",
+        "signature": "fe892fea1e75a442fffb4a604d7eeb451e858787a9f2f01c4e83bf12a3b5048d"
+      },
+      "c:/code/ui-html/node_modules/@types/node/child_process.d.ts": {
+        "version": "f1086bf9854d882321f28c3691987832c97e5bb360f9bbc5e0e5a150fa055f56",
+        "signature": "f1086bf9854d882321f28c3691987832c97e5bb360f9bbc5e0e5a150fa055f56"
+      },
+      "c:/code/ui-html/node_modules/@types/node/cluster.d.ts": {
+        "version": "d2704553f735d9b9cf31a26cbf4dd085e89b0ec3eec33d684b2517555370b665",
+        "signature": "d2704553f735d9b9cf31a26cbf4dd085e89b0ec3eec33d684b2517555370b665"
+      },
+      "c:/code/ui-html/node_modules/@types/node/console.d.ts": {
+        "version": "525c8fc510d9632d2a0a9de2d41c3ac1cdd79ff44d3b45c6d81cacabb683528d",
+        "signature": "525c8fc510d9632d2a0a9de2d41c3ac1cdd79ff44d3b45c6d81cacabb683528d"
+      },
+      "c:/code/ui-html/node_modules/@types/node/constants.d.ts": {
+        "version": "b952021e804dcd9cb5e5552e1ec8bf9f479b61e20da5641e2a542fe77db9a598",
+        "signature": "b952021e804dcd9cb5e5552e1ec8bf9f479b61e20da5641e2a542fe77db9a598"
+      },
+      "c:/code/ui-html/node_modules/@types/node/crypto.d.ts": {
+        "version": "6b956acd0fa4df8f2723012d18498954438874cc63a0bd639dc470135a782101",
+        "signature": "6b956acd0fa4df8f2723012d18498954438874cc63a0bd639dc470135a782101"
+      },
+      "c:/code/ui-html/node_modules/@types/node/dgram.d.ts": {
+        "version": "525f8306266375b46334fcfa9d7b62fdcfed5171b2a76c98b278b230419437c6",
+        "signature": "525f8306266375b46334fcfa9d7b62fdcfed5171b2a76c98b278b230419437c6"
+      },
+      "c:/code/ui-html/node_modules/@types/node/dns.d.ts": {
+        "version": "92bd533d635f967b198fde9bc789996370f0db3322306646d961f64e67ed5b7a",
+        "signature": "92bd533d635f967b198fde9bc789996370f0db3322306646d961f64e67ed5b7a"
+      },
+      "c:/code/ui-html/node_modules/@types/node/domain.d.ts": {
+        "version": "ae3487bdb9b50c1d8bbeb6b55c8b2b9aa79bbc46d7afbc3483169ad8750c4304",
+        "signature": "ae3487bdb9b50c1d8bbeb6b55c8b2b9aa79bbc46d7afbc3483169ad8750c4304"
+      },
+      "c:/code/ui-html/node_modules/@types/node/events.d.ts": {
+        "version": "4a419878f025046ff6748d073123b0451849f83b7dbca907037a53e3eaa9bbbb",
+        "signature": "4a419878f025046ff6748d073123b0451849f83b7dbca907037a53e3eaa9bbbb"
+      },
+      "c:/code/ui-html/node_modules/@types/node/fs.d.ts": {
+        "version": "c3c4f0875544378188c840f167a35aa511365b047286ec2c4e985ed49c78d19c",
+        "signature": "c3c4f0875544378188c840f167a35aa511365b047286ec2c4e985ed49c78d19c"
+      },
+      "c:/code/ui-html/node_modules/@types/node/http.d.ts": {
+        "version": "896c59370c35abd48415751b78ce927eda463a20f1a3921bf3dc4962504ec06e",
+        "signature": "896c59370c35abd48415751b78ce927eda463a20f1a3921bf3dc4962504ec06e"
+      },
+      "c:/code/ui-html/node_modules/@types/node/http2.d.ts": {
+        "version": "e36a3ca6d86f19ff207dabc61d27088c464f2dc3ffb64b0daf17dc33b85191e6",
+        "signature": "e36a3ca6d86f19ff207dabc61d27088c464f2dc3ffb64b0daf17dc33b85191e6"
+      },
+      "c:/code/ui-html/node_modules/@types/node/https.d.ts": {
+        "version": "152af7c23ec219f632afa2d861abc65993f56cd39a4f3a4018515dbc05950a74",
+        "signature": "152af7c23ec219f632afa2d861abc65993f56cd39a4f3a4018515dbc05950a74"
+      },
+      "c:/code/ui-html/node_modules/@types/node/inspector.d.ts": {
+        "version": "0d668f73487c0d16fd6c1051c61b76d3b590cd986fadea91da08dff459dbec45",
+        "signature": "0d668f73487c0d16fd6c1051c61b76d3b590cd986fadea91da08dff459dbec45"
+      },
+      "c:/code/ui-html/node_modules/@types/node/module.d.ts": {
+        "version": "03394bf8deb8781b490ae9266a843fbdf00647947d79e25fcbf1d89a9e9c8a66",
+        "signature": "03394bf8deb8781b490ae9266a843fbdf00647947d79e25fcbf1d89a9e9c8a66"
+      },
+      "c:/code/ui-html/node_modules/@types/node/net.d.ts": {
+        "version": "56a15cc211894d79aa44cbb46c276bfd3f10458a61bff2dec99114db8a7e71e3",
+        "signature": "56a15cc211894d79aa44cbb46c276bfd3f10458a61bff2dec99114db8a7e71e3"
+      },
+      "c:/code/ui-html/node_modules/@types/node/os.d.ts": {
+        "version": "0ab49f803fa1d0f26682096e87ae239be05fee89ac538d30c59ab5a15bd38e6a",
+        "signature": "0ab49f803fa1d0f26682096e87ae239be05fee89ac538d30c59ab5a15bd38e6a"
+      },
+      "c:/code/ui-html/node_modules/@types/node/path.d.ts": {
+        "version": "61c84c3b0eb6e60196d15ae5e21793a1d4241c547f0bdd0529ffae838d1a073c",
+        "signature": "61c84c3b0eb6e60196d15ae5e21793a1d4241c547f0bdd0529ffae838d1a073c"
+      },
+      "c:/code/ui-html/node_modules/@types/node/perf_hooks.d.ts": {
+        "version": "981192e57b0e159c977f1d8e8b8576e9d6b4e013b902e9c0d4b178cb47e2dc86",
+        "signature": "981192e57b0e159c977f1d8e8b8576e9d6b4e013b902e9c0d4b178cb47e2dc86"
+      },
+      "c:/code/ui-html/node_modules/@types/node/process.d.ts": {
+        "version": "3a8848a9c307429b861402cc69bc472ffe0c05b86474fc158723169161e16389",
+        "signature": "3a8848a9c307429b861402cc69bc472ffe0c05b86474fc158723169161e16389"
+      },
+      "c:/code/ui-html/node_modules/@types/node/punycode.d.ts": {
+        "version": "eeb0d1ad28e70773ac57ae9fe939c3bad6af2525a463c28f9ec31b5953de6735",
+        "signature": "eeb0d1ad28e70773ac57ae9fe939c3bad6af2525a463c28f9ec31b5953de6735"
+      },
+      "c:/code/ui-html/node_modules/@types/node/querystring.d.ts": {
+        "version": "8969e0b4d22ca77ad011c8fc4a25ec5d515bdfae4ecbd22608ed0d5c38829c1e",
+        "signature": "8969e0b4d22ca77ad011c8fc4a25ec5d515bdfae4ecbd22608ed0d5c38829c1e"
+      },
+      "c:/code/ui-html/node_modules/@types/node/readline.d.ts": {
+        "version": "544728a999d35afc7b9e6d7420fb10046c16fcc5cb54fef21d2f5de78bf98830",
+        "signature": "544728a999d35afc7b9e6d7420fb10046c16fcc5cb54fef21d2f5de78bf98830"
+      },
+      "c:/code/ui-html/node_modules/@types/node/repl.d.ts": {
+        "version": "d0b0b533dc34ff7ffd019665fdc2b2aeae717bc1347e17a5bdc4d6572b5c109a",
+        "signature": "d0b0b533dc34ff7ffd019665fdc2b2aeae717bc1347e17a5bdc4d6572b5c109a"
+      },
+      "c:/code/ui-html/node_modules/@types/node/stream.d.ts": {
+        "version": "6e04fe987766b22afe0b959da7145f904c164fe2c17586b218b8fcdad5792d51",
+        "signature": "6e04fe987766b22afe0b959da7145f904c164fe2c17586b218b8fcdad5792d51"
+      },
+      "c:/code/ui-html/node_modules/@types/node/string_decoder.d.ts": {
+        "version": "17e157df6125098a1a34eb4d201ee4ac03bbe97e471ab5627bb2c40fce555948",
+        "signature": "17e157df6125098a1a34eb4d201ee4ac03bbe97e471ab5627bb2c40fce555948"
+      },
+      "c:/code/ui-html/node_modules/@types/node/timers.d.ts": {
+        "version": "b40652bf8ce4a18133b31349086523b219724dca8df3448c1a0742528e7ad5b9",
+        "signature": "b40652bf8ce4a18133b31349086523b219724dca8df3448c1a0742528e7ad5b9"
+      },
+      "c:/code/ui-html/node_modules/@types/node/tls.d.ts": {
+        "version": "68f639766f4b9d5c832bbca1203955969a8686137a4a197285dd64519cc26e58",
+        "signature": "68f639766f4b9d5c832bbca1203955969a8686137a4a197285dd64519cc26e58"
+      },
+      "c:/code/ui-html/node_modules/@types/node/trace_events.d.ts": {
+        "version": "978aecd2e6bc2ac094e9a35eda98ff8586713857b3655e7c98ca5ed8f7d50662",
+        "signature": "978aecd2e6bc2ac094e9a35eda98ff8586713857b3655e7c98ca5ed8f7d50662"
+      },
+      "c:/code/ui-html/node_modules/@types/node/tty.d.ts": {
+        "version": "3a59044813b24482ad7a7963bbee6b62507561969e273fbdc992ed9bc948fe13",
+        "signature": "3a59044813b24482ad7a7963bbee6b62507561969e273fbdc992ed9bc948fe13"
+      },
+      "c:/code/ui-html/node_modules/@types/node/url.d.ts": {
+        "version": "431151f55411c3f27cf539b987a7d1de453188ed58e54bc946183d280d3444a2",
+        "signature": "431151f55411c3f27cf539b987a7d1de453188ed58e54bc946183d280d3444a2"
+      },
+      "c:/code/ui-html/node_modules/@types/node/util.d.ts": {
+        "version": "62588e1d1de12cfb60f01badcb34db248df3ae2bc983d5f76376c4884783bdb2",
+        "signature": "62588e1d1de12cfb60f01badcb34db248df3ae2bc983d5f76376c4884783bdb2"
+      },
+      "c:/code/ui-html/node_modules/@types/node/v8.d.ts": {
+        "version": "e880a08fbb0d9ee2f733f9183f4d1bdb75bc9e0e64060a8a1fc30540791fcded",
+        "signature": "e880a08fbb0d9ee2f733f9183f4d1bdb75bc9e0e64060a8a1fc30540791fcded"
+      },
+      "c:/code/ui-html/node_modules/@types/node/vm.d.ts": {
+        "version": "f98df5ec124f441b465332271d0b083aeec815cd3c92d9249b9739e6318477a9",
+        "signature": "f98df5ec124f441b465332271d0b083aeec815cd3c92d9249b9739e6318477a9"
+      },
+      "c:/code/ui-html/node_modules/@types/node/worker_threads.d.ts": {
+        "version": "e761c833140e3ab6f9deab37fe034154f3eb15547dce61395d9b0b1f130f3fa3",
+        "signature": "e761c833140e3ab6f9deab37fe034154f3eb15547dce61395d9b0b1f130f3fa3"
+      },
+      "c:/code/ui-html/node_modules/@types/node/zlib.d.ts": {
+        "version": "58257a0147702ab415ed18164557a0feb9c5d1351792ea293a876e6b7ed0c559",
+        "signature": "58257a0147702ab415ed18164557a0feb9c5d1351792ea293a876e6b7ed0c559"
+      },
+      "c:/code/ui-html/node_modules/@types/node/base.d.ts": {
+        "version": "6622f76993bdfeaacb947ba7c4cf26f2e5c5194194d02d792c3cba4174cd8fce",
+        "signature": "6622f76993bdfeaacb947ba7c4cf26f2e5c5194194d02d792c3cba4174cd8fce"
+      },
+      "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts": {
+        "version": "4f54f0a9dd3b644c99ec32b32f8804d5978bc854799b228ae9c467bf3c84c64c",
+        "signature": "4f54f0a9dd3b644c99ec32b32f8804d5978bc854799b228ae9c467bf3c84c64c"
+      },
+      "c:/code/ui-html/node_modules/@types/node/ts3.2/globals.d.ts": {
+        "version": "ce6b191c382ee19f23678b8c364484627bcf424e8f408357a2f5530fb8d52a45",
+        "signature": "ce6b191c382ee19f23678b8c364484627bcf424e8f408357a2f5530fb8d52a45"
+      },
+      "c:/code/ui-html/node_modules/@types/node/ts3.2/index.d.ts": {
+        "version": "765fc34423b93c2ab763670d8d11d99e5f47387c13c161d6f1640dd6d91b7d1c",
+        "signature": "765fc34423b93c2ab763670d8d11d99e5f47387c13c161d6f1640dd6d91b7d1c"
+      },
+      "c:/code/ui-html/node_modules/@types/clean-css/index.d.ts": {
+        "version": "4bfa64d72f076287ee5c40a3a91aa1ac2dc0b480cacc0f4fabdb3a2002d1ef67",
+        "signature": "4bfa64d72f076287ee5c40a3a91aa1ac2dc0b480cacc0f4fabdb3a2002d1ef67"
+      },
+      "c:/code/ui-html/node_modules/@types/uglify-js/node_modules/source-map/source-map.d.ts": {
+        "version": "2887592574fcdfd087647c539dcb0fbe5af2521270dad4a37f9d17c16190d579",
+        "signature": "2887592574fcdfd087647c539dcb0fbe5af2521270dad4a37f9d17c16190d579"
+      },
+      "c:/code/ui-html/node_modules/@types/uglify-js/index.d.ts": {
+        "version": "bdc18dd47aea9977e419a8e03e7e5d04ed8cf8265e014d8788848b76b969cbba",
+        "signature": "bdc18dd47aea9977e419a8e03e7e5d04ed8cf8265e014d8788848b76b969cbba"
+      },
+      "c:/code/ui-html/node_modules/@types/relateurl/index.d.ts": {
+        "version": "a523644fe1d30f36465118be107642c78c36afe0d885f93eae399b3c44dc8fe9",
+        "signature": "a523644fe1d30f36465118be107642c78c36afe0d885f93eae399b3c44dc8fe9"
+      },
+      "c:/code/ui-html/node_modules/@types/html-minifier/index.d.ts": {
+        "version": "3f6bff86e78e065dad71ca8e395824703f56977f7309139127e58718d7915410",
+        "signature": "3f6bff86e78e065dad71ca8e395824703f56977f7309139127e58718d7915410"
+      },
+      "c:/code/ui-html/node_modules/@types/istanbul-lib-coverage/index.d.ts": {
+        "version": "2e91ae1a0304062735f5d6f2e0b90d5f5bc11d73291d0a3783c79fd5ad9ac4c7",
+        "signature": "2e91ae1a0304062735f5d6f2e0b90d5f5bc11d73291d0a3783c79fd5ad9ac4c7"
+      },
+      "c:/code/ui-html/node_modules/@types/jest-diff/index.d.ts": {
+        "version": "6ecb326999da47034eff85653423767152858fbb7acf0433f7603c9abf1e3f06",
+        "signature": "6ecb326999da47034eff85653423767152858fbb7acf0433f7603c9abf1e3f06"
+      },
+      "c:/code/ui-html/node_modules/jest-diff/build/types.d.ts": {
+        "version": "71ba0678a3c647f5c0706ae975c031ace0d464e60f9ce56eaa7f1678d065aab7",
+        "signature": "71ba0678a3c647f5c0706ae975c031ace0d464e60f9ce56eaa7f1678d065aab7"
+      },
+      "c:/code/ui-html/node_modules/jest-diff/build/index.d.ts": {
+        "version": "b2c5ded6320c45c5d3e1c481c5d2808adf24dd1a59ffc944b72a418e95da5b17",
+        "signature": "b2c5ded6320c45c5d3e1c481c5d2808adf24dd1a59ffc944b72a418e95da5b17"
+      },
+      "c:/code/ui-html/node_modules/@types/jest/index.d.ts": {
+        "version": "a6ea3b29104efd7a3dd497d3496306f8350eb2ab05b7fa1b25fe82f9391bf879",
+        "signature": "a6ea3b29104efd7a3dd497d3496306f8350eb2ab05b7fa1b25fe82f9391bf879"
+      },
+      "c:/code/ui-html/node_modules/@types/stack-utils/index.d.ts": {
+        "version": "41422586881bcd739b4e62d9b91cd29909f8572aa3e3cdf316b7c50f14708d49",
+        "signature": "41422586881bcd739b4e62d9b91cd29909f8572aa3e3cdf316b7c50f14708d49"
+      },
+      "c:/code/ui-html/node_modules/@types/yargs/index.d.ts": {
+        "version": "8f3237f03af87871a18d49ff52dec94d71eabecca464d5f2a81e34b55fb60bb5",
+        "signature": "8f3237f03af87871a18d49ff52dec94d71eabecca464d5f2a81e34b55fb60bb5"
+      }
+    },
+    "options": {
+      "declaration": true,
+      "importHelpers": true,
+      "module": 1,
+      "outDir": "c:/code/ui-html/dist",
+      "rootDir": "c:/code/ui-html/src",
+      "strict": true,
+      "target": 2,
+      "composite": true,
+      "configFilePath": "c:/code/ui-html/tsconfig.json"
+    },
+    "referencedMap": {
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es6.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es5.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2015.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2016.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2017.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2018.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/typescript/lib/lib.dom.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/typescript/lib/lib.dom.iterable.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/typescript/lib/lib.webworker.importscripts.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/typescript/lib/lib.scripthost.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2015.core.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2015.collection.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2015.generator.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2015.iterable.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2015.promise.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2015.proxy.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2015.reflect.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2015.symbol.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2016.array.include.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2017.object.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2017.string.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2017.intl.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2017.typedarrays.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2018.asynciterable.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2018.intl.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2018.promise.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2018.regexp.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/typescript/lib/lib.esnext.intl.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/typescript/lib/lib.esnext.bigint.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/tslib/tslib.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/concordialang-ui-core/dist/interfaces/ast-mappings/document.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/concordialang-ui-core/dist/interfaces/ast-mappings/ui-element.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/concordialang-ui-core/dist/interfaces/ast-mappings/feature.d.ts": [
+        "c:/code/ui-html/node_modules/concordialang-ui-core/dist/interfaces/ast-mappings/ui-element.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/concordialang-ui-core/dist/interfaces/ast-mappings/index.d.ts": [
+        "c:/code/ui-html/node_modules/concordialang-ui-core/dist/interfaces/ast-mappings/document.d.ts",
+        "c:/code/ui-html/node_modules/concordialang-ui-core/dist/interfaces/ast-mappings/feature.d.ts",
+        "c:/code/ui-html/node_modules/concordialang-ui-core/dist/interfaces/ast-mappings/ui-element.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/concordialang-ui-core/dist/interfaces/prototyper.d.ts": [
+        "c:/code/ui-html/node_modules/concordialang-ui-core/dist/interfaces/ast-mappings/index.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/concordialang-ui-core/dist/interfaces/process-result.d.ts": [
+        "c:/code/ui-html/node_modules/concordialang-ui-core/dist/interfaces/ast-mappings/index.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/concordialang-ui-core/dist/interfaces/index.d.ts": [
+        "c:/code/ui-html/node_modules/concordialang-ui-core/dist/interfaces/ast-mappings/index.d.ts",
+        "c:/code/ui-html/node_modules/concordialang-ui-core/dist/interfaces/prototyper.d.ts",
+        "c:/code/ui-html/node_modules/concordialang-ui-core/dist/interfaces/process-result.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/concordialang-ui-core/dist/ast-processor.d.ts": [
+        "c:/code/ui-html/node_modules/concordialang-ui-core/dist/interfaces/index.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/concordialang-ui-core/dist/classes/widget.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/concordialang-ui-core/dist/classes/index.d.ts": [
+        "c:/code/ui-html/node_modules/concordialang-ui-core/dist/classes/widget.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/concordialang-ui-core/dist/utils/create-file.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/concordialang-ui-core/dist/utils/index.d.ts": [
+        "c:/code/ui-html/node_modules/concordialang-ui-core/dist/utils/create-file.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/concordialang-ui-core/dist/index.d.ts": [
+        "c:/code/ui-html/node_modules/concordialang-ui-core/dist/ast-processor.d.ts",
+        "c:/code/ui-html/node_modules/concordialang-ui-core/dist/interfaces/index.d.ts",
+        "c:/code/ui-html/node_modules/concordialang-ui-core/dist/classes/index.d.ts",
+        "c:/code/ui-html/node_modules/concordialang-ui-core/dist/utils/index.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/src/widgets/prop.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/src/widgets/button.ts": [
+        "c:/code/ui-html/node_modules/concordialang-ui-core/dist/index.d.ts",
+        "c:/code/ui-html/src/widgets/prop.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/src/widgets/input.ts": [
+        "c:/code/ui-html/node_modules/concordialang-ui-core/dist/index.d.ts",
+        "c:/code/ui-html/src/widgets/prop.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/src/widgets/widget-factory.ts": [
+        "c:/code/ui-html/node_modules/concordialang-ui-core/dist/index.d.ts",
+        "c:/code/ui-html/src/widgets/button.ts",
+        "c:/code/ui-html/src/widgets/input.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/src/generator.ts": [
+        "c:/code/ui-html/node_modules/concordialang-ui-core/dist/index.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/fs.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/src/widgets/widget-factory.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/src/index.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@oclif/parser/lib/args.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@oclif/parser/lib/alphabet.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@oclif/parser/lib/flags.d.ts": [
+        "c:/code/ui-html/node_modules/@oclif/parser/lib/alphabet.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@oclif/parser/lib/metadata.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@oclif/parser/lib/parse.d.ts": [
+        "c:/code/ui-html/node_modules/@oclif/parser/lib/args.d.ts",
+        "c:/code/ui-html/node_modules/@oclif/parser/lib/flags.d.ts",
+        "c:/code/ui-html/node_modules/@oclif/parser/lib/metadata.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@oclif/parser/lib/help.d.ts": [
+        "c:/code/ui-html/node_modules/@oclif/parser/lib/flags.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@oclif/parser/lib/index.d.ts": [
+        "c:/code/ui-html/node_modules/@oclif/parser/lib/args.d.ts",
+        "c:/code/ui-html/node_modules/@oclif/parser/lib/parse.d.ts",
+        "c:/code/ui-html/node_modules/@oclif/parser/lib/flags.d.ts",
+        "c:/code/ui-html/node_modules/@oclif/parser/lib/help.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@oclif/config/lib/command.d.ts": [
+        "c:/code/ui-html/node_modules/@oclif/parser/lib/index.d.ts",
+        "c:/code/ui-html/node_modules/@oclif/config/lib/index.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@oclif/config/lib/hooks.d.ts": [
+        "c:/code/ui-html/node_modules/@oclif/config/lib/index.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@oclif/config/lib/pjson.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@oclif/config/lib/manifest.d.ts": [
+        "c:/code/ui-html/node_modules/@oclif/config/lib/command.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@oclif/config/lib/topic.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@oclif/config/lib/plugin.d.ts": [
+        "c:/code/ui-html/node_modules/@oclif/config/lib/command.d.ts",
+        "c:/code/ui-html/node_modules/@oclif/config/lib/manifest.d.ts",
+        "c:/code/ui-html/node_modules/@oclif/config/lib/pjson.d.ts",
+        "c:/code/ui-html/node_modules/@oclif/config/lib/topic.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@oclif/config/lib/config.d.ts": [
+        "c:/code/ui-html/node_modules/@oclif/config/lib/command.d.ts",
+        "c:/code/ui-html/node_modules/@oclif/config/lib/hooks.d.ts",
+        "c:/code/ui-html/node_modules/@oclif/config/lib/pjson.d.ts",
+        "c:/code/ui-html/node_modules/@oclif/config/lib/plugin.d.ts",
+        "c:/code/ui-html/node_modules/@oclif/config/lib/topic.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@oclif/config/lib/index.d.ts": [
+        "c:/code/ui-html/node_modules/@oclif/config/lib/config.d.ts",
+        "c:/code/ui-html/node_modules/@oclif/config/lib/command.d.ts",
+        "c:/code/ui-html/node_modules/@oclif/config/lib/hooks.d.ts",
+        "c:/code/ui-html/node_modules/@oclif/config/lib/manifest.d.ts",
+        "c:/code/ui-html/node_modules/@oclif/config/lib/pjson.d.ts",
+        "c:/code/ui-html/node_modules/@oclif/config/lib/plugin.d.ts",
+        "c:/code/ui-html/node_modules/@oclif/config/lib/topic.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@oclif/command/lib/flags.d.ts": [
+        "c:/code/ui-html/node_modules/@oclif/config/lib/index.d.ts",
+        "c:/code/ui-html/node_modules/@oclif/parser/lib/index.d.ts",
+        "c:/code/ui-html/node_modules/@oclif/parser/lib/flags.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@oclif/command/lib/command.d.ts": [
+        "c:/code/ui-html/node_modules/@oclif/config/lib/index.d.ts",
+        "c:/code/ui-html/node_modules/@oclif/parser/lib/index.d.ts",
+        "c:/code/ui-html/node_modules/@oclif/command/lib/flags.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@oclif/command/lib/main.d.ts": [
+        "c:/code/ui-html/node_modules/@oclif/config/lib/index.d.ts",
+        "c:/code/ui-html/node_modules/@oclif/command/lib/index.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@oclif/command/lib/index.d.ts": [
+        "c:/code/ui-html/node_modules/@oclif/command/lib/command.d.ts",
+        "c:/code/ui-html/node_modules/@oclif/command/lib/flags.d.ts",
+        "c:/code/ui-html/node_modules/@oclif/command/lib/main.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/src/commands/generate.ts": [
+        "c:/code/ui-html/node_modules/@oclif/command/lib/index.d.ts",
+        "c:/code/ui-html/node_modules/concordialang-ui-core/dist/index.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/fs.d.ts",
+        "c:/code/ui-html/src/generator.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@babel/types/lib/index.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/babel__generator/index.d.ts": [
+        "c:/code/ui-html/node_modules/@babel/types/lib/index.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/babel__traverse/index.d.ts": [
+        "c:/code/ui-html/node_modules/@babel/types/lib/index.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@babel/parser/typings/babel-parser.d.ts": [
+        "c:/code/ui-html/node_modules/@babel/types/lib/index.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/babel__template/index.d.ts": [
+        "c:/code/ui-html/node_modules/@babel/parser/typings/babel-parser.d.ts",
+        "c:/code/ui-html/node_modules/@babel/types/lib/index.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/babel__core/index.d.ts": [
+        "c:/code/ui-html/node_modules/@types/babel__generator/index.d.ts",
+        "c:/code/ui-html/node_modules/@types/babel__traverse/index.d.ts",
+        "c:/code/ui-html/node_modules/@types/babel__template/index.d.ts",
+        "c:/code/ui-html/node_modules/@babel/types/lib/index.d.ts",
+        "c:/code/ui-html/node_modules/@babel/parser/typings/babel-parser.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/globals.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/assert.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/async_hooks.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/buffer.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/child_process.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/events.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/stream.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/net.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/cluster.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/child_process.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/events.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/net.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/console.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/constants.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/crypto.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/stream.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/dgram.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/net.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/dns.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/events.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/dns.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/domain.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/events.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/events.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/fs.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/stream.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/events.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/url.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/http.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/events.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/net.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/stream.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/url.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/http2.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/events.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/fs.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/net.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/stream.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/tls.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/url.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/http.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/https.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/tls.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/events.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/http.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/url.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/inspector.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/events.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/module.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/net.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/stream.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/events.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/dns.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/os.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/path.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/perf_hooks.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/async_hooks.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/process.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/punycode.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/querystring.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/readline.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/events.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/stream.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/repl.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/readline.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/vm.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/stream.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/events.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/string_decoder.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/timers.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/tls.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/crypto.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/dns.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/net.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/stream.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/trace_events.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/tty.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/net.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/url.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/querystring.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/util.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/v8.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/vm.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/worker_threads.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/events.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/stream.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/zlib.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/stream.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/base.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/globals.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/assert.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/async_hooks.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/buffer.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/child_process.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/cluster.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/console.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/constants.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/crypto.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/dgram.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/dns.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/domain.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/events.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/fs.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/http.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/http2.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/https.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/inspector.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/module.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/net.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/os.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/path.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/perf_hooks.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/process.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/punycode.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/querystring.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/readline.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/repl.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/stream.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/string_decoder.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/timers.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/tls.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/trace_events.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/tty.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/url.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/v8.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/vm.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/worker_threads.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/zlib.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/ts3.2/globals.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/globals.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/ts3.2/index.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/base.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/globals.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/clean-css/index.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/https.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/http.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/index.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/uglify-js/node_modules/source-map/source-map.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/uglify-js/index.d.ts": [
+        "c:/code/ui-html/node_modules/@types/uglify-js/node_modules/source-map/source-map.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/relateurl/index.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/html-minifier/index.d.ts": [
+        "c:/code/ui-html/node_modules/@types/uglify-js/index.d.ts",
+        "c:/code/ui-html/node_modules/@types/clean-css/index.d.ts",
+        "c:/code/ui-html/node_modules/@types/relateurl/index.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/istanbul-lib-coverage/index.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/jest-diff/index.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/jest-diff/build/types.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/jest-diff/build/index.d.ts": [
+        "c:/code/ui-html/node_modules/jest-diff/build/types.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/jest/index.d.ts": [
+        "c:/code/ui-html/node_modules/jest-diff/build/index.d.ts",
+        "c:/code/ui-html/node_modules/@types/jest-diff/index.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/stack-utils/index.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/yargs/index.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ]
+    },
+    "exportedModulesMap": {
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es6.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es5.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2015.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2016.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2017.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2018.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/typescript/lib/lib.dom.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/typescript/lib/lib.dom.iterable.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/typescript/lib/lib.webworker.importscripts.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/typescript/lib/lib.scripthost.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2015.core.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2015.collection.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2015.generator.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2015.iterable.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2015.promise.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2015.proxy.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2015.reflect.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2015.symbol.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2016.array.include.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2017.object.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2017.string.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2017.intl.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2017.typedarrays.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2018.asynciterable.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2018.intl.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2018.promise.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2018.regexp.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/typescript/lib/lib.esnext.intl.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/typescript/lib/lib.esnext.bigint.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/tslib/tslib.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/concordialang-ui-core/dist/interfaces/ast-mappings/document.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/concordialang-ui-core/dist/interfaces/ast-mappings/ui-element.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/concordialang-ui-core/dist/interfaces/ast-mappings/feature.d.ts": [
+        "c:/code/ui-html/node_modules/concordialang-ui-core/dist/interfaces/ast-mappings/ui-element.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/concordialang-ui-core/dist/interfaces/ast-mappings/index.d.ts": [
+        "c:/code/ui-html/node_modules/concordialang-ui-core/dist/interfaces/ast-mappings/document.d.ts",
+        "c:/code/ui-html/node_modules/concordialang-ui-core/dist/interfaces/ast-mappings/feature.d.ts",
+        "c:/code/ui-html/node_modules/concordialang-ui-core/dist/interfaces/ast-mappings/ui-element.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/concordialang-ui-core/dist/interfaces/prototyper.d.ts": [
+        "c:/code/ui-html/node_modules/concordialang-ui-core/dist/interfaces/ast-mappings/index.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/concordialang-ui-core/dist/interfaces/process-result.d.ts": [
+        "c:/code/ui-html/node_modules/concordialang-ui-core/dist/interfaces/ast-mappings/index.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/concordialang-ui-core/dist/interfaces/index.d.ts": [
+        "c:/code/ui-html/node_modules/concordialang-ui-core/dist/interfaces/ast-mappings/index.d.ts",
+        "c:/code/ui-html/node_modules/concordialang-ui-core/dist/interfaces/prototyper.d.ts",
+        "c:/code/ui-html/node_modules/concordialang-ui-core/dist/interfaces/process-result.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/concordialang-ui-core/dist/ast-processor.d.ts": [
+        "c:/code/ui-html/node_modules/concordialang-ui-core/dist/interfaces/index.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/concordialang-ui-core/dist/classes/widget.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/concordialang-ui-core/dist/classes/index.d.ts": [
+        "c:/code/ui-html/node_modules/concordialang-ui-core/dist/classes/widget.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/concordialang-ui-core/dist/utils/create-file.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/concordialang-ui-core/dist/utils/index.d.ts": [
+        "c:/code/ui-html/node_modules/concordialang-ui-core/dist/utils/create-file.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/concordialang-ui-core/dist/index.d.ts": [
+        "c:/code/ui-html/node_modules/concordialang-ui-core/dist/ast-processor.d.ts",
+        "c:/code/ui-html/node_modules/concordialang-ui-core/dist/interfaces/index.d.ts",
+        "c:/code/ui-html/node_modules/concordialang-ui-core/dist/classes/index.d.ts",
+        "c:/code/ui-html/node_modules/concordialang-ui-core/dist/utils/index.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/src/widgets/button.ts": [
+        "c:/code/ui-html/node_modules/concordialang-ui-core/dist/index.d.ts"
+      ],
+      "c:/code/ui-html/src/widgets/input.ts": [
+        "c:/code/ui-html/node_modules/concordialang-ui-core/dist/index.d.ts"
+      ],
+      "c:/code/ui-html/src/widgets/widget-factory.ts": [
+        "c:/code/ui-html/node_modules/concordialang-ui-core/dist/index.d.ts"
+      ],
+      "c:/code/ui-html/src/generator.ts": [
+        "c:/code/ui-html/node_modules/concordialang-ui-core/dist/index.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@oclif/parser/lib/args.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@oclif/parser/lib/alphabet.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@oclif/parser/lib/flags.d.ts": [
+        "c:/code/ui-html/node_modules/@oclif/parser/lib/alphabet.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@oclif/parser/lib/metadata.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@oclif/parser/lib/parse.d.ts": [
+        "c:/code/ui-html/node_modules/@oclif/parser/lib/args.d.ts",
+        "c:/code/ui-html/node_modules/@oclif/parser/lib/flags.d.ts",
+        "c:/code/ui-html/node_modules/@oclif/parser/lib/metadata.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@oclif/parser/lib/help.d.ts": [
+        "c:/code/ui-html/node_modules/@oclif/parser/lib/flags.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@oclif/parser/lib/index.d.ts": [
+        "c:/code/ui-html/node_modules/@oclif/parser/lib/args.d.ts",
+        "c:/code/ui-html/node_modules/@oclif/parser/lib/parse.d.ts",
+        "c:/code/ui-html/node_modules/@oclif/parser/lib/flags.d.ts",
+        "c:/code/ui-html/node_modules/@oclif/parser/lib/help.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@oclif/config/lib/command.d.ts": [
+        "c:/code/ui-html/node_modules/@oclif/parser/lib/index.d.ts",
+        "c:/code/ui-html/node_modules/@oclif/config/lib/index.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@oclif/config/lib/hooks.d.ts": [
+        "c:/code/ui-html/node_modules/@oclif/config/lib/index.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@oclif/config/lib/pjson.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@oclif/config/lib/manifest.d.ts": [
+        "c:/code/ui-html/node_modules/@oclif/config/lib/command.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@oclif/config/lib/topic.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@oclif/config/lib/plugin.d.ts": [
+        "c:/code/ui-html/node_modules/@oclif/config/lib/command.d.ts",
+        "c:/code/ui-html/node_modules/@oclif/config/lib/manifest.d.ts",
+        "c:/code/ui-html/node_modules/@oclif/config/lib/pjson.d.ts",
+        "c:/code/ui-html/node_modules/@oclif/config/lib/topic.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@oclif/config/lib/config.d.ts": [
+        "c:/code/ui-html/node_modules/@oclif/config/lib/command.d.ts",
+        "c:/code/ui-html/node_modules/@oclif/config/lib/hooks.d.ts",
+        "c:/code/ui-html/node_modules/@oclif/config/lib/pjson.d.ts",
+        "c:/code/ui-html/node_modules/@oclif/config/lib/plugin.d.ts",
+        "c:/code/ui-html/node_modules/@oclif/config/lib/topic.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@oclif/config/lib/index.d.ts": [
+        "c:/code/ui-html/node_modules/@oclif/config/lib/config.d.ts",
+        "c:/code/ui-html/node_modules/@oclif/config/lib/command.d.ts",
+        "c:/code/ui-html/node_modules/@oclif/config/lib/hooks.d.ts",
+        "c:/code/ui-html/node_modules/@oclif/config/lib/manifest.d.ts",
+        "c:/code/ui-html/node_modules/@oclif/config/lib/pjson.d.ts",
+        "c:/code/ui-html/node_modules/@oclif/config/lib/plugin.d.ts",
+        "c:/code/ui-html/node_modules/@oclif/config/lib/topic.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@oclif/command/lib/flags.d.ts": [
+        "c:/code/ui-html/node_modules/@oclif/config/lib/index.d.ts",
+        "c:/code/ui-html/node_modules/@oclif/parser/lib/index.d.ts",
+        "c:/code/ui-html/node_modules/@oclif/parser/lib/flags.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@oclif/command/lib/command.d.ts": [
+        "c:/code/ui-html/node_modules/@oclif/config/lib/index.d.ts",
+        "c:/code/ui-html/node_modules/@oclif/parser/lib/index.d.ts",
+        "c:/code/ui-html/node_modules/@oclif/command/lib/flags.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@oclif/command/lib/main.d.ts": [
+        "c:/code/ui-html/node_modules/@oclif/config/lib/index.d.ts",
+        "c:/code/ui-html/node_modules/@oclif/command/lib/index.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@oclif/command/lib/index.d.ts": [
+        "c:/code/ui-html/node_modules/@oclif/command/lib/command.d.ts",
+        "c:/code/ui-html/node_modules/@oclif/command/lib/flags.d.ts",
+        "c:/code/ui-html/node_modules/@oclif/command/lib/main.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/src/commands/generate.ts": [
+        "c:/code/ui-html/node_modules/@oclif/parser/lib/flags.d.ts",
+        "c:/code/ui-html/node_modules/@oclif/command/lib/index.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@babel/types/lib/index.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/babel__generator/index.d.ts": [
+        "c:/code/ui-html/node_modules/@babel/types/lib/index.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/babel__traverse/index.d.ts": [
+        "c:/code/ui-html/node_modules/@babel/types/lib/index.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@babel/parser/typings/babel-parser.d.ts": [
+        "c:/code/ui-html/node_modules/@babel/types/lib/index.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/babel__template/index.d.ts": [
+        "c:/code/ui-html/node_modules/@babel/parser/typings/babel-parser.d.ts",
+        "c:/code/ui-html/node_modules/@babel/types/lib/index.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/babel__core/index.d.ts": [
+        "c:/code/ui-html/node_modules/@types/babel__generator/index.d.ts",
+        "c:/code/ui-html/node_modules/@types/babel__traverse/index.d.ts",
+        "c:/code/ui-html/node_modules/@types/babel__template/index.d.ts",
+        "c:/code/ui-html/node_modules/@babel/types/lib/index.d.ts",
+        "c:/code/ui-html/node_modules/@babel/parser/typings/babel-parser.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/globals.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/assert.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/async_hooks.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/buffer.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/child_process.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/events.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/stream.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/net.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/cluster.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/child_process.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/events.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/net.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/console.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/constants.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/crypto.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/stream.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/dgram.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/net.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/dns.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/events.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/dns.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/domain.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/events.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/events.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/fs.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/stream.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/events.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/url.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/http.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/events.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/net.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/stream.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/url.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/http2.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/events.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/fs.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/net.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/stream.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/tls.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/url.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/http.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/https.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/tls.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/events.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/http.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/url.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/inspector.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/events.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/module.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/net.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/stream.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/events.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/dns.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/os.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/path.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/perf_hooks.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/async_hooks.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/process.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/punycode.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/querystring.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/readline.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/events.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/stream.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/repl.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/readline.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/vm.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/stream.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/events.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/string_decoder.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/timers.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/tls.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/crypto.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/dns.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/net.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/stream.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/trace_events.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/tty.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/net.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/url.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/querystring.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/util.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/v8.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/vm.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/worker_threads.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/events.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/stream.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/zlib.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/stream.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/base.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/globals.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/assert.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/async_hooks.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/buffer.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/child_process.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/cluster.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/console.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/constants.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/crypto.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/dgram.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/dns.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/domain.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/events.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/fs.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/http.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/http2.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/https.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/inspector.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/module.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/net.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/os.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/path.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/perf_hooks.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/process.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/punycode.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/querystring.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/readline.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/repl.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/stream.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/string_decoder.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/timers.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/tls.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/trace_events.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/tty.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/url.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/v8.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/vm.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/worker_threads.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/zlib.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/ts3.2/globals.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/globals.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/node/ts3.2/index.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/base.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/globals.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/clean-css/index.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/https.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/http.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/index.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/uglify-js/node_modules/source-map/source-map.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/uglify-js/index.d.ts": [
+        "c:/code/ui-html/node_modules/@types/uglify-js/node_modules/source-map/source-map.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/relateurl/index.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/html-minifier/index.d.ts": [
+        "c:/code/ui-html/node_modules/@types/uglify-js/index.d.ts",
+        "c:/code/ui-html/node_modules/@types/clean-css/index.d.ts",
+        "c:/code/ui-html/node_modules/@types/relateurl/index.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/istanbul-lib-coverage/index.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/jest-diff/index.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/jest-diff/build/types.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/jest-diff/build/index.d.ts": [
+        "c:/code/ui-html/node_modules/jest-diff/build/types.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/jest/index.d.ts": [
+        "c:/code/ui-html/node_modules/jest-diff/build/index.d.ts",
+        "c:/code/ui-html/node_modules/@types/jest-diff/index.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/stack-utils/index.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/code/ui-html/node_modules/@types/yargs/index.d.ts": [
+        "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+        "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts"
+      ]
+    },
+    "semanticDiagnosticsPerFile": [
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es6.d.ts",
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es5.d.ts",
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2015.d.ts",
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2016.d.ts",
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2017.d.ts",
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2018.d.ts",
+      "c:/code/ui-html/node_modules/typescript/lib/lib.dom.d.ts",
+      "c:/code/ui-html/node_modules/typescript/lib/lib.dom.iterable.d.ts",
+      "c:/code/ui-html/node_modules/typescript/lib/lib.webworker.importscripts.d.ts",
+      "c:/code/ui-html/node_modules/typescript/lib/lib.scripthost.d.ts",
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2015.core.d.ts",
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2015.collection.d.ts",
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2015.generator.d.ts",
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2015.iterable.d.ts",
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2015.promise.d.ts",
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2015.proxy.d.ts",
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2015.reflect.d.ts",
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2015.symbol.d.ts",
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts",
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2016.array.include.d.ts",
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2017.object.d.ts",
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts",
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2017.string.d.ts",
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2017.intl.d.ts",
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2017.typedarrays.d.ts",
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2018.asynciterable.d.ts",
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2018.intl.d.ts",
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2018.promise.d.ts",
+      "c:/code/ui-html/node_modules/typescript/lib/lib.es2018.regexp.d.ts",
+      "c:/code/ui-html/node_modules/typescript/lib/lib.esnext.intl.d.ts",
+      "c:/code/ui-html/node_modules/typescript/lib/lib.esnext.bigint.d.ts",
+      "c:/code/ui-html/node_modules/tslib/tslib.d.ts",
+      "c:/code/ui-html/node_modules/concordialang-ui-core/dist/interfaces/ast-mappings/document.d.ts",
+      "c:/code/ui-html/node_modules/concordialang-ui-core/dist/interfaces/ast-mappings/ui-element.d.ts",
+      "c:/code/ui-html/node_modules/concordialang-ui-core/dist/interfaces/ast-mappings/feature.d.ts",
+      "c:/code/ui-html/node_modules/concordialang-ui-core/dist/interfaces/ast-mappings/index.d.ts",
+      "c:/code/ui-html/node_modules/concordialang-ui-core/dist/interfaces/prototyper.d.ts",
+      "c:/code/ui-html/node_modules/concordialang-ui-core/dist/interfaces/process-result.d.ts",
+      "c:/code/ui-html/node_modules/concordialang-ui-core/dist/interfaces/index.d.ts",
+      "c:/code/ui-html/node_modules/concordialang-ui-core/dist/ast-processor.d.ts",
+      "c:/code/ui-html/node_modules/concordialang-ui-core/dist/classes/widget.d.ts",
+      "c:/code/ui-html/node_modules/concordialang-ui-core/dist/classes/index.d.ts",
+      "c:/code/ui-html/node_modules/concordialang-ui-core/dist/utils/create-file.d.ts",
+      "c:/code/ui-html/node_modules/concordialang-ui-core/dist/utils/index.d.ts",
+      "c:/code/ui-html/node_modules/concordialang-ui-core/dist/index.d.ts",
+      "c:/code/ui-html/src/widgets/prop.ts",
+      "c:/code/ui-html/src/widgets/button.ts",
+      "c:/code/ui-html/src/widgets/input.ts",
+      "c:/code/ui-html/src/widgets/widget-factory.ts",
+      "c:/code/ui-html/src/generator.ts",
+      "c:/code/ui-html/src/index.ts",
+      "c:/code/ui-html/node_modules/@oclif/parser/lib/args.d.ts",
+      "c:/code/ui-html/node_modules/@oclif/parser/lib/alphabet.d.ts",
+      "c:/code/ui-html/node_modules/@oclif/parser/lib/flags.d.ts",
+      "c:/code/ui-html/node_modules/@oclif/parser/lib/metadata.d.ts",
+      "c:/code/ui-html/node_modules/@oclif/parser/lib/parse.d.ts",
+      "c:/code/ui-html/node_modules/@oclif/parser/lib/help.d.ts",
+      "c:/code/ui-html/node_modules/@oclif/parser/lib/index.d.ts",
+      "c:/code/ui-html/node_modules/@oclif/config/lib/command.d.ts",
+      "c:/code/ui-html/node_modules/@oclif/config/lib/hooks.d.ts",
+      "c:/code/ui-html/node_modules/@oclif/config/lib/pjson.d.ts",
+      "c:/code/ui-html/node_modules/@oclif/config/lib/manifest.d.ts",
+      "c:/code/ui-html/node_modules/@oclif/config/lib/topic.d.ts",
+      "c:/code/ui-html/node_modules/@oclif/config/lib/plugin.d.ts",
+      "c:/code/ui-html/node_modules/@oclif/config/lib/config.d.ts",
+      "c:/code/ui-html/node_modules/@oclif/config/lib/index.d.ts",
+      "c:/code/ui-html/node_modules/@oclif/command/lib/flags.d.ts",
+      "c:/code/ui-html/node_modules/@oclif/command/lib/command.d.ts",
+      "c:/code/ui-html/node_modules/@oclif/command/lib/main.d.ts",
+      "c:/code/ui-html/node_modules/@oclif/command/lib/index.d.ts",
+      "c:/code/ui-html/src/commands/generate.ts",
+      "c:/code/ui-html/node_modules/@babel/types/lib/index.d.ts",
+      "c:/code/ui-html/node_modules/@types/babel__generator/index.d.ts",
+      "c:/code/ui-html/node_modules/@types/babel__traverse/index.d.ts",
+      "c:/code/ui-html/node_modules/@babel/parser/typings/babel-parser.d.ts",
+      "c:/code/ui-html/node_modules/@types/babel__template/index.d.ts",
+      "c:/code/ui-html/node_modules/@types/babel__core/index.d.ts",
+      "c:/code/ui-html/node_modules/@types/node/globals.d.ts",
+      "c:/code/ui-html/node_modules/@types/node/assert.d.ts",
+      "c:/code/ui-html/node_modules/@types/node/async_hooks.d.ts",
+      "c:/code/ui-html/node_modules/@types/node/buffer.d.ts",
+      "c:/code/ui-html/node_modules/@types/node/child_process.d.ts",
+      "c:/code/ui-html/node_modules/@types/node/cluster.d.ts",
+      "c:/code/ui-html/node_modules/@types/node/console.d.ts",
+      "c:/code/ui-html/node_modules/@types/node/constants.d.ts",
+      "c:/code/ui-html/node_modules/@types/node/crypto.d.ts",
+      "c:/code/ui-html/node_modules/@types/node/dgram.d.ts",
+      "c:/code/ui-html/node_modules/@types/node/dns.d.ts",
+      "c:/code/ui-html/node_modules/@types/node/domain.d.ts",
+      "c:/code/ui-html/node_modules/@types/node/events.d.ts",
+      "c:/code/ui-html/node_modules/@types/node/fs.d.ts",
+      "c:/code/ui-html/node_modules/@types/node/http.d.ts",
+      "c:/code/ui-html/node_modules/@types/node/http2.d.ts",
+      "c:/code/ui-html/node_modules/@types/node/https.d.ts",
+      "c:/code/ui-html/node_modules/@types/node/inspector.d.ts",
+      "c:/code/ui-html/node_modules/@types/node/module.d.ts",
+      "c:/code/ui-html/node_modules/@types/node/net.d.ts",
+      "c:/code/ui-html/node_modules/@types/node/os.d.ts",
+      "c:/code/ui-html/node_modules/@types/node/path.d.ts",
+      "c:/code/ui-html/node_modules/@types/node/perf_hooks.d.ts",
+      "c:/code/ui-html/node_modules/@types/node/process.d.ts",
+      "c:/code/ui-html/node_modules/@types/node/punycode.d.ts",
+      "c:/code/ui-html/node_modules/@types/node/querystring.d.ts",
+      "c:/code/ui-html/node_modules/@types/node/readline.d.ts",
+      "c:/code/ui-html/node_modules/@types/node/repl.d.ts",
+      "c:/code/ui-html/node_modules/@types/node/stream.d.ts",
+      "c:/code/ui-html/node_modules/@types/node/string_decoder.d.ts",
+      "c:/code/ui-html/node_modules/@types/node/timers.d.ts",
+      "c:/code/ui-html/node_modules/@types/node/tls.d.ts",
+      "c:/code/ui-html/node_modules/@types/node/trace_events.d.ts",
+      "c:/code/ui-html/node_modules/@types/node/tty.d.ts",
+      "c:/code/ui-html/node_modules/@types/node/url.d.ts",
+      "c:/code/ui-html/node_modules/@types/node/util.d.ts",
+      "c:/code/ui-html/node_modules/@types/node/v8.d.ts",
+      "c:/code/ui-html/node_modules/@types/node/vm.d.ts",
+      "c:/code/ui-html/node_modules/@types/node/worker_threads.d.ts",
+      "c:/code/ui-html/node_modules/@types/node/zlib.d.ts",
+      "c:/code/ui-html/node_modules/@types/node/base.d.ts",
+      "c:/code/ui-html/node_modules/@types/node/ts3.2/util.d.ts",
+      "c:/code/ui-html/node_modules/@types/node/ts3.2/globals.d.ts",
+      "c:/code/ui-html/node_modules/@types/node/ts3.2/index.d.ts",
+      "c:/code/ui-html/node_modules/@types/clean-css/index.d.ts",
+      "c:/code/ui-html/node_modules/@types/uglify-js/node_modules/source-map/source-map.d.ts",
+      "c:/code/ui-html/node_modules/@types/uglify-js/index.d.ts",
+      "c:/code/ui-html/node_modules/@types/relateurl/index.d.ts",
+      "c:/code/ui-html/node_modules/@types/html-minifier/index.d.ts",
+      "c:/code/ui-html/node_modules/@types/istanbul-lib-coverage/index.d.ts",
+      "c:/code/ui-html/node_modules/@types/jest-diff/index.d.ts",
+      "c:/code/ui-html/node_modules/jest-diff/build/types.d.ts",
+      "c:/code/ui-html/node_modules/jest-diff/build/index.d.ts",
+      "c:/code/ui-html/node_modules/@types/jest/index.d.ts",
+      "c:/code/ui-html/node_modules/@types/stack-utils/index.d.ts",
+      "c:/code/ui-html/node_modules/@types/yargs/index.d.ts"
+    ]
+  },
+  "version": "3.4.2"
+}
