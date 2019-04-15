@@ -1,1 +1,49 @@
-{"version":"0.1.0","commands":{"generate":{"id":"generate","description":"Generate html files","pluginName":"concordialang-ui-html","pluginType":"core","aliases":[],"flags":{"help":{"name":"help","type":"boolean","char":"h","description":"show CLI help","allowNo":false},"features":{"name":"features","type":"option","description":"processed features from ast"}},"args":[]}}}
+{
+	"version": "0.1.0",
+	"commands": {
+		"generate": {
+			"id": "generate",
+			"description": "Generate html files",
+			"pluginName": "concordialang-ui-html",
+			"pluginType": "core",
+			"aliases": [],
+			"flags": {
+				"help": {
+					"name": "help",
+					"type": "boolean",
+					"char": "h",
+					"description": "show CLI help",
+					"allowNo": false
+				},
+				"features": {
+					"name": "features",
+					"type": "option",
+					"description": "processed features from ast"
+				}
+			},
+			"args": []
+		},
+		"": {
+			"id": "",
+			"description": "Generate html files",
+			"pluginName": "concordialang-ui-html",
+			"pluginType": "core",
+			"aliases": [],
+			"flags": {
+				"help": {
+					"name": "help",
+					"type": "boolean",
+					"char": "h",
+					"description": "show CLI help",
+					"allowNo": false
+				},
+				"features": {
+					"name": "features",
+					"type": "option",
+					"description": "processed features from ast"
+				}
+			},
+			"args": []
+		}
+	}
+}
