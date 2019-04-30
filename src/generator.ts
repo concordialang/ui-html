@@ -1,6 +1,7 @@
-import { Feature, Prototyper, Widget } from 'concordialang-ui-core'
+import { createFile, Feature, Prototyper, Widget } from 'concordialang-ui-core'
 import * as fs from 'fs'
 import { promisify } from 'util'
+const pretty = require('pretty')
 
 import WidgetFactory from './widgets/widget-factory'
 
@@ -14,33 +15,22 @@ export default class Generator implements Prototyper {
     let createFilePromises: Promise<string>[] = []
 
     for (let feature of features) {
-      const widgets: Widget[] = []
-
-      for (let element of feature.uiElements) {
-        const widget = factory.create(element)
-        widgets.push(widget)
-      }
-
-      const createFilePromise: Promise<string> = this.createHtmlFile(feature.name, widgets)
-      createFilePromises.push(createFilePromise)
+      const elements: Widget[] = feature.uiElements.map(uiElement => (factory.create(uiElement)))
+      createFilePromises.push(this.createHtmlFile(feature.name, elements))
     }
 
     return Promise.all(createFilePromises)
   }
 
   private async createHtmlFile(fileName: string, widgets: Widget[]): Promise<string> {
+    const fileExtension = '.html'
 
-    //TODO format content
     let content = widgets.reduce((result, widget) => {
       return result + widget.renderToString() + '\n'
     }, '')
 
-    content = `<div>${content}</div>`
+    content = pretty(`<div>\n${content}</div>`, {ocd: true})
 
-    const writeF = promisify(this._fs.writeFile)
-    const fullName = fileName + '.html'
-    await writeF(fullName, content)
-    return fullName
+    return createFile(fileName, content, fileExtension)
   }
-
 }
