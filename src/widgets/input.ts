@@ -23,7 +23,7 @@ export class Input extends Widget {
     const inputType = this.getType(this.props.datatype as string)
     const properties = formatProperties(this.props, this.VALID_PROPERTIES)
     const label = (this.name) ? `<label for="${this.name}">${this.name}</label>` : ''
-    return `${label} <input ${inputType} ${properties}/>`
+    return `${label}<input ${inputType}${properties}/>`
   }
 
   private getType(datatype: string): string {
