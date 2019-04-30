@@ -8,5 +8,6 @@ export function formatProperties(props: any, validProperties: string[]): string 
             : result
     }
 
-    return Object.keys(props).reduce(formatValid, '')
+    const output = Object.keys(props).reduce(formatValid, '').trim()
+    return output ? ` ${output}` : ''
 }

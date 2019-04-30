@@ -41,7 +41,7 @@ describe('Generator', () => {
         expect(produced).toEqual(expected)
     }
 
-    it('produces an HTML file from a single button', async () => {
+    it('produces an HTML file from features', async () => {
         const features: Feature[] = [  /* something here */ ]
         const htmls: string[] = [ /* put the expected html here */];
         await expectFeaturesToProduceHtml(features, htmls)
