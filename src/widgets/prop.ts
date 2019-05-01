@@ -4,9 +4,10 @@ export function formatProperties(props: any, validProperties: string[]): string 
 
     const formatValid = function (result: string, key: string) {
         return validProperties.includes(key)
-            ? result + getFormattedProp(key)
+            ? `${result} ${getFormattedProp(key)}`
             : result
     }
 
-    return Object.keys(props).reduce(formatValid, '')
+    const output = Object.keys(props).reduce(formatValid, ' ').trim()
+    return (output && ` ${output}`) || ''
 }

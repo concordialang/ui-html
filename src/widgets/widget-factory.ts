@@ -14,7 +14,7 @@ export default class WidgetFactory {
     switch (element.widget) {
       case WIDGETS.TEXTBOX: return new Input(element.props, element.name)
       case WIDGETS.BUTTON: return new Button(element.props, element.name)
-      default: return new Input(null)
+      default: throw new Error('Invalid widget type')
     }
   }
 
