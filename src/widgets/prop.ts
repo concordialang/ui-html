@@ -2,12 +2,11 @@ export function formatProperties(props: any, validProperties: string[]): string 
 
     const getFormattedProp = (key: string) => `${key}="${props[key]}"`
 
-    const formatValid = function (result: string, key: string) {
-        return validProperties.includes(key)
-            ? `${result} ${getFormattedProp(key)}`
+	const formatValid = (result: string, prop: string) => {
+        return validProperties.includes(prop)
+            ? result + getFormattedProp(prop) + ' '
             : result
     }
 
-    const output = Object.keys(props).reduce(formatValid, ' ').trim()
-    return (output && ` ${output}`) || ''
+    return Object.keys(props).reduce(formatValid, '').trimRight()
 }

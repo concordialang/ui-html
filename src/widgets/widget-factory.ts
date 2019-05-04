@@ -2,20 +2,21 @@ import {UiElement, Widget} from 'concordialang-ui-core'
 
 import {Button} from './button'
 import {Input} from './input'
+import {Checkbox} from './checkbox'
 
-const enum WIDGETS {
-  BUTTON = 'button',
-  TEXTBOX = 'textbox'
+const enum Widgets {
+	BUTTON = 'button',
+	TEXTBOX = 'textbox',
+	CHECKBOX = 'checkbox'
 }
 
 export default class WidgetFactory {
-
-  create(element: UiElement): Widget {
-    switch (element.widget) {
-      case WIDGETS.TEXTBOX: return new Input(element.props, element.name)
-      case WIDGETS.BUTTON: return new Button(element.props, element.name)
-      default: throw new Error('Invalid widget type')
-    }
-  }
-
+	create(element: UiElement): Widget {
+		switch (element.widget) {
+			case Widgets.TEXTBOX: return new Input(element.props, element.name)
+			case Widgets.BUTTON: return new Button(element.props, element.name)
+			case Widgets.CHECKBOX: return new Checkbox(element.props, element.name)
+			default: throw new Error('Invalid widget type')
+		}
+	}
 }

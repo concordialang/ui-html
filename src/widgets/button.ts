@@ -3,7 +3,6 @@ import {Widget} from 'concordialang-ui-core'
 import {formatProperties} from './prop'
 
 export class Button extends Widget {
-  // private readonly DATA_TYPES = ['button', 'submit', 'reset']
   private readonly VALID_PROPERTIES = ['id', 'disabled', 'value']
 
   constructor(props: any, name?: string) {
