@@ -22,7 +22,7 @@ export default class WidgetFactory {
 			case Widgets.CHECKBOX: return new Checkbox(element.props, element.name)
 			case Widgets.RADIO: return new Radio(element.props, element.name)
 			case Widgets.SELECT: return new Select(element.props, element.name)
-			default: throw new Error('Invalid widget type')
+			default: throw new Error(`Invalid widget type: ${element.widget}`)
 		}
 	}
 }
