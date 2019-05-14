@@ -21,7 +21,7 @@ describe('Checkbox', () => {
 
         it('without properties', () => {
             const inputWidget: Checkbox = subject()
-            expect(inputWidget.renderToString()).toEqual(expect.stringContaining('<input type="checkbox"/>'))
+            expect(inputWidget.renderToString()).toEqual(expect.stringContaining('<input type="checkbox">'))
         })
 
 		it('surrounds the input with a div', () => {
@@ -33,13 +33,13 @@ describe('Checkbox', () => {
         it('produces html from an input element with name', async () => {
 			const inputWidget: Checkbox = subject(defaultProps)
 			const result = inputWidget.renderToString()
-            expect(result).toEqual(expect.stringContaining('<input type="checkbox" value="web_developer"/>Web Developer'))
+            expect(result).toEqual(expect.stringContaining('<input type="checkbox" value="web_developer">Web Developer'))
         })
 
         it('produces html from an input element without name', async () => {
 			const inputWidget: Checkbox = subject({ ...defaultProps, name: undefined })
 			const result = inputWidget.renderToString()
-			expect(result).toEqual(expect.stringMatching('<input type="checkbox" value="web_developer"/>\n'))
+			expect(result).toEqual(expect.stringMatching('<input type="checkbox" value="web_developer">\n'))
         })
 	})
 })
