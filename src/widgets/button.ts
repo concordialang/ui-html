@@ -10,9 +10,10 @@ export class Button extends Widget {
   }
 
   public renderToString(): string {
-    const inputType = this.getType(this.props.datatype as string)
+    // const inputType = this.getType(this.props.datatype as string)
     const properties = formatProperties(this.props, this.VALID_PROPERTIES)
-    return `<button ${inputType}${properties}>${this.name}</button>`
+    // return `<button ${inputType}${properties}>${this.name}</button>`
+    return `<button ${properties}>${this.name}</button>`
   }
 
   private getType(datatype: string): string {
