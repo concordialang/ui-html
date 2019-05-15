@@ -29,7 +29,7 @@ export default class Generator implements Prototyper {
       return result + widget.renderToString() + '\n'
     }, '')
 
-    content = pretty(`<div>\n${content}</div>`, {ocd: true})
+    content = pretty(`<form>\n${content}</form>`, {ocd: true})
 
     return createFile(fileName, content, fileExtension)
   }
