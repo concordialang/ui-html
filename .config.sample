@@ -1,0 +1,14 @@
+{
+  cssDir: 'path/to/css/files',
+  cssFiles: ['./file.css', 'http://cdn/file.css'],
+  wrapperClasses: {
+    label: ['class_name', 'class_name_2']
+    input: ['class_name', 'class_name_2'],
+    checkbox: ['class_checkbox']
+  },
+  widgetClasses: {
+    label: ['class_name', 'class_name_2']
+    input: ['class_name', 'class_name_2'],
+    checkbox: ['class_checkbox']
+  }
+}

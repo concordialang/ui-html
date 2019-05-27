@@ -1,6 +1,6 @@
 import {Widget} from 'concordialang-ui-core'
 
-import {formatProperties} from './prop'
+import {formatProperties, createLabel} from './prop'
 
 const enum DataTypes {
 	STRING = 'string',
@@ -14,15 +14,15 @@ const enum DataTypes {
 export class Input extends Widget {
 	private readonly VALID_PROPERTIES = ['id', 'editable', 'minlength', 'maxlength', 'required', 'format']
 
-	constructor(props: any, name?: string) {
+	constructor(props: any, name: string) {
 		super(props, name)
 	}
 
 	public renderToString(): string {
 		const inputType = this.getType(this.props.datatype as string)
 		const properties = formatProperties(this.props, this.VALID_PROPERTIES)
-		const input = properties ? `<input ${inputType} ${properties}/>\n` : `<input ${inputType}/>\n`
-		const label = this.createLabel()
+		const input = properties ? `<input ${inputType} ${properties}>\n` : `<input ${inputType}>\n`
+		const label = createLabel(this.name, this.props.id.toString())
 		return `<div>\n${label + input}</div>`
 	}
 
@@ -39,11 +39,5 @@ export class Input extends Widget {
 			case DataTypes.DATETIME: return 'datetime-local'
 		}
 		return 'text'
-	}
-
-	private createLabel(): string {
-		if (!this.name) return ''
-		if (this.props.id) return `<label for="${this.props.id}">${this.name}</label>\n`
-		return `<label>${this.name}</label>\n`
 	}
 }

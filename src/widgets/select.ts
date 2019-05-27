@@ -1,12 +1,12 @@
 import {Widget} from 'concordialang-ui-core'
 
-import {formatProperties} from './prop'
+import {formatProperties, createLabel} from './prop'
 
 export class Select extends Widget {
-	private readonly VALID_PROPERTIES = ['id']
+	private readonly VALID_PROPERTIES = ['id', 'required']
 
-	constructor(props: any, name?: string) {
-		super(props, name || '')
+	constructor(props: any, name: string) {
+		super(props, name)
 	}
 
 	public renderToString(): string {
@@ -14,22 +14,16 @@ export class Select extends Widget {
 		if (!properties) return '<div>\n<select></select>\n</div>'
 		const options = this.getOptions()
 		const select = `<select ${properties}>\n${options}\n</select>\n`
-		const label = this.createLabel()
+		const label = createLabel(this.name, this.props.id.toString())
 		return `<div>\n${label + select}</div>`
 	}
 
 	private getOptions(): string {
 		let options: string[] = []
-		for (let value of this.props.value) {
+		for (let value of this.props.value as Array<string>) {
 			let option = `<option value="${value.toLowerCase()}">${value}</option>`
 			options.push(option)
 		}
 		return options.join('\n')
-	}
-
-	private createLabel(): string {
-		if (!this.name) return ''
-		if (this.props.id) return `<label for="${this.props.id}">${this.name}</label>\n`
-		return `<label>${this.name}</label>\n`
 	}
 }
