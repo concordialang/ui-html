@@ -1,13 +1,11 @@
 import { createFile, Feature, Prototyper, Widget } from 'concordialang-ui-core'
-import * as fs from 'fs'
 import { promisify } from 'util'
 const pretty = require('pretty')
 
 import WidgetFactory from './widgets/widget-factory'
 
 export default class Generator implements Prototyper {
-
-  constructor(private _fs: any = fs) {
+  constructor(private _outputDir: string) {
   }
 
   public async generate(features: Feature[]): Promise<string[]> {
@@ -31,6 +29,6 @@ export default class Generator implements Prototyper {
 
     content = pretty(`<form>\n${content}</form>`, {ocd: true})
 
-    return createFile(fileName, content, fileExtension)
+    return createFile(this._outputDir, fileName, content, fileExtension)
   }
 }
