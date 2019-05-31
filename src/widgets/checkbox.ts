@@ -5,8 +5,8 @@ import {formatProperties} from './prop'
 export class Checkbox extends Widget {
 	private readonly VALID_PROPERTIES = ['value', 'required']
 
-	constructor(props: any, name?: string) {
-		super(props, name || '')
+	constructor(props: any, name: string) {
+		super(props, name)
 	}
 
 	public renderToString(): string {
