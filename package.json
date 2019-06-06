@@ -72,7 +72,7 @@
 	"dependencies": {
 		"@oclif/command": "^1.5.12",
 		"@oclif/config": "^1.12.12",
-		"concordialang-ui-core": "^0.2.0",
+		"concordialang-ui-core": "^0.2.2",
 		"pretty": "^2.0.0",
 		"tslib": "^1.9.3"
 	},
