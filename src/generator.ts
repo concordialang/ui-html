@@ -30,6 +30,7 @@ export default class Generator implements Prototyper {
 		content = pretty(`<form>\n${content}</form>`, {ocd: true})
 
 		const path = format({ dir: this._outputDir, name: fileName, ext: '.html' })
-		return promisify(fs.writeFile)(path, content).then(() => (path))
+		await promisify(fs.writeFile)(path, content)
+		return path
 	}
 }
