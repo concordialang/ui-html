@@ -4,8 +4,11 @@ const tslib_1 = require('tslib')
 const fs = require('fs')
 const util_1 = require('util')
 const path_1 = require('path')
-const pretty = require('pretty')
+const prettier = require('prettier')
+const cosmiconfig = require('cosmiconfig')
 const widget_factory_1 = require('./widgets/widget-factory')
+// TODO: use "export default"
+const config_loader_1 = require('./utils/config_loader')
 class Generator {
 	constructor(_fs = fs, _outputDir) {
 		this._fs = _fs
@@ -13,7 +16,12 @@ class Generator {
 	}
 	generate(features) {
 		return tslib_1.__awaiter(this, void 0, void 0, function*() {
-			const factory = new widget_factory_1.default()
+			// search for a ".configrc.json"
+			// TODO: replace "config" with the CLI name
+			const explorer = cosmiconfig('config')
+			let config = explorer.searchSync()
+			const configLoader = new config_loader_1.ConfigLoader(config)
+			const factory = new widget_factory_1.default(configLoader)
 			let createFilePromises = []
 			for (let feature of features) {
 				const elements = feature.uiElements.map(uiElement =>
@@ -29,9 +37,12 @@ class Generator {
 	createHtmlFile(fileName, widgets) {
 		return tslib_1.__awaiter(this, void 0, void 0, function*() {
 			let content = widgets.reduce((result, widget) => {
-				return result + widget.renderToString() + '\n'
+				return result + widget.renderToString()
 			}, '')
-			content = pretty(`<form>\n${content}</form>`, { ocd: true })
+			content = prettier.format(`<form>\n${content}</form>`, {
+				parser: 'html',
+				htmlWhitespaceSensitivity: 'ignore',
+			})
 			const path = path_1.format({
 				dir: this._outputDir,
 				name: fileName,

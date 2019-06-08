@@ -1,6 +1,6 @@
 import {Widget} from 'concordialang-ui-core'
 
-import {formatProperties} from './prop'
+import {formatProperties} from '../utils'
 
 export class Button extends Widget {
   private readonly VALID_PROPERTIES = ['id', 'disabled', 'value']

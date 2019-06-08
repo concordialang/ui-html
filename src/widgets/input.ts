@@ -1,6 +1,14 @@
-import {Widget} from 'concordialang-ui-core'
+import { Widget } from 'concordialang-ui-core'
+import { get } from 'lodash';
 
-import {formatProperties, createLabel} from './prop'
+import { formatProperties, createLabel } from '../utils'
+import {
+	WidgetConfig,
+	WIDGET_OPENING,
+	WIDGET_CLOSURE,
+	WIDGET_WRAPPER_OPENING,
+	WIDGET_WRAPPER_CLOSURE
+} from '../interfaces/custom_config'
 
 const enum DataTypes {
 	STRING = 'string',
@@ -14,30 +22,46 @@ const enum DataTypes {
 export class Input extends Widget {
 	private readonly VALID_PROPERTIES = ['id', 'editable', 'minlength', 'maxlength', 'required', 'format']
 
-	constructor(props: any, name: string) {
+	constructor(props: any, name: string, private _customDefinition?: WidgetConfig) {
 		super(props, name)
 	}
 
 	public renderToString(): string {
-		const inputType = this.getType(this.props.datatype as string)
-		const properties = formatProperties(this.props, this.VALID_PROPERTIES)
-		const input = properties ? `<input ${inputType} ${properties}>\n` : `<input ${inputType}>\n`
+		const input = this.createInput()
 		const label = createLabel(this.name, this.props.id.toString())
-		return `<div>\n${label + input}</div>`
+		return this.wrap(label + input)
+	}
+
+	private createInput(): string {
+		const inputType = this.getType(this.props.datatype as string)
+		const inputOpening = get(this._customDefinition, WIDGET_OPENING, 'input')
+		const inputClosure = get(this._customDefinition, WIDGET_CLOSURE)
+		const properties = formatProperties(this.props, this.VALID_PROPERTIES)
+
+		if (inputClosure) {
+			return `<${inputOpening} ${inputType} ${properties}></${inputClosure}>`
+		} else {
+			return `<${inputOpening} ${inputType} ${properties}>`
+		}
+	}
+
+	private wrap(elements: string): string {
+		const wrapperOpening = get(this._customDefinition, WIDGET_WRAPPER_OPENING, '<div>')
+		const wrapperEnclosing = get(this._customDefinition, WIDGET_WRAPPER_CLOSURE, '</div>')
+		return wrapperOpening + elements + wrapperEnclosing
 	}
 
 	private getType(datatype: string): string {
-		const typeProperty = this.typeForDataType(datatype)
-		return `type="${typeProperty}"`
-	}
+		let typeProperty
 
-	private typeForDataType(datatype: string): string {
 		switch (datatype) {
 			case DataTypes.INTEGER:
-			case DataTypes.DOUBLE: return 'number'
-			case DataTypes.TIME: return 'time'
-			case DataTypes.DATETIME: return 'datetime-local'
+			case DataTypes.DOUBLE: typeProperty = 'number'; break
+			case DataTypes.TIME: typeProperty = 'time'; break
+			case DataTypes.DATETIME: typeProperty = 'datetime-local'; break
+			default: typeProperty = 'text'
 		}
-		return 'text'
+
+		return `type="${typeProperty}"`
 	}
 }

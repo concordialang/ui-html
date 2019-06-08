@@ -1,14 +1,15 @@
 'use strict'
 Object.defineProperty(exports, '__esModule', { value: true })
 const concordialang_ui_core_1 = require('concordialang-ui-core')
-const prop_1 = require('./prop')
+const utils_1 = require('../utils')
 class Checkbox extends concordialang_ui_core_1.Widget {
 	constructor(props, name) {
 		super(props, name)
 		this.VALID_PROPERTIES = ['value', 'required']
 	}
+	// TODO: remove \n
 	renderToString() {
-		const properties = prop_1.formatProperties(
+		const properties = utils_1.formatProperties(
 			this.props,
 			this.VALID_PROPERTIES
 		)

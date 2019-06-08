@@ -14,6 +14,7 @@ function formatProperties(props, validProperties) {
 		const invalidIdPattern = /^\/\//
 		if (key === 'id') {
 			let newKey = key
+			// TODO: replace test wit str.match(pattern)
 			if (!invalidIdPattern.test(value)) {
 				const validIdPattern = /^#|~/
 				const validClassPattern = /^\./
@@ -38,11 +39,3 @@ function formatProperties(props, validProperties) {
 		.trimRight()
 }
 exports.formatProperties = formatProperties
-function createLabel(name, id) {
-	const validIdPattern = /^(#|~|\d|\w).*/
-	const labelFor = validIdPattern.test(id)
-		? `for="${id.replace(/^#|~/, '')}"`
-		: ''
-	return `<label ${labelFor}>${name}</label>\n`
-}
-exports.createLabel = createLabel

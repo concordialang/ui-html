@@ -1,6 +1,6 @@
 import {Widget} from 'concordialang-ui-core'
 
-import {formatProperties, createLabel} from './prop'
+import {formatProperties, createLabel} from '../utils'
 
 export class Select extends Widget {
 	private readonly VALID_PROPERTIES = ['id', 'required']
@@ -9,6 +9,7 @@ export class Select extends Widget {
 		super(props, name)
 	}
 
+	// TODO: remove \n
 	public renderToString(): string {
 		const properties = formatProperties(this.props, this.VALID_PROPERTIES)
 		if (!properties) return '<div>\n<select></select>\n</div>'
