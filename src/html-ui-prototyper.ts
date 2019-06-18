@@ -6,10 +6,8 @@ const prettier = require('prettier')
 const cosmiconfig = require('cosmiconfig')
 
 import WidgetFactory from './widgets/widget-factory'
-// TODO: use "export default"
-import { ConfigLoader } from './utils/config_loader'
 
-export default class Generator implements Prototyper {
+export default class HtmlUIPrototyper implements Prototyper {
 	constructor(private _fs: any = fs, private _outputDir: string) {
 	}
 
@@ -19,8 +17,9 @@ export default class Generator implements Prototyper {
 		const explorer = cosmiconfig('config')
 		let config = explorer.searchSync()
 
-		const configLoader = new ConfigLoader(config)
-		const factory = new WidgetFactory(configLoader)
+		// TODO: lançar exceção se arquivo não existir
+		// TODO: extrair "config" de config
+		const factory = new WidgetFactory(config.config)
 		let createFilePromises: Promise<string>[] = []
 
 		for (let feature of features) {

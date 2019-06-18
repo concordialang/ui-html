@@ -2,7 +2,7 @@ import {Widget} from 'concordialang-ui-core'
 
 import {formatProperties, createLabel} from '../utils'
 
-export class Select extends Widget {
+export default class Select extends Widget {
 	private readonly VALID_PROPERTIES = ['id', 'required']
 
 	constructor(props: any, name: string) {

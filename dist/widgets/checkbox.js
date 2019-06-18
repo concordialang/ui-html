@@ -20,4 +20,4 @@ class Checkbox extends concordialang_ui_core_1.Widget {
 		return `<div>\n<input type="checkbox">${this.name}\n</div>`
 	}
 }
-exports.Checkbox = Checkbox
+exports.default = Checkbox

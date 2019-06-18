@@ -7,9 +7,7 @@ const path_1 = require('path')
 const prettier = require('prettier')
 const cosmiconfig = require('cosmiconfig')
 const widget_factory_1 = require('./widgets/widget-factory')
-// TODO: use "export default"
-const config_loader_1 = require('./utils/config_loader')
-class Generator {
+class HtmlUIPrototyper {
 	constructor(_fs = fs, _outputDir) {
 		this._fs = _fs
 		this._outputDir = _outputDir
@@ -20,8 +18,9 @@ class Generator {
 			// TODO: replace "config" with the CLI name
 			const explorer = cosmiconfig('config')
 			let config = explorer.searchSync()
-			const configLoader = new config_loader_1.ConfigLoader(config)
-			const factory = new widget_factory_1.default(configLoader)
+			// TODO: lançar exceção se arquivo não existir
+			// TODO: extrair "config" de config
+			const factory = new widget_factory_1.default(config.config)
 			let createFilePromises = []
 			for (let feature of features) {
 				const elements = feature.uiElements.map(uiElement =>
@@ -53,4 +52,4 @@ class Generator {
 		})
 	}
 }
-exports.default = Generator
+exports.default = HtmlUIPrototyper

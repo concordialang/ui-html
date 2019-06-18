@@ -2,7 +2,7 @@ import {Widget} from 'concordialang-ui-core'
 
 import {formatProperties} from '../utils'
 
-export class Checkbox extends Widget {
+export default class Checkbox extends Widget {
 	private readonly VALID_PROPERTIES = ['value', 'required']
 
 	constructor(props: any, name: string) {

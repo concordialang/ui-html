@@ -26,4 +26,4 @@ class Radio extends concordialang_ui_core_1.Widget {
 		return '<div>\n<input type="radio">\n</div>'
 	}
 }
-exports.Radio = Radio
+exports.default = Radio

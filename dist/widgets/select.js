@@ -28,4 +28,4 @@ class Select extends concordialang_ui_core_1.Widget {
 		return options.join('\n')
 	}
 }
-exports.Select = Select
+exports.default = Select

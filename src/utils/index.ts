@@ -1,2 +1,2 @@
 export * from './prop'
-export * from './create_label'
+export * from './create-label'

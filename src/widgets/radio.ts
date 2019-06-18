@@ -2,7 +2,7 @@ import {Widget} from 'concordialang-ui-core'
 
 import {formatProperties, createLabel} from '../utils'
 
-export class Radio extends Widget {
+export default class Radio extends Widget {
 	private readonly VALID_PROPERTIES = ['value']
 
 	constructor(props: any, name: string) {

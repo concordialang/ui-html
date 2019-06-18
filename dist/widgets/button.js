@@ -20,4 +20,4 @@ class Button extends concordialang_ui_core_1.Widget {
 		return `type="${datatype || 'button'}"`
 	}
 }
-exports.Button = Button
+exports.default = Button

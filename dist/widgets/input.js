@@ -1,13 +1,11 @@
 'use strict'
 Object.defineProperty(exports, '__esModule', { value: true })
 const concordialang_ui_core_1 = require('concordialang-ui-core')
-const lodash_1 = require('lodash')
 const utils_1 = require('../utils')
-const custom_config_1 = require('../interfaces/custom_config')
 class Input extends concordialang_ui_core_1.Widget {
-	constructor(props, name, _customDefinition) {
+	constructor(props, name, _config) {
 		super(props, name)
-		this._customDefinition = _customDefinition
+		this._config = _config
 		this.VALID_PROPERTIES = [
 			'id',
 			'editable',
@@ -18,43 +16,25 @@ class Input extends concordialang_ui_core_1.Widget {
 		]
 	}
 	renderToString() {
-		const input = this.createInput()
-		const label = utils_1.createLabel(this.name, this.props.id.toString())
-		return this.wrap(label + input)
-	}
-	createInput() {
 		const inputType = this.getType(this.props.datatype)
-		const inputOpening = lodash_1.get(
-			this._customDefinition,
-			custom_config_1.WIDGET_OPENING,
-			'input'
-		)
-		const inputClosure = lodash_1.get(
-			this._customDefinition,
-			custom_config_1.WIDGET_CLOSURE
-		)
 		const properties = utils_1.formatProperties(
 			this.props,
 			this.VALID_PROPERTIES
 		)
-		if (inputClosure) {
-			return `<${inputOpening} ${inputType} ${properties}></${inputClosure}>`
-		} else {
-			return `<${inputOpening} ${inputType} ${properties}>`
-		}
+		const input =
+			this._config.opening.replace('%s', `${inputType} ${properties}`) +
+			this._config.closure
+		const label = utils_1.createLabel(this.name, this.props.id.toString())
+		return this.wrap(label + input)
 	}
 	wrap(elements) {
-		const wrapperOpening = lodash_1.get(
-			this._customDefinition,
-			custom_config_1.WIDGET_WRAPPER_OPENING,
-			'<div>'
-		)
-		const wrapperEnclosing = lodash_1.get(
-			this._customDefinition,
-			custom_config_1.WIDGET_WRAPPER_CLOSURE,
-			'</div>'
-		)
-		return wrapperOpening + elements + wrapperEnclosing
+		if (this._config.wrapperOpening && this._config.wrapperClosure)
+			return (
+				this._config.wrapperOpening +
+				elements +
+				this._config.wrapperClosure
+			)
+		return elements
 	}
 	getType(datatype) {
 		let typeProperty
@@ -75,4 +55,4 @@ class Input extends concordialang_ui_core_1.Widget {
 		return `type="${typeProperty}"`
 	}
 }
-exports.Input = Input
+exports.default = Input

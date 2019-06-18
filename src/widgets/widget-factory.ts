@@ -1,11 +1,12 @@
 import {UiElement, Widget} from 'concordialang-ui-core'
+import { get } from 'lodash';
 
-import {Button} from './button'
-import {Input} from './input'
-import {Checkbox} from './checkbox'
-import {Radio} from './radio'
-import {Select} from './select'
-import {ConfigLoader} from '../utils/config_loader'
+import Button from './button'
+import Input from './input'
+import Checkbox from './checkbox'
+import Radio from './radio'
+import Select from './select'
+import { AppConfig, WidgetConfig } from '../interfaces/app-config'
 
 const enum Widgets {
 	BUTTON = 'button',
@@ -16,9 +17,7 @@ const enum Widgets {
 }
 
 export default class WidgetFactory {
-	// criar uma classe "ConfigLoader" que recebe "config" no construtor
-	// criar uma interface para "config"
-	constructor(private _configLoader: ConfigLoader) {}
+	constructor(private _config: AppConfig) {}
 
 	create(element: UiElement): Widget {
 		switch (element.widget) {
@@ -32,8 +31,7 @@ export default class WidgetFactory {
 	}
 
 	private createInputElement(element: UiElement): any {
-		const customInputDefinition = this._configLoader.getInputDefinition()
-		if (customInputDefinition) return new Input(element.props, element.name, customInputDefinition)
-		return new Input(element.props, element.name)
+		const widgetConfig: WidgetConfig = get(this._config, 'widgets.input')
+		return new Input(element.props, element.name, widgetConfig)
 	}
 }

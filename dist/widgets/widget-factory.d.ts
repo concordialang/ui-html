@@ -1,8 +1,8 @@
 import { UiElement, Widget } from 'concordialang-ui-core';
-import { ConfigLoader } from '../utils/config_loader';
+import { AppConfig } from '../interfaces/app-config';
 export default class WidgetFactory {
-    private _configLoader;
-    constructor(_configLoader: ConfigLoader);
+    private _config;
+    constructor(_config: AppConfig);
     create(element: UiElement): Widget;
     private createInputElement;
 }
