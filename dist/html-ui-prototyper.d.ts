@@ -5,4 +5,5 @@ export default class HtmlUIPrototyper implements Prototyper {
     constructor(_fs: any, _outputDir: string);
     generate(features: Feature[]): Promise<string[]>;
     private createHtmlFile;
+    private getAppConfig;
 }

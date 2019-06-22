@@ -1,7 +1,8 @@
 'use strict'
 Object.defineProperty(exports, '__esModule', { value: true })
 const concordialang_ui_core_1 = require('concordialang-ui-core')
-const utils_1 = require('../utils')
+const prop_1 = require('../utils/prop')
+const label_1 = require('./label')
 class Input extends concordialang_ui_core_1.Widget {
 	constructor(props, name, _config) {
 		super(props, name)
@@ -17,15 +18,17 @@ class Input extends concordialang_ui_core_1.Widget {
 	}
 	renderToString() {
 		const inputType = this.getType(this.props.datatype)
-		const properties = utils_1.formatProperties(
+		const properties = prop_1.formatProperties(
 			this.props,
 			this.VALID_PROPERTIES
 		)
-		const input =
-			this._config.opening.replace('%s', `${inputType} ${properties}`) +
-			this._config.closure
-		const label = utils_1.createLabel(this.name, this.props.id.toString())
-		return this.wrap(label + input)
+		const input = this._config.opening.replace(
+			'%s',
+			`${inputType} ${properties}`
+		)
+		const inputClosure = this._config.closure || ''
+		const label = label_1.createLabel(this.name, this.props.id.toString())
+		return this.wrap(label + input + inputClosure)
 	}
 	wrap(elements) {
 		if (this._config.wrapperOpening && this._config.wrapperClosure)

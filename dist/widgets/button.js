@@ -1,7 +1,7 @@
 'use strict'
 Object.defineProperty(exports, '__esModule', { value: true })
 const concordialang_ui_core_1 = require('concordialang-ui-core')
-const utils_1 = require('../utils')
+const prop_1 = require('../utils/prop')
 class Button extends concordialang_ui_core_1.Widget {
 	constructor(props, name) {
 		super(props, name || '')
@@ -9,7 +9,7 @@ class Button extends concordialang_ui_core_1.Widget {
 	}
 	renderToString() {
 		// const inputType = this.getType(this.props.datatype as string)
-		const properties = utils_1.formatProperties(
+		const properties = prop_1.formatProperties(
 			this.props,
 			this.VALID_PROPERTIES
 		)

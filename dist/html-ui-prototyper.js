@@ -14,14 +14,9 @@ class HtmlUIPrototyper {
 	}
 	generate(features) {
 		return tslib_1.__awaiter(this, void 0, void 0, function*() {
-			// search for a ".configrc.json"
-			// TODO: replace "config" with the CLI name
-			const explorer = cosmiconfig('config')
-			let config = explorer.searchSync()
-			// TODO: lançar exceção se arquivo não existir
-			// TODO: extrair "config" de config
-			const factory = new widget_factory_1.default(config.config)
-			let createFilePromises = []
+			const appConfig = this.getAppConfig()
+			const factory = new widget_factory_1.default(appConfig)
+			const createFilePromises = []
 			for (let feature of features) {
 				const elements = feature.uiElements.map(uiElement =>
 					factory.create(uiElement)
@@ -50,6 +45,15 @@ class HtmlUIPrototyper {
 			yield util_1.promisify(fs.writeFile)(path, content)
 			return path
 		})
+	}
+	getAppConfig() {
+		// search for a ".configrc.json"
+		// TODO: replace "config" with the CLI name
+		const explorer = cosmiconfig('config')
+		const configFile = explorer.searchSync()
+		if (!configFile) throw new Error('Config file not found')
+		const appConfig = configFile.config
+		return appConfig
 	}
 }
 exports.default = HtmlUIPrototyper

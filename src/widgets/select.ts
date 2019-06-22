@@ -1,6 +1,7 @@
 import {Widget} from 'concordialang-ui-core'
 
-import {formatProperties, createLabel} from '../utils'
+import {formatProperties} from '../utils/prop'
+import {createLabel} from './label'
 
 export default class Select extends Widget {
 	private readonly VALID_PROPERTIES = ['id', 'required']

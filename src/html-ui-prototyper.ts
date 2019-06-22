@@ -6,21 +6,16 @@ const prettier = require('prettier')
 const cosmiconfig = require('cosmiconfig')
 
 import WidgetFactory from './widgets/widget-factory'
+import { AppConfig } from './interfaces/app-config'
 
 export default class HtmlUIPrototyper implements Prototyper {
 	constructor(private _fs: any = fs, private _outputDir: string) {
 	}
 
 	public async generate(features: Feature[]): Promise<string[]> {
-		// search for a ".configrc.json"
-		// TODO: replace "config" with the CLI name
-		const explorer = cosmiconfig('config')
-		let config = explorer.searchSync()
-
-		// TODO: lançar exceção se arquivo não existir
-		// TODO: extrair "config" de config
-		const factory = new WidgetFactory(config.config)
-		let createFilePromises: Promise<string>[] = []
+		const appConfig: AppConfig = this.getAppConfig()
+		const factory = new WidgetFactory(appConfig)
+		const createFilePromises: Promise<string>[] = []
 
 		for (let feature of features) {
 			const elements: Widget[] = feature.uiElements.map(uiElement => (factory.create(uiElement)))
@@ -40,5 +35,17 @@ export default class HtmlUIPrototyper implements Prototyper {
 		const path = format({ dir: this._outputDir, name: fileName, ext: '.html' })
 		await promisify(fs.writeFile)(path, content)
 		return path
+	}
+
+	private getAppConfig(): AppConfig {
+		// search for a ".configrc.json"
+		// TODO: replace "config" with the CLI name
+		const explorer = cosmiconfig('config')
+		const configFile = explorer.searchSync()
+
+		if (!configFile) throw new Error('Config file not found')
+		const appConfig: AppConfig = configFile.config
+
+		return appConfig
 	}
 }
