@@ -47,13 +47,14 @@ class HtmlUIPrototyper {
 		})
 	}
 	getAppConfig() {
-		// search for a ".configrc.json"
-		// TODO: replace "config" with the CLI name
-		const explorer = cosmiconfig('config')
-		const configFile = explorer.searchSync()
-		if (!configFile) throw new Error('Config file not found')
-		const appConfig = configFile.config
-		return appConfig
+		try {
+			const explorer = cosmiconfig()
+			const configFile = explorer.loadSync('concordialang-ui-html.json')
+			const appConfig = configFile.config
+			return appConfig
+		} catch (e) {
+			throw new Error('Config file not found')
+		}
 	}
 }
 exports.default = HtmlUIPrototyper
