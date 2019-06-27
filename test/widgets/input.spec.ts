@@ -1,10 +1,11 @@
 import { UiElement } from 'concordialang-ui-core'
-import { Input } from '../../src/widgets/input'
+import { WidgetConfig } from '../../src/interfaces/app-config'
+import Input from '../../src/widgets/input'
 
 describe('Input', () => {
 
     describe('renderToString', () => {
-		const defaultProps: UiElement = {
+		const uiElement: UiElement = {
 			name: 'Username',
 			widget: 'textbox',
 			position: 16,
@@ -16,37 +17,26 @@ describe('Input', () => {
 			}
 		}
 
-		const subject = (uiElement?: UiElement) => (
-			uiElement ?
-			new Input(uiElement.props, uiElement.name) :
-			new Input({})
-		)
-
-        it('without properties', () => {
-            const inputWidget: Input = subject()
-            expect(inputWidget.renderToString()).toEqual(expect.stringContaining('<input type="text"/>'))
-        })
+		const widgetConfig: WidgetConfig = {
+			opening: '<input %s>',
+			wrapperOpening: '<div>',
+			wrapperClosure: '</div>'
+		}
 
         it('produces html from an input element with name', async () => {
-			const inputWidget: Input = subject(defaultProps)
+			const inputWidget: Input = new Input(uiElement.props, uiElement.name, widgetConfig)
 			const result = inputWidget.renderToString()
-            expect(result).toEqual(expect.stringContaining('<input type="text" id="username" required="true" maxlength="20" minlength="10"/>'))
-        })
-
-        it('produces html from an input element without name', async () => {
-			const inputWidget: Input = subject({ ...defaultProps, name: undefined })
-			const result = inputWidget.renderToString()
-            expect(result).toEqual(expect.stringContaining('<input type="text" id="username" required="true" maxlength="20" minlength="10"/>'))
+            expect(result).toEqual(expect.stringContaining('<input type="text" id="username" required="true" maxlength="20" minlength="10">'))
         })
 
 		it('produces a label for the input element', async () => {
-			const inputWidget: Input = subject(defaultProps)
+			const inputWidget: Input = new Input(uiElement.props, uiElement.name, widgetConfig)
 			const result = inputWidget.renderToString()
             expect(result).toEqual(expect.stringContaining('<label for="username">Username</label>'))
 		})
 
 		it('surrounds the input with a div', () => {
-			const inputWidget: Input = subject()
+			const inputWidget: Input = new Input(uiElement.props, uiElement.name, widgetConfig)
             const result = inputWidget.renderToString()
 			expect(result).toEqual(expect.stringMatching(/^<div>(.|\s)*<\/div>$/))
 		})
