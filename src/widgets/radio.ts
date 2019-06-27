@@ -1,14 +1,16 @@
 import {Widget} from 'concordialang-ui-core'
 
-import {formatProperties, createLabel} from './prop'
+import {formatProperties} from '../utils/prop'
+import {createLabel} from './label'
 
-export class Radio extends Widget {
+export default class Radio extends Widget {
 	private readonly VALID_PROPERTIES = ['value']
 
 	constructor(props: any, name: string) {
 		super(props, name)
 	}
 
+	// TODO: remove \n
 	public renderToString(): string {
 		const properties = formatProperties(this.props, this.VALID_PROPERTIES)
 		let inputs: String[] = []

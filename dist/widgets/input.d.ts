@@ -1,8 +1,10 @@
 import { Widget } from 'concordialang-ui-core';
-export declare class Input extends Widget {
+import { WidgetConfig } from '../interfaces/app-config';
+export default class Input extends Widget {
+    private _config;
     private readonly VALID_PROPERTIES;
-    constructor(props: any, name?: string);
+    constructor(props: any, name: string, _config: WidgetConfig);
     renderToString(): string;
+    private wrap;
     private getType;
-    private typeForDataType;
 }

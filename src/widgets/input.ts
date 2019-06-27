@@ -1,6 +1,9 @@
-import {Widget} from 'concordialang-ui-core'
+import { Widget } from 'concordialang-ui-core'
+import { get } from 'lodash';
 
-import {formatProperties, createLabel} from './prop'
+import { WidgetConfig } from '../interfaces/app-config'
+import { formatProperties } from '../utils/prop'
+import { createLabel } from './label'
 
 const enum DataTypes {
 	STRING = 'string',
@@ -11,33 +14,39 @@ const enum DataTypes {
 	DATETIME = 'datetime'
 }
 
-export class Input extends Widget {
+export default class Input extends Widget {
 	private readonly VALID_PROPERTIES = ['id', 'editable', 'minlength', 'maxlength', 'required', 'format']
 
-	constructor(props: any, name: string) {
+	constructor(props: any, name: string, private _config: WidgetConfig) {
 		super(props, name)
 	}
 
 	public renderToString(): string {
 		const inputType = this.getType(this.props.datatype as string)
 		const properties = formatProperties(this.props, this.VALID_PROPERTIES)
-		const input = properties ? `<input ${inputType} ${properties}>\n` : `<input ${inputType}>\n`
+		const input = this._config.opening.replace('%s', `${ inputType } ${ properties }`)
+		const inputClosure = this._config.closure || ''
 		const label = createLabel(this.name, this.props.id.toString())
-		return `<div>\n${label + input}</div>`
+		return this.wrap(label + input + inputClosure)
+	}
+
+	private wrap(elements: string): string {
+		if (this._config.wrapperOpening && this._config.wrapperClosure)
+			return this._config.wrapperOpening + elements + this._config.wrapperClosure
+		return elements
 	}
 
 	private getType(datatype: string): string {
-		const typeProperty = this.typeForDataType(datatype)
-		return `type="${typeProperty}"`
-	}
+		let typeProperty
 
-	private typeForDataType(datatype: string): string {
 		switch (datatype) {
 			case DataTypes.INTEGER:
-			case DataTypes.DOUBLE: return 'number'
-			case DataTypes.TIME: return 'time'
-			case DataTypes.DATETIME: return 'datetime-local'
+			case DataTypes.DOUBLE: typeProperty = 'number'; break
+			case DataTypes.TIME: typeProperty = 'time'; break
+			case DataTypes.DATETIME: typeProperty = 'datetime-local'; break
+			default: typeProperty = 'text'
 		}
-		return 'text'
+
+		return `type="${typeProperty}"`
 	}
 }

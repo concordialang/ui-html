@@ -1,7 +1,7 @@
 import { Widget } from 'concordialang-ui-core';
-export default class Button extends Widget {
+export default class Select extends Widget {
     private readonly VALID_PROPERTIES;
-    constructor(props: any, name?: string);
+    constructor(props: any, name: string);
     renderToString(): string;
-    private getType;
+    private getOptions;
 }

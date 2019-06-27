@@ -12,10 +12,11 @@ export function formatProperties(props: any, validProperties: string[]): string 
 
         if(key === 'id') {
             let newKey = key
+			// TODO: replace test wit str.match(pattern)
             if(!invalidIdPattern.test(value)) {
                 const validIdPattern = /^#|~/
                 const validClassPattern = /^\./
-    
+
                 if(validIdPattern.test(value)) {
                     value = value.toString().replace(validIdPattern, '')
                 } else if(validClassPattern.test(value)) {
@@ -24,9 +25,7 @@ export function formatProperties(props: any, validProperties: string[]): string 
                 }
                 return `${translateProp(newKey)}="${value}"`
             }
-
         }
-
 
         return `${translateProp(key)}="${value}"`
     }
@@ -38,12 +37,4 @@ export function formatProperties(props: any, validProperties: string[]): string 
     }
 
     return Object.keys(props).reduce(formatValid, '').trimRight()
-}
-
-export function createLabel(name: string, id: string): string {
-
-    const validIdPattern = /^(#|~|\d|\w).*/
-
-    const labelFor = (validIdPattern.test(id)) ? `for="${id.replace(/^#|~/ , '')}"` : ''
-    return `<label ${labelFor}>${name}</label>\n`
 }
