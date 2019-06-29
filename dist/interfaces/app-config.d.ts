@@ -1,6 +1,7 @@
 export interface AppConfig {
     widgets?: {
         input?: WidgetConfig;
+        label?: LabelConfig;
     };
 }
 export interface WidgetConfig {
@@ -8,4 +9,10 @@ export interface WidgetConfig {
     closure?: string;
     wrapperOpening?: string;
     wrapperClosure?: string;
+    label?: LabelConfig;
 }
+interface LabelConfig {
+    opening: string;
+    closure: string;
+}
+export {};

@@ -32,6 +32,7 @@ export default class WidgetFactory {
 
 	private createInputElement(element: UiElement): any {
 		const widgetConfig: WidgetConfig = get(this._config, 'widgets.input')
+		widgetConfig.label = widgetConfig.label || get(this._config, 'widgets.label')
 		return new Input(element.props, element.name, widgetConfig)
 	}
 }

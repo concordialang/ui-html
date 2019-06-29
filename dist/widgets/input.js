@@ -23,11 +23,15 @@ class Input extends concordialang_ui_core_1.Widget {
 			this.VALID_PROPERTIES
 		)
 		const input = this._config.opening.replace(
-			'%s',
+			prop_1.PROPS_INJECTION_POINT,
 			`${inputType} ${properties}`
 		)
 		const inputClosure = this._config.closure || ''
-		const label = label_1.createLabel(this.name, this.props.id.toString())
+		const label = label_1.createLabel(
+			this.name,
+			this.props.id.toString(),
+			this._config
+		)
 		return this.wrap(label + input + inputClosure)
 	}
 	wrap(elements) {

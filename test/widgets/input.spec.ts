@@ -1,6 +1,7 @@
 import { UiElement } from 'concordialang-ui-core'
-import { WidgetConfig } from '../../src/interfaces/app-config'
+import { AppConfig, WidgetConfig } from '../../src/interfaces/app-config'
 import Input from '../../src/widgets/input'
+import { getAppConfig } from '../test-helpers/app-config'
 
 describe('Input', () => {
 
@@ -20,7 +21,11 @@ describe('Input', () => {
 		const widgetConfig: WidgetConfig = {
 			opening: '<input %s>',
 			wrapperOpening: '<div>',
-			wrapperClosure: '</div>'
+			wrapperClosure: '</div>',
+			label: {
+				opening: '<label %s>',
+				closure: '</label>'
+			}
 		}
 
         it('produces html from an input element with name', async () => {
@@ -35,10 +40,24 @@ describe('Input', () => {
             expect(result).toEqual(expect.stringContaining('<label for="username">Username</label>'))
 		})
 
-		it('surrounds the input with a div', () => {
+		it('produces a wrapper for the input element', () => {
 			const inputWidget: Input = new Input(uiElement.props, uiElement.name, widgetConfig)
             const result = inputWidget.renderToString()
 			expect(result).toEqual(expect.stringMatching(/^<div>(.|\s)*<\/div>$/))
+		})
+
+		describe('when the label is not defined', () => {
+			const widgetConfig: WidgetConfig = {
+				opening: '<input %s>',
+				wrapperOpening: '<div>',
+				wrapperClosure: '</div>'
+			}
+
+			it('does not produce a label for the input element', async () => {
+				const inputWidget: Input = new Input(uiElement.props, uiElement.name, widgetConfig)
+				const result = inputWidget.renderToString()
+				expect(result).not.toEqual(expect.stringContaining('label'))
+			})
 		})
     })
 })
