@@ -1,10 +1,17 @@
 'use strict'
 Object.defineProperty(exports, '__esModule', { value: true })
-function createLabel(name, id) {
-	const validIdPattern = /^(#|~|\d|\w).*/
-	const labelFor = validIdPattern.test(id)
-		? `for="${id.replace(/^#|~/, '')}"`
+const prop_1 = require('../utils/prop')
+function createLabel(widgetName, widgetId, widgetConfig) {
+	if (!widgetConfig.label) return ''
+	const idPattern = /^(#|~|\d|\w).*/
+	const labelFor = widgetId.match(idPattern)
+		? `for="${widgetId.replace(/^#|~/, '')}"`
 		: ''
-	return `<label ${labelFor}>${name}</label>`
+	const labelOpening = widgetConfig.label.opening.replace(
+		prop_1.PROPS_INJECTION_POINT,
+		labelFor
+	)
+	const labelClosure = widgetConfig.label.closure
+	return labelOpening + widgetName + labelClosure
 }
 exports.createLabel = createLabel

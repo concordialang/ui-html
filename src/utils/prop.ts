@@ -1,3 +1,5 @@
+export const PROPS_INJECTION_POINT = '%s'
+
 export function formatProperties(props: any, validProperties: string[]): string {
     const translateProp = (key: string) => {
         switch(key) {

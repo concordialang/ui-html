@@ -2,7 +2,7 @@ import { Widget } from 'concordialang-ui-core'
 import { get } from 'lodash';
 
 import { WidgetConfig } from '../interfaces/app-config'
-import { formatProperties } from '../utils/prop'
+import { formatProperties, PROPS_INJECTION_POINT } from '../utils/prop'
 import { createLabel } from './label'
 
 const enum DataTypes {
@@ -24,9 +24,9 @@ export default class Input extends Widget {
 	public renderToString(): string {
 		const inputType = this.getType(this.props.datatype as string)
 		const properties = formatProperties(this.props, this.VALID_PROPERTIES)
-		const input = this._config.opening.replace('%s', `${ inputType } ${ properties }`)
+		const input = this._config.opening.replace(PROPS_INJECTION_POINT, `${ inputType } ${ properties }`)
 		const inputClosure = this._config.closure || ''
-		const label = createLabel(this.name, this.props.id.toString())
+		const label = createLabel(this.name, this.props.id.toString(), this._config)
 		return this.wrap(label + input + inputClosure)
 	}
 

@@ -1,5 +1,6 @@
 'use strict'
 Object.defineProperty(exports, '__esModule', { value: true })
+exports.PROPS_INJECTION_POINT = '%s'
 function formatProperties(props, validProperties) {
 	const translateProp = key => {
 		switch (key) {

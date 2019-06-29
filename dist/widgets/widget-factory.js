@@ -28,6 +28,8 @@ class WidgetFactory {
 	}
 	createInputElement(element) {
 		const widgetConfig = lodash_1.get(this._config, 'widgets.input')
+		widgetConfig.label =
+			widgetConfig.label || lodash_1.get(this._config, 'widgets.label')
 		return new input_1.default(element.props, element.name, widgetConfig)
 	}
 }
