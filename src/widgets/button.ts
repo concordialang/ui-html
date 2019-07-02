@@ -1,22 +1,24 @@
-import {Widget} from 'concordialang-ui-core'
-
-import {formatProperties} from '../utils/prop'
+import { Widget } from 'concordialang-ui-core'
+import { WidgetConfig } from '../interfaces/app-config'
+import { formatProperties, PROPS_INJECTION_POINT } from '../utils/prop'
 
 export default class Button extends Widget {
-  private readonly VALID_PROPERTIES = ['id', 'disabled', 'value']
+	private readonly VALID_PROPERTIES = ['id', 'disabled', 'value']
 
-  constructor(props: any, name?: string) {
-    super(props, name || '')
-  }
+	constructor(props: any, name: string, private _config: WidgetConfig) {
+		super(props, name || '')
+	}
 
-  public renderToString(): string {
-    // const inputType = this.getType(this.props.datatype as string)
-    const properties = formatProperties(this.props, this.VALID_PROPERTIES)
-    // return `<button ${inputType}${properties}>${this.name}</button>`
-    return `<button ${properties}>${this.name}</button>`
-  }
+	public renderToString(): string {
+		const buttonType = this.getType(this.props.datatype as string)
+		let properties = formatProperties(this.props, this.VALID_PROPERTIES)
+		properties = `${ buttonType } ${ properties }`
+		const buttonOpening = this._config.opening.replace(PROPS_INJECTION_POINT, properties)
+		const buttonClosure = this._config.closure
+		return buttonOpening + this.name + buttonClosure
+	}
 
-  private getType(datatype: string): string {
-    return `type="${datatype || 'button'}"`
-  }
+	private getType(datatype: string): string {
+		return `type="${datatype || 'button'}"`
+	}
 }

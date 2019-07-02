@@ -1,4 +1,4 @@
-import { formatProperties } from '../../src/widgets/prop'
+import { formatProperties } from '../../src/utils/prop'
 
 describe('formatProperties', () => {
 	it('creates a string with the valid properties', () => {

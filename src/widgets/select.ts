@@ -1,31 +1,38 @@
-import {Widget} from 'concordialang-ui-core'
-
-import {formatProperties} from '../utils/prop'
-import {createLabel} from './label'
+import { Widget } from 'concordialang-ui-core'
+import { WidgetConfig } from '../interfaces/app-config'
+import { formatProperties, PROPS_INJECTION_POINT } from '../utils/prop'
+import { createLabel } from './label'
+import { wrap } from './wrapper'
 
 export default class Select extends Widget {
-	private readonly VALID_PROPERTIES = ['id', 'required']
+	private readonly SELECT_VALID_PROPERTIES = ['id', 'required']
+	private readonly OPTION_VALID_PROPERTIES = ['value']
 
-	constructor(props: any, name: string) {
+	constructor(props: any, name: string, private _config: WidgetConfig) {
 		super(props, name)
 	}
 
-	// TODO: remove \n
 	public renderToString(): string {
-		const properties = formatProperties(this.props, this.VALID_PROPERTIES)
-		if (!properties) return '<div>\n<select></select>\n</div>'
+		const properties = formatProperties(this.props, this.SELECT_VALID_PROPERTIES)
+		const selectOpening = this._config.opening.replace(PROPS_INJECTION_POINT, properties)
+		const selectClosure = this._config.closure
 		const options = this.getOptions()
-		const select = `<select ${properties}>\n${options}\n</select>\n`
-		const label = createLabel(this.name, this.props.id.toString())
-		return `<div>\n${label + select}</div>`
+		const select = selectOpening + options + selectClosure
+		const label = createLabel(this.name, this.props.id.toString(), this._config)
+		return wrap(label + select, this._config)
 	}
 
 	private getOptions(): string {
+		if (!this._config.optionOpening) return ''
+
 		let options: string[] = []
 		for (let value of this.props.value as Array<string>) {
-			let option = `<option value="${value.toLowerCase()}">${value}</option>`
-			options.push(option)
+			const optionProps = { value }
+			const properties = formatProperties(optionProps, this.OPTION_VALID_PROPERTIES)
+			const optionOpening = this._config.optionOpening.replace(PROPS_INJECTION_POINT, properties)
+			const optionClosure = this._config.optionClosure
+			options.push(optionOpening + value + optionClosure)
 		}
-		return options.join('\n')
+		return options.join('')
 	}
 }

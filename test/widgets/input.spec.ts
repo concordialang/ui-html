@@ -1,10 +1,8 @@
 import { UiElement } from 'concordialang-ui-core'
 import { AppConfig, WidgetConfig } from '../../src/interfaces/app-config'
 import Input from '../../src/widgets/input'
-import { getAppConfig } from '../test-helpers/app-config'
 
 describe('Input', () => {
-
     describe('renderToString', () => {
 		const uiElement: UiElement = {
 			name: 'Username',

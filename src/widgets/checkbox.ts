@@ -1,18 +1,21 @@
-import {Widget} from 'concordialang-ui-core'
-
-import {formatProperties} from '../utils/prop'
+import { Widget } from 'concordialang-ui-core'
+import { WidgetConfig } from '../interfaces/app-config'
+import { formatProperties, PROPS_INJECTION_POINT } from '../utils/prop'
+import { wrap } from './wrapper'
 
 export default class Checkbox extends Widget {
 	private readonly VALID_PROPERTIES = ['value', 'required']
 
-	constructor(props: any, name: string) {
+	constructor(props: any, name: string, private _config: WidgetConfig) {
 		super(props, name)
 	}
 
-	// TODO: remove \n
 	public renderToString(): string {
-		const properties = formatProperties(this.props, this.VALID_PROPERTIES)
-		if (properties) return `<div>\n<input type="checkbox" ${properties}>${this.name}\n</div>`
-		return `<div>\n<input type="checkbox">${this.name}\n</div>`
+		const inputType = 'type="checkbox"'
+		let properties = formatProperties(this.props, this.VALID_PROPERTIES)
+		properties = `${inputType} ${properties}`
+		const inputOpening = this._config.opening.replace(PROPS_INJECTION_POINT, properties)
+		const inputClosure = this._config.closure || ''
+		return wrap(inputOpening + this.name + inputClosure, this._config)
 	}
 }
