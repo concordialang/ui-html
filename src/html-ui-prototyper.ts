@@ -15,6 +15,9 @@ export default class HtmlUIPrototyper implements Prototyper {
 	public async generate(features: Feature[]): Promise<string[]> {
 		const appConfig: AppConfig = this.getAppConfig()
 		const factory = new WidgetFactory(appConfig)
+
+		if (features.length === 0) return Promise.resolve([ 'No features found' ])
+
 		const createFilePromises: Promise<string>[] = []
 
 		for (let feature of features) {
@@ -30,7 +33,7 @@ export default class HtmlUIPrototyper implements Prototyper {
 			return result + widget.renderToString()
 		}, '')
 
-		content = prettier.format(`<form>\n${content}</form>`, {parser: 'html', htmlWhitespaceSensitivity: 'ignore'})
+		content = prettier.format(`<form>${content}</form>`, {parser: 'html', htmlWhitespaceSensitivity: 'ignore'})
 
 		const path = format({ dir: this._outputDir, name: fileName, ext: '.html' })
 		await promisify(fs.writeFile)(path, content)
