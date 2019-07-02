@@ -4,6 +4,7 @@ import { get } from 'lodash';
 import { WidgetConfig } from '../interfaces/app-config'
 import { formatProperties, PROPS_INJECTION_POINT } from '../utils/prop'
 import { createLabel } from './label'
+import { wrap } from './wrapper'
 
 const enum DataTypes {
 	STRING = 'string',
@@ -24,16 +25,10 @@ export default class Input extends Widget {
 	public renderToString(): string {
 		const inputType = this.getType(this.props.datatype as string)
 		const properties = formatProperties(this.props, this.VALID_PROPERTIES)
-		const input = this._config.opening.replace(PROPS_INJECTION_POINT, `${ inputType } ${ properties }`)
+		const inputOpening = this._config.opening.replace(PROPS_INJECTION_POINT, `${ inputType } ${ properties }`)
 		const inputClosure = this._config.closure || ''
 		const label = createLabel(this.name, this.props.id.toString(), this._config)
-		return this.wrap(label + input + inputClosure)
-	}
-
-	private wrap(elements: string): string {
-		if (this._config.wrapperOpening && this._config.wrapperClosure)
-			return this._config.wrapperOpening + elements + this._config.wrapperClosure
-		return elements
+		return wrap(label + inputOpening + inputClosure, this._config)
 	}
 
 	private getType(datatype: string): string {

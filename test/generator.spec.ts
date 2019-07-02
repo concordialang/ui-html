@@ -3,29 +3,31 @@ import { minify } from 'html-minifier'
 import { fs, vol } from 'memfs'
 import { promisify } from 'util'
 
-import Generator from '../src/generator'
+import HtmlUIPrototyper from '../src/html-ui-prototyper'
 
-describe('Generator', () => {
+describe('HtmlUIPrototyper', () => {
 
     const CURRENT_DIR: string = process.cwd()
 
-    let generator: Generator | null
+    let prototyper: HtmlUIPrototyper | null
 
     beforeEach(() => {
-        vol.mkdirpSync(CURRENT_DIR) // Synchronize with the current fs structure
-        generator = new Generator(fs) // In-memory fs
+		vol.fromJSON({
+			'/concordialang-ui-html.json': '{}'
+		}, CURRENT_DIR)
+        prototyper = new HtmlUIPrototyper(fs, CURRENT_DIR) // In-memory fs
     })
 
     afterEach(() => {
         vol.reset() // Erase in-memory structure
-        generator = null
+        prototyper = null
     })
 
     async function expectFeaturesToProduceHtml(features: Feature[], htmls: string[]): Promise<void> {
-        if (! generator) {
-            generator = new Generator(fs)
+        if (! prototyper) {
+            prototyper = new HtmlUIPrototyper(fs, CURRENT_DIR)
         }
-        const files: string[] = await generator.generate(features)
+        const files: string[] = await prototyper.generate(features)
         expect(files).toHaveLength(htmls.length)
         // tslint:disable-next-line:forin
         for (let i in files) {

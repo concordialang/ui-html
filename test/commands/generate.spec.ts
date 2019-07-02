@@ -4,9 +4,8 @@ describe('Generate', () => {
 
     it('should print a JSON content', async () => {
         let spy = jest.spyOn(process.stdout, 'write');
-        await Generate.run([]) // TODO: pass a parameter
-        // expect(spy).toBeCalledWith({})
-        expect(spy).not.toBeCalled() // TODO: change this assertion
+		await Generate.run(['--features', '[]', '--outputDir', 'outputDir'])
+        expect(spy).not.toBeCalled()
     })
 
 })
