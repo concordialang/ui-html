@@ -21,7 +21,7 @@ export default class Generate extends Command {
       const processResult: ProcessResult = JSON.parse(flags.features) as ProcessResult
       const generator = new HtmlUIPrototyper(fs, flags.outputDir)
       const result = await generator.generate(processResult.features)
-      this.log(JSON.stringify(result))
+      this.log(result.join('\n'))
     }
   }
 }
