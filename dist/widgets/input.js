@@ -3,6 +3,7 @@ Object.defineProperty(exports, '__esModule', { value: true })
 const concordialang_ui_core_1 = require('concordialang-ui-core')
 const prop_1 = require('../utils/prop')
 const label_1 = require('./label')
+const wrapper_1 = require('./wrapper')
 class Input extends concordialang_ui_core_1.Widget {
 	constructor(props, name, _config) {
 		super(props, name)
@@ -22,7 +23,7 @@ class Input extends concordialang_ui_core_1.Widget {
 			this.props,
 			this.VALID_PROPERTIES
 		)
-		const input = this._config.opening.replace(
+		const inputOpening = this._config.opening.replace(
 			prop_1.PROPS_INJECTION_POINT,
 			`${inputType} ${properties}`
 		)
@@ -32,16 +33,7 @@ class Input extends concordialang_ui_core_1.Widget {
 			this.props.id.toString(),
 			this._config
 		)
-		return this.wrap(label + input + inputClosure)
-	}
-	wrap(elements) {
-		if (this._config.wrapperOpening && this._config.wrapperClosure)
-			return (
-				this._config.wrapperOpening +
-				elements +
-				this._config.wrapperClosure
-			)
-		return elements
+		return wrapper_1.wrap(label + inputOpening + inputClosure, this._config)
 	}
 	getType(datatype) {
 		let typeProperty

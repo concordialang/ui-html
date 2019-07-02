@@ -5,4 +5,8 @@ export default class WidgetFactory {
     constructor(_config: AppConfig);
     create(element: UiElement): Widget;
     private createInputElement;
+    private createRadioElement;
+    private createCheckboxElement;
+    private createSelectElement;
+    private createButtonElement;
 }

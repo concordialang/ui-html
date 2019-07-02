@@ -1,5 +1,6 @@
 'use strict'
 Object.defineProperty(exports, '__esModule', { value: true })
+const case_1 = require('case')
 exports.PROPS_INJECTION_POINT = '%s'
 function formatProperties(props, validProperties) {
 	const translateProp = key => {
@@ -11,23 +12,7 @@ function formatProperties(props, validProperties) {
 		}
 	}
 	const getFormattedProp = key => {
-		let value = props[key]
-		const invalidIdPattern = /^\/\//
-		if (key === 'id') {
-			let newKey = key
-			// TODO: replace test wit str.match(pattern)
-			if (!invalidIdPattern.test(value)) {
-				const validIdPattern = /^#|~/
-				const validClassPattern = /^\./
-				if (validIdPattern.test(value)) {
-					value = value.toString().replace(validIdPattern, '')
-				} else if (validClassPattern.test(value)) {
-					newKey = 'class'
-					value = value.toString().replace(validClassPattern, '')
-				}
-				return `${translateProp(newKey)}="${value}"`
-			}
-		}
+		let value = case_1.camel(props[key].toString())
 		return `${translateProp(key)}="${value}"`
 	}
 	const formatValid = (result, prop) => {
