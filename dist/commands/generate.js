@@ -15,7 +15,7 @@ class Generate extends command_1.Command {
 					flags.outputDir
 				)
 				const result = yield generator.generate(processResult.features)
-				this.log(JSON.stringify(result))
+				this.log(result.join('\n'))
 			}
 		})
 	}
