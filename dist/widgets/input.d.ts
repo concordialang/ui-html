@@ -5,6 +5,5 @@ export default class Input extends Widget {
     private readonly VALID_PROPERTIES;
     constructor(props: any, name: string, _config: WidgetConfig);
     renderToString(): string;
-    private wrap;
     private getType;
 }
