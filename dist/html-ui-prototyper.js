@@ -16,6 +16,8 @@ class HtmlUIPrototyper {
 		return tslib_1.__awaiter(this, void 0, void 0, function*() {
 			const appConfig = this.getAppConfig()
 			const factory = new widget_factory_1.default(appConfig)
+			if (features.length === 0)
+				return Promise.resolve(['No features found'])
 			const createFilePromises = []
 			for (let feature of features) {
 				const elements = feature.uiElements.map(uiElement =>
@@ -33,7 +35,7 @@ class HtmlUIPrototyper {
 			let content = widgets.reduce((result, widget) => {
 				return result + widget.renderToString()
 			}, '')
-			content = prettier.format(`<form>\n${content}</form>`, {
+			content = prettier.format(`<form>${content}</form>`, {
 				parser: 'html',
 				htmlWhitespaceSensitivity: 'ignore',
 			})
