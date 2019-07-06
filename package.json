@@ -49,7 +49,8 @@
 			"ts-jest": {
 				"diagnostics": false
 			}
-		}
+		},
+		"testEnvironment": "node"
 	},
 	"oclif": {
 		"commands": "./dist/commands",
@@ -77,6 +78,7 @@
 		"concordialang-ui-core": "^0.2.3",
 		"cosmiconfig": "^5.2.1",
 		"lodash": "^4.17.11",
+		"normalize-diacritics": "^2.5.0",
 		"tslib": "^1.9.3"
 	},
 	"devDependencies": {

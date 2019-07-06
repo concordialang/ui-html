@@ -1,8 +1,8 @@
-import { camel } from 'case'
+import { convertCase } from './case-converter'
 
 export const PROPS_INJECTION_POINT = '%s'
 
-export function formatProperties(props: any, validProperties: string[]): string {
+export function formatProperties(props: any, validProperties: string[], caseType: string = 'camel'): string {
     const translateProp = (key: string) => {
         switch(key) {
             case 'format': return 'pattern';
@@ -11,7 +11,7 @@ export function formatProperties(props: any, validProperties: string[]): string 
     }
 
     const getFormattedProp = (key: string) => {
-        let value = camel(props[key].toString())
+        let value = convertCase(props[key].toString(), caseType)
         return `${translateProp(key)}="${value}"`
     }
 

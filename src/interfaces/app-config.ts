@@ -1,10 +1,6 @@
 export interface AppConfig {
 	widgets?: {
-		input?: WidgetConfig,
-		radio?: WidgetConfig,
-		checkbox?: WidgetConfig,
-		select?: WidgetConfig,
-		label?: LabelConfig
+		[key: string]: WidgetConfig,
 	}
 }
 
@@ -15,10 +11,5 @@ export interface WidgetConfig {
 	optionClosure?: string,
 	wrapperOpening?: string,
 	wrapperClosure?: string,
-	label?: LabelConfig
-}
-
-interface LabelConfig {
-	opening: string,
-	closure: string
+	label?: WidgetConfig
 }

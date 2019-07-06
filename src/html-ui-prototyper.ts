@@ -2,8 +2,11 @@ import { Feature, Prototyper, Widget } from 'concordialang-ui-core'
 import * as fs from 'fs'
 import { promisify } from 'util'
 import { format } from 'path'
+import { convertCase } from './utils/case-converter'
+
 const prettier = require('prettier')
 const cosmiconfig = require('cosmiconfig')
+const { normalize } = require('normalize-diacritics')
 
 import WidgetFactory from './widgets/widget-factory'
 import { AppConfig } from './interfaces/app-config'
@@ -15,9 +18,6 @@ export default class HtmlUIPrototyper implements Prototyper {
 	public async generate(features: Feature[]): Promise<string[]> {
 		const appConfig: AppConfig = this.getAppConfig()
 		const factory = new WidgetFactory(appConfig)
-
-		if (features.length === 0) return Promise.resolve([ 'No features found' ])
-
 		const createFilePromises: Promise<string>[] = []
 
 		for (let feature of features) {
@@ -29,6 +29,8 @@ export default class HtmlUIPrototyper implements Prototyper {
 	}
 
 	private async createHtmlFile(fileName: string, widgets: Widget[]): Promise<string> {
+		fileName = await normalize(convertCase(fileName, 'snake'))
+
 		let content = widgets.reduce((result, widget) => {
 			return result + widget.renderToString()
 		}, '')
