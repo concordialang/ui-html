@@ -1,8 +1,6 @@
 import { convertCase } from './case-converter'
 
-export const PROPS_INJECTION_POINT = '%s'
-
-export function formatProperties(props: any, validProperties: string[], caseType: string = 'camel'): string {
+export function formatProperties(props: any, caseType: string = 'camel'): string {
     const translateProp = (key: string) => {
         switch(key) {
             case 'format': return 'pattern';
@@ -10,16 +8,13 @@ export function formatProperties(props: any, validProperties: string[], caseType
         }
     }
 
-    const getFormattedProp = (key: string) => {
-        let value = convertCase(props[key].toString(), caseType)
-        return `${translateProp(key)}="${value}"`
+	const getValueOf = (key: string) => (convertCase(props[key].toString(), caseType))
+
+	const format = (result: string, key: string) => {
+		const value = getValueOf(key)
+		const htmlProp = translateProp(key)
+		return result + `${htmlProp}="${value}"` + ' '
     }
 
-	const formatValid = (result: string, prop: string) => {
-        return validProperties.includes(prop)
-            ? result + getFormattedProp(prop) + ' '
-            : result
-    }
-
-    return Object.keys(props).reduce(formatValid, '').trimRight()
+    return Object.keys(props).reduce(format, '').trimRight()
 }

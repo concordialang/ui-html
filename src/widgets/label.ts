@@ -1,13 +1,14 @@
-import { WidgetConfig } from '../interfaces/app-config'
-import { PROPS_INJECTION_POINT } from '../utils/prop'
+import * as Mustache from 'mustache'
 
-export function createLabel(widgetName: string, widgetId: string, widgetConfig: WidgetConfig): string {
+import { WidgetConfig } from '../interfaces/app-config'
+import { formatHtml } from '../utils'
+
+export function createLabel(widgetName: string, widgetId: string | undefined, widgetConfig: WidgetConfig): string {
 	if (!widgetConfig.label) return ''
 
 	const idPattern = /^(#|~|\d|\w).*/
-	const labelFor = widgetId.match(idPattern) ? `for="${widgetId.replace(/^#|~/ , '')}"` : ''
-	const labelOpening = widgetConfig.label.opening.replace(PROPS_INJECTION_POINT, labelFor)
-	const labelClosure = widgetConfig.label.closure
+	const labelFor = widgetId && widgetId.match(idPattern) ? `for="${widgetId.replace(/^#|~/ , '')}"` : ''
+	widgetConfig.label.opening = Mustache.render(widgetConfig.label.opening, { props: labelFor })
 
-	return labelOpening + widgetName + labelClosure
+	return formatHtml(widgetConfig.label.opening + widgetName + widgetConfig.label.closure)
 }

@@ -1,10 +1,13 @@
 'use strict'
 Object.defineProperty(exports, '__esModule', { value: true })
 function wrap(elements, widgetConfig) {
-	if (widgetConfig.wrapperOpening && widgetConfig.wrapperClosure)
+	if (widgetConfig.wrapper) {
 		return (
-			widgetConfig.wrapperOpening + elements + widgetConfig.wrapperClosure
+			widgetConfig.wrapper.opening +
+			elements +
+			widgetConfig.wrapper.closure
 		)
+	}
 	return elements
 }
 exports.wrap = wrap

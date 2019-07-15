@@ -1,8 +1,6 @@
-import { Widget } from 'concordialang-ui-core';
 import { WidgetConfig } from '../interfaces/app-config';
-export default class Checkbox extends Widget {
-    private _config;
-    private readonly VALID_PROPERTIES;
-    constructor(props: any, name: string, _config: WidgetConfig);
-    renderToString(): string;
+import HtmlWidget from './html-widget';
+export default class Checkbox extends HtmlWidget {
+    constructor(props: any, name: string, config: WidgetConfig);
+    protected getFormattedProps(props: any): string;
 }

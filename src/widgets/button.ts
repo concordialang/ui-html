@@ -1,24 +1,29 @@
-import { Widget } from 'concordialang-ui-core'
+import { pick } from 'lodash'
+
 import { WidgetConfig } from '../interfaces/app-config'
-import { formatProperties, PROPS_INJECTION_POINT } from '../utils/prop'
+import { formatProperties } from '../utils/prop'
 
-export default class Button extends Widget {
-	private readonly VALID_PROPERTIES = ['id', 'disabled', 'value']
+import HtmlWidget from './html-widget'
 
-	constructor(props: any, name: string, private _config: WidgetConfig) {
-		super(props, name || '')
+export default class Button extends HtmlWidget {
+	constructor(props: any, name: string, config: WidgetConfig) {
+		super(props, name, config)
+		this.props.value = this.props.value || name
 	}
 
-	public renderToString(): string {
-		const buttonType = this.getType(this.props.datatype as string)
-		let properties = formatProperties(this.props, this.VALID_PROPERTIES)
-		properties = `${ buttonType } ${ properties }`
-		const buttonOpening = this._config.opening.replace(PROPS_INJECTION_POINT, properties)
-		const buttonClosure = this._config.closure
-		return buttonOpening + this.name + buttonClosure
+	protected getFormattedProps(props: any): string {
+		// Defines the properties that will be injected in the widget and its order.
+		const VALID_PROPERTIES = ['id', 'type', 'disabled']
+
+		props.type = this.getType(props.datatype)
+		props.value = props.value || this.name
+
+		const filteredProps = pick(props, VALID_PROPERTIES)
+
+		return formatProperties(filteredProps)
 	}
 
 	private getType(datatype: string): string {
-		return `type="${datatype || 'button'}"`
+		return datatype || 'button'
 	}
 }

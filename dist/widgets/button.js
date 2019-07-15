@@ -1,29 +1,23 @@
 'use strict'
 Object.defineProperty(exports, '__esModule', { value: true })
-const concordialang_ui_core_1 = require('concordialang-ui-core')
+const lodash_1 = require('lodash')
 const prop_1 = require('../utils/prop')
-class Button extends concordialang_ui_core_1.Widget {
-	constructor(props, name, _config) {
-		super(props, name || '')
-		this._config = _config
-		this.VALID_PROPERTIES = ['id', 'disabled', 'value']
+const html_widget_1 = require('./html-widget')
+class Button extends html_widget_1.default {
+	constructor(props, name, config) {
+		super(props, name, config)
+		this.props.value = this.props.value || name
 	}
-	renderToString() {
-		const buttonType = this.getType(this.props.datatype)
-		let properties = prop_1.formatProperties(
-			this.props,
-			this.VALID_PROPERTIES
-		)
-		properties = `${buttonType} ${properties}`
-		const buttonOpening = this._config.opening.replace(
-			prop_1.PROPS_INJECTION_POINT,
-			properties
-		)
-		const buttonClosure = this._config.closure
-		return buttonOpening + this.name + buttonClosure
+	getFormattedProps(props) {
+		// Defines the properties that will be injected in the widget and its order.
+		const VALID_PROPERTIES = ['id', 'type', 'disabled']
+		props.type = this.getType(props.datatype)
+		props.value = props.value || this.name
+		const filteredProps = lodash_1.pick(props, VALID_PROPERTIES)
+		return prop_1.formatProperties(filteredProps)
 	}
 	getType(datatype) {
-		return `type="${datatype || 'button'}"`
+		return datatype || 'button'
 	}
 }
 exports.default = Button

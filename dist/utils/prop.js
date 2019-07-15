@@ -1,8 +1,7 @@
 'use strict'
 Object.defineProperty(exports, '__esModule', { value: true })
-const case_1 = require('case')
-exports.PROPS_INJECTION_POINT = '%s'
-function formatProperties(props, validProperties) {
+const case_converter_1 = require('./case-converter')
+function formatProperties(props, caseType = 'camel') {
 	const translateProp = key => {
 		switch (key) {
 			case 'format':
@@ -11,17 +10,15 @@ function formatProperties(props, validProperties) {
 				return key
 		}
 	}
-	const getFormattedProp = key => {
-		let value = case_1.camel(props[key].toString())
-		return `${translateProp(key)}="${value}"`
-	}
-	const formatValid = (result, prop) => {
-		return validProperties.includes(prop)
-			? result + getFormattedProp(prop) + ' '
-			: result
+	const getValueOf = key =>
+		case_converter_1.convertCase(props[key].toString(), caseType)
+	const format = (result, key) => {
+		const value = getValueOf(key)
+		const htmlProp = translateProp(key)
+		return result + `${htmlProp}="${value}"` + ' '
 	}
 	return Object.keys(props)
-		.reduce(formatValid, '')
+		.reduce(format, '')
 		.trimRight()
 }
 exports.formatProperties = formatProperties

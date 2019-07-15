@@ -1,21 +1,24 @@
-import { Widget } from 'concordialang-ui-core'
+import { pick } from 'lodash'
+
 import { WidgetConfig } from '../interfaces/app-config'
-import { formatProperties, PROPS_INJECTION_POINT } from '../utils/prop'
-import { wrap } from './wrapper'
+import { formatProperties } from '../utils/prop'
 
-export default class Checkbox extends Widget {
-	private readonly VALID_PROPERTIES = ['value', 'required']
+import HtmlWidget from './html-widget'
 
-	constructor(props: any, name: string, private _config: WidgetConfig) {
-		super(props, name)
+export default class Checkbox extends HtmlWidget {
+	constructor(props: any, name: string, config: WidgetConfig) {
+		super(props, name, config)
 	}
 
-	public renderToString(): string {
-		const inputType = 'type="checkbox"'
-		let properties = formatProperties(this.props, this.VALID_PROPERTIES)
-		properties = `${inputType} ${properties}`
-		const inputOpening = this._config.opening.replace(PROPS_INJECTION_POINT, properties)
-		const inputClosure = this._config.closure || ''
-		return wrap(inputOpening + this.name + inputClosure, this._config)
+	protected getFormattedProps(props: any): string {
+		// Defines the properties that will be injected in the widget and its order.
+		const VALID_PROPERTIES = ['type', 'name', 'value', 'required']
+
+		props.type = 'checkbox'
+		props.name = props.value
+
+		const filteredProps = pick(props, VALID_PROPERTIES)
+
+		return formatProperties(filteredProps)
 	}
 }

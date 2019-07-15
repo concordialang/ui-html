@@ -2,7 +2,7 @@ import { vol } from 'memfs'
 
 const fs = jest.requireActual('fs')
 
-const mockedWriteFile = (path: string, content: string) => {
+function mockedWriteFile(path: string, content: string) {
 	vol.writeFileSync(path, content)
 }
 

@@ -1,37 +1,24 @@
-import { Widget } from 'concordialang-ui-core'
+import { pick } from 'lodash'
+
 import { WidgetConfig } from '../interfaces/app-config'
-import { formatProperties, PROPS_INJECTION_POINT } from '../utils/prop'
-import { createLabel } from './label'
-import { wrap } from './wrapper'
+import { formatProperties } from '../utils/prop'
 
-export default class Radio extends Widget {
-	private readonly VALID_PROPERTIES = [ 'value' ]
+import HtmlWidget from './html-widget'
 
-	constructor(props: any, name: string, private _config: WidgetConfig) {
-		super(props, name)
+export default class Radio extends HtmlWidget {
+	constructor(props: any, name: string, config: WidgetConfig) {
+		super(props, name, config)
 	}
 
-	public renderToString(): string {
-		const inputType = 'type="radio"'
-		const label = createLabel(this.name, '', this._config)
-		let inputs: String[] = []
+	protected getFormattedProps(props: any): string {
+		// Defines the properties that will be injected in the widget and its order.
+		const VALID_PROPERTIES = ['type', 'name', 'value']
 
-		for (let value of this.props.value as Array<string>) {
-			// TODO: o que fazer no formatProperties em relação ao value?
-			// provavelmente terei que instalar o pacote "case"
-			// para ter 'value="algumaCoisa"', quando value for "Alguma Coisa"
-			//
-			// TODO: adicionar propriedades 'id' e 'nome'
+		props.type = 'radio'
+		props.name = this.name
 
-			const props = Object.assign({}, this.props, { value })
-			let properties = formatProperties(props, this.VALID_PROPERTIES)
-			properties = `${inputType} ${properties}`
-			const inputOpening = this._config.opening.replace(PROPS_INJECTION_POINT, properties)
-			const inputClosure = this._config.closure || ''
-			inputs.push(inputOpening + value + inputClosure)
-		}
+		const filteredProps = pick(props, VALID_PROPERTIES)
 
-		return wrap(label + inputs.join(''), this._config)
+		return formatProperties(filteredProps)
 	}
 }
-

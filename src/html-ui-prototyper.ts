@@ -3,8 +3,8 @@ import * as fs from 'fs'
 import { promisify } from 'util'
 import { format } from 'path'
 import { convertCase } from './utils/case-converter'
+import { formatHtml } from './utils/format-html'
 
-const prettier = require('prettier')
 const cosmiconfig = require('cosmiconfig')
 const { normalize } = require('normalize-diacritics')
 
@@ -35,7 +35,7 @@ export default class HtmlUIPrototyper implements Prototyper {
 			return result + widget.renderToString()
 		}, '')
 
-		content = prettier.format(`<form>${content}</form>`, {parser: 'html', htmlWhitespaceSensitivity: 'ignore'})
+		content = formatHtml(`<form>${content}</form>`)
 
 		const path = format({ dir: this._outputDir, name: fileName, ext: '.html' })
 		await promisify(fs.writeFile)(path, content)

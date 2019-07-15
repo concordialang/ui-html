@@ -1,17 +1,19 @@
 'use strict'
 Object.defineProperty(exports, '__esModule', { value: true })
-const prop_1 = require('../utils/prop')
+const Mustache = require('mustache')
+const utils_1 = require('../utils')
 function createLabel(widgetName, widgetId, widgetConfig) {
 	if (!widgetConfig.label) return ''
 	const idPattern = /^(#|~|\d|\w).*/
-	const labelFor = widgetId.match(idPattern)
-		? `for="${widgetId.replace(/^#|~/, '')}"`
-		: ''
-	const labelOpening = widgetConfig.label.opening.replace(
-		prop_1.PROPS_INJECTION_POINT,
-		labelFor
+	const labelFor =
+		widgetId && widgetId.match(idPattern)
+			? `for="${widgetId.replace(/^#|~/, '')}"`
+			: ''
+	widgetConfig.label.opening = Mustache.render(widgetConfig.label.opening, {
+		props: labelFor,
+	})
+	return utils_1.formatHtml(
+		widgetConfig.label.opening + widgetName + widgetConfig.label.closure
 	)
-	const labelClosure = widgetConfig.label.closure
-	return labelOpening + widgetName + labelClosure
 }
 exports.createLabel = createLabel

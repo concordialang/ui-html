@@ -1,10 +1,9 @@
-import { Widget } from 'concordialang-ui-core'
-import { get } from 'lodash';
+import { pick } from 'lodash'
 
 import { WidgetConfig } from '../interfaces/app-config'
-import { formatProperties, PROPS_INJECTION_POINT } from '../utils/prop'
-import { createLabel } from './label'
-import { wrap } from './wrapper'
+import { formatProperties } from '../utils/prop'
+
+import HtmlWidget from './html-widget'
 
 const enum DataTypes {
 	STRING = 'string',
@@ -15,33 +14,34 @@ const enum DataTypes {
 	DATETIME = 'datetime'
 }
 
-export default class Input extends Widget {
-	private readonly VALID_PROPERTIES = ['id', 'editable', 'minlength', 'maxlength', 'required', 'format']
-
-	constructor(props: any, name: string, private _config: WidgetConfig) {
-		super(props, name)
+export default class Input extends HtmlWidget {
+	constructor(props: any, name: string, config: WidgetConfig) {
+		super(props, name, config)
 	}
 
-	public renderToString(): string {
-		const inputType = this.getType(this.props.datatype as string)
-		const properties = formatProperties(this.props, this.VALID_PROPERTIES)
-		const inputOpening = this._config.opening.replace(PROPS_INJECTION_POINT, `${ inputType } ${ properties }`)
-		const inputClosure = this._config.closure || ''
-		const label = createLabel(this.name, this.props.id.toString(), this._config)
-		return wrap(label + inputOpening + inputClosure, this._config)
+	protected getFormattedProps(props: any): string {
+		// Defines the properties that will be injected in the widget and its order.
+		const VALID_PROPERTIES = ['id', 'type', 'name', 'editable', 'minlength', 'maxlength', 'required', 'format']
+
+		props.type = this.getType(props.datatype)
+		props.name = this.name
+
+		const filteredProps = pick(props, VALID_PROPERTIES)
+
+		return formatProperties(filteredProps)
 	}
 
 	private getType(datatype: string): string {
 		let typeProperty
 
 		switch (datatype) {
-			case DataTypes.INTEGER:
-			case DataTypes.DOUBLE: typeProperty = 'number'; break
-			case DataTypes.TIME: typeProperty = 'time'; break
-			case DataTypes.DATETIME: typeProperty = 'datetime-local'; break
-			default: typeProperty = 'text'
+		case DataTypes.INTEGER:
+		case DataTypes.DOUBLE: typeProperty = 'number'; break
+		case DataTypes.TIME: typeProperty = 'time'; break
+		case DataTypes.DATETIME: typeProperty = 'datetime-local'; break
+		default: typeProperty = 'text'
 		}
 
-		return `type="${typeProperty}"`
+		return typeProperty
 	}
 }

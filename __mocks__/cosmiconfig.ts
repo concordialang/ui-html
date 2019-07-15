@@ -1,6 +1,6 @@
 import { vol } from 'memfs'
 
-const loadConfigFile = (filePath) => {
+const loadConfigFile = filePath => {
 	const fileContent: string = vol.readFileSync(filePath, 'utf8') as string
 	const config = JSON.parse(fileContent)
 	return { config }

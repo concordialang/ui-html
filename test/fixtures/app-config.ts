@@ -1,17 +1,26 @@
-export const completeAppConfig: string = JSON.stringify({
+export const completeAppConfigObject = {
 	widgets: {
 		input: {
-			opening: '<input %s>',
-			wrapperOpening: '<div>',
-			wrapperClosure: '</div>'
+			widget: {
+				opening: '<input {{&props}}>'
+			},
+			wrapper: {
+				opening: '<div>',
+				closure: '</div>'
+			}
 		},
 		label: {
-			opening: '<label %s>',
-			closure: '</label>'
+			widget: {
+				opening: '<label {{&props}}>',
+				closure: '</label>'
+			}
 		},
 		button: {
-			opening: '<button %s>',
-			closure: '</button>'
+			widget: {
+				opening: '<button {{&props}}>',
+				closure: '</button>'
+			}
 		}
 	}
-})
+}
+export const completeAppConfig: string = JSON.stringify(completeAppConfigObject)

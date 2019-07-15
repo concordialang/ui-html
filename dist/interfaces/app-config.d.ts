@@ -1,23 +1,25 @@
 export interface AppConfig {
     widgets?: {
-        input?: WidgetConfig;
-        radio?: WidgetConfig;
-        checkbox?: WidgetConfig;
-        select?: WidgetConfig;
-        label?: LabelConfig;
+        [key: string]: WidgetConfig;
     };
 }
 export interface WidgetConfig {
-    opening: string;
-    closure?: string;
-    optionOpening?: string;
-    optionClosure?: string;
-    wrapperOpening?: string;
-    wrapperClosure?: string;
-    label?: LabelConfig;
+    template?: string;
+    widget: {
+        opening: string;
+        closure?: string;
+        onePerValue?: boolean;
+    };
+    valueWrapper?: {
+        opening: string;
+        closure: string;
+    };
+    wrapper?: {
+        opening: string;
+        closure: string;
+    };
+    label?: {
+        opening: string;
+        closure: string;
+    };
 }
-interface LabelConfig {
-    opening: string;
-    closure: string;
-}
-export {};

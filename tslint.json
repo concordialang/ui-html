@@ -1,3 +1,10 @@
 {
-  "ter-indent": [true, 4]
+	"extends": "@oclif/tslint",
+	"rules": {
+		"indent": {
+			"options": ["tabs"]
+		},
+		"ter-indent": [true, "tab"],
+		"object-curly-spacing": [true, "always"]
+	}
 }
