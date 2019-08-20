@@ -1,4 +1,6 @@
-export function formatProperties(props: any, validProperties: string[]): string {
+import { convertCase } from './case-converter'
+
+export function formatProperties(props: any, caseType: string = 'camel'): string {
     const translateProp = (key: string) => {
         switch(key) {
             case 'format': return 'pattern';
@@ -6,35 +8,13 @@ export function formatProperties(props: any, validProperties: string[]): string 
         }
     }
 
-    const getFormattedProp = (key: string) => {
-        let value = props[key]
-        const invalidIdPattern = /^\/\//
+	const getValueOf = (key: string) => (convertCase(props[key].toString(), caseType))
 
-        if(key === 'id') {
-            let newKey = key
-			// TODO: replace test wit str.match(pattern)
-            if(!invalidIdPattern.test(value)) {
-                const validIdPattern = /^#|~/
-                const validClassPattern = /^\./
-
-                if(validIdPattern.test(value)) {
-                    value = value.toString().replace(validIdPattern, '')
-                } else if(validClassPattern.test(value)) {
-                    newKey = 'class'
-                    value = value.toString().replace(validClassPattern, '')
-                }
-                return `${translateProp(newKey)}="${value}"`
-            }
-        }
-
-        return `${translateProp(key)}="${value}"`
+	const format = (result: string, key: string) => {
+		const value = getValueOf(key)
+		const htmlProp = translateProp(key)
+		return result + `${htmlProp}="${value}"` + ' '
     }
 
-	const formatValid = (result: string, prop: string) => {
-        return validProperties.includes(prop)
-            ? result + getFormattedProp(prop) + ' '
-            : result
-    }
-
-    return Object.keys(props).reduce(formatValid, '').trimRight()
+    return Object.keys(props).reduce(format, '').trimRight()
 }

@@ -1,45 +1,61 @@
 import { UiElement } from 'concordialang-ui-core'
-import { Checkbox } from '../../src/widgets/checkbox'
+
+import { WidgetConfig } from '../../src/interfaces/app-config'
+import Checkbox from '../../src/widgets/checkbox'
 
 describe('Checkbox', () => {
-
 	describe('renderToString', () => {
-		const defaultProps: UiElement = {
-			name: 'Web Developer',
-			widget: 'checkbox',
-			position: 16,
-			props: {
-				value: 'web_developer'
+		let uiElement: UiElement
+		let widgetConfig: WidgetConfig
+
+		beforeEach(() => {
+			uiElement = {
+				name: 'Web Developer Skills',
+				widget: 'checkbox',
+				position: 16,
+				props: {
+					value: ['html', 'css', 'javascript']
+				}
 			}
-		}
 
-		const subject = (uiElement?: UiElement) => (
-			uiElement ?
-			new Checkbox(uiElement.props, uiElement.name) :
-			new Checkbox({})
-		)
-
-        it('without properties', () => {
-            const inputWidget: Checkbox = subject()
-            expect(inputWidget.renderToString()).toEqual(expect.stringContaining('<input type="checkbox">'))
-        })
-
-		it('surrounds the input with a div', () => {
-			const inputWidget: Checkbox = subject()
-            const result = inputWidget.renderToString()
-			expect(result).toEqual(expect.stringMatching(/^<div>(.|\s)*<\/div>$/))
+			widgetConfig = {
+				widget: {
+					opening: '<input {{&props}}>',
+					onePerValue: true,
+				},
+				wrapper: {
+					opening: '<div>',
+					closure: '</div>',
+				},
+				valueWrapper: {
+					opening: '<label>',
+					closure: '</label>',
+				},
+				label: {
+					opening: '<label {{&props}}>',
+					closure: '</label>'
+				}
+			}
 		})
 
-        it('produces html from an input element with name', async () => {
-			const inputWidget: Checkbox = subject(defaultProps)
+		it('produces html from an input element with name', async () => {
+			const inputWidget: Checkbox = new Checkbox(uiElement.props, uiElement.name, widgetConfig)
 			const result = inputWidget.renderToString()
-            expect(result).toEqual(expect.stringContaining('<input type="checkbox" value="web_developer">Web Developer'))
-        })
+			expect(result).toEqual(expect.stringContaining('<input type="checkbox" name="html" value="html"><label>html</label>'))
+			expect(result).toEqual(expect.stringContaining('<input type="checkbox" name="css" value="css"><label>css</label>'))
+			expect(result).toEqual(expect.stringContaining('<input type="checkbox" name="javascript" value="javascript"><label>javascript</label>'))
+		})
 
-        it('produces html from an input element without name', async () => {
-			const inputWidget: Checkbox = subject({ ...defaultProps, name: undefined })
+		it('produces a label for the input element', async () => {
+			const inputWidget: Checkbox = new Checkbox(uiElement.props, uiElement.name, widgetConfig)
 			const result = inputWidget.renderToString()
-			expect(result).toEqual(expect.stringMatching('<input type="checkbox" value="web_developer">\n'))
-        })
+			expect(result).toEqual(expect.stringContaining('<label>Web Developer Skills</label>'))
+		})
+
+		it('produces a wrapper for the input element', () => {
+			const inputWidget: Checkbox = new Checkbox(uiElement.props, uiElement.name, widgetConfig)
+			const result = inputWidget.renderToString()
+			expect(result).toEqual(expect.stringMatching(/^<div>(.|\s)*<\/div>$/))
+		})
 	})
 })

@@ -1,23 +1,19 @@
 'use strict'
 Object.defineProperty(exports, '__esModule', { value: true })
-const concordialang_ui_core_1 = require('concordialang-ui-core')
+const lodash_1 = require('lodash')
 const prop_1 = require('../utils/prop')
-class Checkbox extends concordialang_ui_core_1.Widget {
-	constructor(props, name) {
-		super(props, name)
-		this.VALID_PROPERTIES = ['value', 'required']
+const html_widget_1 = require('./html-widget')
+class Checkbox extends html_widget_1.default {
+	constructor(props, name, config) {
+		super(props, name, config)
 	}
-	// TODO: remove \n
-	renderToString() {
-		const properties = prop_1.formatProperties(
-			this.props,
-			this.VALID_PROPERTIES
-		)
-		if (properties)
-			return `<div>\n<input type="checkbox" ${properties}>${
-				this.name
-			}\n</div>`
-		return `<div>\n<input type="checkbox">${this.name}\n</div>`
+	getFormattedProps(props) {
+		// Defines the properties that will be injected in the widget and its order.
+		const VALID_PROPERTIES = ['type', 'name', 'value', 'required']
+		props.type = 'checkbox'
+		props.name = props.value
+		const filteredProps = lodash_1.pick(props, VALID_PROPERTIES)
+		return prop_1.formatProperties(filteredProps)
 	}
 }
 exports.default = Checkbox

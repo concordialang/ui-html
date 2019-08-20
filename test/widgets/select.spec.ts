@@ -1,53 +1,68 @@
 import { UiElement } from 'concordialang-ui-core'
-import { Select } from '../../src/widgets/select'
+
+import { WidgetConfig } from '../../src/interfaces/app-config'
+import Select from '../../src/widgets/select'
 
 describe('Select', () => {
 	describe('renderToString', () => {
-		const defaultProps: UiElement = {
-			name: 'Gender',
-			widget: 'select',
-			position: 7,
-			props: {
-				id: 'gender',
-				value: ['Male', 'Female']
+		let uiElement: UiElement
+		let widgetConfig: WidgetConfig
+
+		beforeEach(() => {
+			uiElement = {
+				name: 'Gender',
+				widget: 'select',
+				position: 7,
+				props: {
+					id: 'gender',
+					value: ['Male', 'Female']
+				}
 			}
-		}
 
-		const subject = (uiElement?: UiElement) => (
-			uiElement ?
-			new Select(uiElement.props, uiElement.name) :
-			new Select({})
-		)
-
-        it('without properties', () => {
-            const inputWidget: Select = subject()
-			expect(inputWidget.renderToString()).toEqual(expect.stringContaining('<select></select>'))
-        })
-
-		it('surrounds the select with a div', () => {
-			const inputWidget: Select = subject()
-            const result = inputWidget.renderToString()
-			expect(result).toEqual(expect.stringMatching(/^<div>(.|\s)*<\/div>$/))
+			widgetConfig = {
+				widget: {
+					opening: '<select {{&props}}>',
+					closure: '</select>',
+				},
+				wrapper: {
+					opening: '<div>',
+					closure: '</div>',
+				},
+				valueWrapper: {
+					opening: '<option {{&props}}>',
+					closure: '</option>',
+				},
+				label: {
+					opening: '<label {{&props}}>',
+					closure: '</label>'
+				}
+			}
 		})
 
-        it('produces html from an select element with name', async () => {
-			const inputWidget: Select = subject(defaultProps)
+		it('produces html from an select element with name', async () => {
+			const inputWidget: Select = new Select(uiElement.props, uiElement.name, widgetConfig)
 			const result = inputWidget.renderToString()
-			expect(result).toEqual(expect.stringContaining('<select id="gender">'))
+			expect(result).toEqual(expect.stringContaining('<select id="gender" name="gender">'))
 			expect(result).toEqual(expect.stringContaining('</select>'))
-        })
-
-		it('produces a label for the select element', async () => {
-			const inputWidget: Select = subject(defaultProps)
-			const result = inputWidget.renderToString()
-            expect(result).toEqual(expect.stringContaining('<label for="gender">Gender</label>'))
 		})
 
 		it('produces the options for the select element', async () => {
-			const inputWidget: Select = subject(defaultProps)
+			const inputWidget: Select = new Select(uiElement.props, uiElement.name, widgetConfig)
 			const result = inputWidget.renderToString()
 			expect(result).toEqual(expect.stringContaining('<option value="male">Male</option>'))
 			expect(result).toEqual(expect.stringContaining('<option value="female">Female</option>'))
+		})
+
+		it('produces a label for the select element', async () => {
+			const inputWidget: Select = new Select(uiElement.props, uiElement.name, widgetConfig)
+			const result = inputWidget.renderToString()
+			expect(result).toEqual(expect.stringContaining('<label for="gender">Gender</label>'))
+		})
+
+		it('produces a wrapper for the input element', () => {
+			const inputWidget: Select = new Select(uiElement.props, uiElement.name, widgetConfig)
+			const result = inputWidget.renderToString()
+			expect(result).toEqual(expect.stringMatching(/^<div>(.|\s)*<\/div>$/))
 		})
 	})
 })

@@ -1,30 +1,24 @@
-import {Widget} from 'concordialang-ui-core'
+import { pick } from 'lodash'
 
-import {formatProperties} from '../utils/prop'
-import {createLabel} from './label'
+import { WidgetConfig } from '../interfaces/app-config'
+import { formatProperties } from '../utils/prop'
 
-export default class Radio extends Widget {
-	private readonly VALID_PROPERTIES = ['value']
+import HtmlWidget from './html-widget'
 
-	constructor(props: any, name: string) {
-		super(props, name)
+export default class Radio extends HtmlWidget {
+	constructor(props: any, name: string, config: WidgetConfig) {
+		super(props, name, config)
 	}
 
-	// TODO: remove \n
-	public renderToString(): string {
-		const properties = formatProperties(this.props, this.VALID_PROPERTIES)
-		let inputs: String[] = []
-		const label = createLabel(this.name, this.props.id.toString())
-		const inputName = this.name.toLowerCase()
+	protected getFormattedProps(props: any): string {
+		// Defines the properties that will be injected in the widget and its order.
+		const VALID_PROPERTIES = ['type', 'name', 'value']
 
-		if (properties) {
-			for (let value of this.props.value as Array<string>) {
-				let input = `<input type="radio" name="${inputName}" value="${value.toLowerCase()}">${value}`
-				inputs.push(input)
-			}
-			return `<div>\n${label + inputs.join('\n')}\n</div>`
-		}
-		return '<div>\n<input type="radio">\n</div>'
+		props.type = 'radio'
+		props.name = this.name
+
+		const filteredProps = pick(props, VALID_PROPERTIES)
+
+		return formatProperties(filteredProps)
 	}
 }
-

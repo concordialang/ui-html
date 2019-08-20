@@ -1,30 +1,19 @@
 'use strict'
 Object.defineProperty(exports, '__esModule', { value: true })
-const concordialang_ui_core_1 = require('concordialang-ui-core')
+const lodash_1 = require('lodash')
 const prop_1 = require('../utils/prop')
-const label_1 = require('./label')
-class Radio extends concordialang_ui_core_1.Widget {
-	constructor(props, name) {
-		super(props, name)
-		this.VALID_PROPERTIES = ['value']
+const html_widget_1 = require('./html-widget')
+class Radio extends html_widget_1.default {
+	constructor(props, name, config) {
+		super(props, name, config)
 	}
-	// TODO: remove \n
-	renderToString() {
-		const properties = prop_1.formatProperties(
-			this.props,
-			this.VALID_PROPERTIES
-		)
-		let inputs = []
-		const label = label_1.createLabel(this.name, this.props.id.toString())
-		const inputName = this.name.toLowerCase()
-		if (properties) {
-			for (let value of this.props.value) {
-				let input = `<input type="radio" name="${inputName}" value="${value.toLowerCase()}">${value}`
-				inputs.push(input)
-			}
-			return `<div>\n${label + inputs.join('\n')}\n</div>`
-		}
-		return '<div>\n<input type="radio">\n</div>'
+	getFormattedProps(props) {
+		// Defines the properties that will be injected in the widget and its order.
+		const VALID_PROPERTIES = ['type', 'name', 'value']
+		props.type = 'radio'
+		props.name = this.name
+		const filteredProps = lodash_1.pick(props, VALID_PROPERTIES)
+		return prop_1.formatProperties(filteredProps)
 	}
 }
 exports.default = Radio

@@ -1,43 +1,28 @@
 'use strict'
 Object.defineProperty(exports, '__esModule', { value: true })
-const concordialang_ui_core_1 = require('concordialang-ui-core')
+const lodash_1 = require('lodash')
 const prop_1 = require('../utils/prop')
-const label_1 = require('./label')
-class Input extends concordialang_ui_core_1.Widget {
-	constructor(props, name, _config) {
-		super(props, name)
-		this._config = _config
-		this.VALID_PROPERTIES = [
+const html_widget_1 = require('./html-widget')
+class Input extends html_widget_1.default {
+	constructor(props, name, config) {
+		super(props, name, config)
+	}
+	getFormattedProps(props) {
+		// Defines the properties that will be injected in the widget and its order.
+		const VALID_PROPERTIES = [
 			'id',
+			'type',
+			'name',
 			'editable',
 			'minlength',
 			'maxlength',
 			'required',
 			'format',
 		]
-	}
-	renderToString() {
-		const inputType = this.getType(this.props.datatype)
-		const properties = prop_1.formatProperties(
-			this.props,
-			this.VALID_PROPERTIES
-		)
-		const input = this._config.opening.replace(
-			'%s',
-			`${inputType} ${properties}`
-		)
-		const inputClosure = this._config.closure || ''
-		const label = label_1.createLabel(this.name, this.props.id.toString())
-		return this.wrap(label + input + inputClosure)
-	}
-	wrap(elements) {
-		if (this._config.wrapperOpening && this._config.wrapperClosure)
-			return (
-				this._config.wrapperOpening +
-				elements +
-				this._config.wrapperClosure
-			)
-		return elements
+		props.type = this.getType(props.datatype)
+		props.name = this.name
+		const filteredProps = lodash_1.pick(props, VALID_PROPERTIES)
+		return prop_1.formatProperties(filteredProps)
 	}
 	getType(datatype) {
 		let typeProperty
@@ -55,7 +40,7 @@ class Input extends concordialang_ui_core_1.Widget {
 			default:
 				typeProperty = 'text'
 		}
-		return `type="${typeProperty}"`
+		return typeProperty
 	}
 }
 exports.default = Input

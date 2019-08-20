@@ -1,12 +1,27 @@
 export interface AppConfig {
+	// TODO: add a property to config the widget properties case
 	widgets?: {
-		input?: WidgetConfig
+		[key: string]: WidgetConfig,
 	}
 }
 
 export interface WidgetConfig {
-	opening: string,
-	closure?: string,
-	wrapperOpening?: string,
-	wrapperClosure?: string
+	template?: string,
+	widget: {
+		opening: string,
+		closure?: string,
+		onePerValue?: boolean,
+	}
+	valueWrapper?: {
+		opening: string,
+		closure: string,
+	},
+	wrapper?: {
+		opening: string,
+		closure: string,
+	}
+	label?: {
+		opening: string,
+		closure: string,
+	}
 }

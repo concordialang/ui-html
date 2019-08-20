@@ -1,6 +1,7 @@
 'use strict'
 Object.defineProperty(exports, '__esModule', { value: true })
-function formatProperties(props, validProperties) {
+const case_converter_1 = require('./case-converter')
+function formatProperties(props, caseType = 'camel') {
 	const translateProp = key => {
 		switch (key) {
 			case 'format':
@@ -9,33 +10,15 @@ function formatProperties(props, validProperties) {
 				return key
 		}
 	}
-	const getFormattedProp = key => {
-		let value = props[key]
-		const invalidIdPattern = /^\/\//
-		if (key === 'id') {
-			let newKey = key
-			// TODO: replace test wit str.match(pattern)
-			if (!invalidIdPattern.test(value)) {
-				const validIdPattern = /^#|~/
-				const validClassPattern = /^\./
-				if (validIdPattern.test(value)) {
-					value = value.toString().replace(validIdPattern, '')
-				} else if (validClassPattern.test(value)) {
-					newKey = 'class'
-					value = value.toString().replace(validClassPattern, '')
-				}
-				return `${translateProp(newKey)}="${value}"`
-			}
-		}
-		return `${translateProp(key)}="${value}"`
-	}
-	const formatValid = (result, prop) => {
-		return validProperties.includes(prop)
-			? result + getFormattedProp(prop) + ' '
-			: result
+	const getValueOf = key =>
+		case_converter_1.convertCase(props[key].toString(), caseType)
+	const format = (result, key) => {
+		const value = getValueOf(key)
+		const htmlProp = translateProp(key)
+		return result + `${htmlProp}="${value}"` + ' '
 	}
 	return Object.keys(props)
-		.reduce(formatValid, '')
+		.reduce(format, '')
 		.trimRight()
 }
 exports.formatProperties = formatProperties

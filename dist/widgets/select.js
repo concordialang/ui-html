@@ -1,32 +1,19 @@
 'use strict'
 Object.defineProperty(exports, '__esModule', { value: true })
-const concordialang_ui_core_1 = require('concordialang-ui-core')
+const lodash_1 = require('lodash')
 const prop_1 = require('../utils/prop')
-const label_1 = require('./label')
-class Select extends concordialang_ui_core_1.Widget {
-	constructor(props, name) {
-		super(props, name)
-		this.VALID_PROPERTIES = ['id', 'required']
+const html_widget_1 = require('./html-widget')
+class Select extends html_widget_1.default {
+	constructor(props, name, config) {
+		super(props, name, config)
+		this.VALID_PROPERTIES = []
 	}
-	// TODO: remove \n
-	renderToString() {
-		const properties = prop_1.formatProperties(
-			this.props,
-			this.VALID_PROPERTIES
-		)
-		if (!properties) return '<div>\n<select></select>\n</div>'
-		const options = this.getOptions()
-		const select = `<select ${properties}>\n${options}\n</select>\n`
-		const label = label_1.createLabel(this.name, this.props.id.toString())
-		return `<div>\n${label + select}</div>`
-	}
-	getOptions() {
-		let options = []
-		for (let value of this.props.value) {
-			let option = `<option value="${value.toLowerCase()}">${value}</option>`
-			options.push(option)
-		}
-		return options.join('\n')
+	getFormattedProps(props) {
+		// Defines the properties that will be injected in the widget and its order.
+		const VALID_PROPERTIES = ['id', 'name', 'required']
+		props.name = this.name
+		const filteredProps = lodash_1.pick(props, VALID_PROPERTIES)
+		return prop_1.formatProperties(filteredProps)
 	}
 }
 exports.default = Select

@@ -1,47 +1,61 @@
 import { UiElement } from 'concordialang-ui-core'
-import { Radio } from '../../src/widgets/radio'
+
+import { WidgetConfig } from '../../src/interfaces/app-config'
+import Radio from '../../src/widgets/radio'
 
 describe('Radio', () => {
 	describe('renderToString', () => {
-		const defaultProps: UiElement = {
-			name: 'Gender',
-			widget: 'radio',
-			position: 7,
-			props: {
-				id: 'gender',
-				value: ['Male', 'Female']
+		let uiElement: UiElement
+		let widgetConfig: WidgetConfig
+
+		beforeEach(() => {
+			uiElement = {
+				name: 'Gender',
+				widget: 'radio',
+				position: 7,
+				props: {
+					id: 'gender',
+					value: ['Male', 'Female']
+				}
 			}
-		}
 
-		const subject = (uiElement?: UiElement) => (
-			uiElement ?
-			new Radio(uiElement.props, uiElement.name) :
-			new Radio({})
-		)
-
-        it('without properties', () => {
-            const inputWidget: Radio = subject()
-			expect(inputWidget.renderToString()).toEqual(expect.stringContaining('<input type="radio">'))
-        })
-
-		it('surrounds the input with a div', () => {
-			const inputWidget: Radio = subject()
-            const result = inputWidget.renderToString()
-			expect(result).toEqual(expect.stringMatching(/^<div>(.|\s)*<\/div>$/))
+			widgetConfig = {
+				widget: {
+					opening: '<input {{&props}}>',
+					onePerValue: true,
+				},
+				wrapper: {
+					opening: '<div>',
+					closure: '</div>',
+				},
+				valueWrapper: {
+					opening: '<label>',
+					closure: '</label>',
+				},
+				label: {
+					opening: '<label {{&props}}>',
+					closure: '</label>'
+				}
+			}
 		})
 
-        it('produces html from an input element with name', async () => {
-			const inputWidget: Radio = subject(defaultProps)
+		it('produces html from an radio element with name', async () => {
+			const inputWidget: Radio = new Radio(uiElement.props, uiElement.name, widgetConfig)
 			const result = inputWidget.renderToString()
-			expect(result).toEqual(expect.stringContaining('<input type="radio" name="gender" value="male">Male'))
-			expect(result).toEqual(expect.stringContaining('<input type="radio" name="gender" value="female">Female'))
-        })
+			expect(result).toEqual(expect.stringContaining('<input type="radio" name="gender" value="male"><label>Male</label>'))
+			expect(result).toEqual(expect.stringContaining('<input type="radio" name="gender" value="female"><label>Female</label>'))
+		})
 
-		it('produces a label for the select element', async () => {
-			const inputWidget: Radio = subject(defaultProps)
+		it('produces a label for the input element', async () => {
+			const inputWidget: Radio = new Radio(uiElement.props, uiElement.name, widgetConfig)
 			const result = inputWidget.renderToString()
-            expect(result).toEqual(expect.stringContaining('<label for="gender">Gender</label>'))
+			expect(result).toEqual(expect.stringContaining('<label>Gender</label>'))
+		})
+
+		it('produces a wrapper for the input element', () => {
+			const inputWidget: Radio = new Radio(uiElement.props, uiElement.name, widgetConfig)
+			const result = inputWidget.renderToString()
+			expect(result).toEqual(expect.stringMatching(/^<div>(.|\s)*<\/div>$/))
 		})
 	})
 })
-

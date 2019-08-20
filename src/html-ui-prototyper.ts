@@ -2,8 +2,11 @@ import { Feature, Prototyper, Widget } from 'concordialang-ui-core'
 import * as fs from 'fs'
 import { promisify } from 'util'
 import { format } from 'path'
-const prettier = require('prettier')
+import { convertCase } from './utils/case-converter'
+import { formatHtml } from './utils/format-html'
+
 const cosmiconfig = require('cosmiconfig')
+const { normalize } = require('normalize-diacritics')
 
 import WidgetFactory from './widgets/widget-factory'
 import { AppConfig } from './interfaces/app-config'
@@ -26,11 +29,13 @@ export default class HtmlUIPrototyper implements Prototyper {
 	}
 
 	private async createHtmlFile(fileName: string, widgets: Widget[]): Promise<string> {
+		fileName = await normalize(convertCase(fileName, 'snake'))
+
 		let content = widgets.reduce((result, widget) => {
 			return result + widget.renderToString()
 		}, '')
 
-		content = prettier.format(`<form>\n${content}</form>`, {parser: 'html', htmlWhitespaceSensitivity: 'ignore'})
+		content = formatHtml(`<form>${content}</form>`)
 
 		const path = format({ dir: this._outputDir, name: fileName, ext: '.html' })
 		await promisify(fs.writeFile)(path, content)
