@@ -1,14 +1,22 @@
 'use strict'
 Object.defineProperty(exports, '__esModule', { value: true })
 const lodash_1 = require('lodash')
+const body_1 = require('./body')
 const button_1 = require('./button')
 const checkbox_1 = require('./checkbox')
+const head_1 = require('./head')
 const input_1 = require('./input')
 const radio_1 = require('./radio')
 const select_1 = require('./select')
 class WidgetFactory {
 	constructor(_config) {
 		this._config = _config
+	}
+	createHead() {
+		return new head_1.default(this._config)
+	}
+	createBody(widgets) {
+		return new body_1.default(widgets)
 	}
 	create(element) {
 		switch (element.widget) {

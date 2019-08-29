@@ -8,20 +8,23 @@ import { formatHtml } from './utils/format-html'
 const cosmiconfig = require('cosmiconfig')
 const { normalize } = require('normalize-diacritics')
 
-import WidgetFactory from './widgets/widget-factory'
 import { AppConfig } from './interfaces/app-config'
+import WidgetFactory from './widgets/widget-factory'
 
 export default class HtmlUIPrototyper implements Prototyper {
+	private _widgetFactory: WidgetFactory
+	private _appConfig: AppConfig
+
 	constructor(private _fs: any = fs, private _outputDir: string) {
+		this._appConfig = this.getAppConfig()
+		this._widgetFactory = new WidgetFactory(this._appConfig)
 	}
 
 	public async generate(features: Feature[]): Promise<string[]> {
-		const appConfig: AppConfig = this.getAppConfig()
-		const factory = new WidgetFactory(appConfig)
 		const createFilePromises: Promise<string>[] = []
 
 		for (let feature of features) {
-			const elements: Widget[] = feature.uiElements.map(uiElement => (factory.create(uiElement)))
+			const elements: Widget[] = feature.uiElements.map(uiElement => (this._widgetFactory.create(uiElement)))
 			createFilePromises.push(this.createHtmlFile(feature.name, elements))
 		}
 
@@ -31,14 +34,13 @@ export default class HtmlUIPrototyper implements Prototyper {
 	private async createHtmlFile(fileName: string, widgets: Widget[]): Promise<string> {
 		fileName = await normalize(convertCase(fileName, 'snake'))
 
-		let content = widgets.reduce((result, widget) => {
-			return result + widget.renderToString()
-		}, '')
+		const head: string = this._widgetFactory.createHead().renderToString()
+		const body: string = this._widgetFactory.createBody(widgets).renderToString()
 
-		content = formatHtml(`<form>${content}</form>`)
-
+		const fileContent: string = formatHtml(`<html>${head}${body}</html>`)
 		const path = format({ dir: this._outputDir, name: fileName, ext: '.html' })
-		await promisify(fs.writeFile)(path, content)
+
+		await promisify(fs.writeFile)(path, fileContent)
 		return path
 	}
 

@@ -39,7 +39,7 @@ export default abstract class HtmlWidget extends Widget {
 			value: this.props.value
 		}
 		config.widget.opening = Mustache.render(config.widget.opening, { props })
-		const template = this._config.template || '{{&widget.opening}}{{&widget.closure}}'
+		const template = this._config.template || '{{&widget.opening}}{{value}}{{&widget.closure}}'
 		return Mustache.render(template, config)
 	}
 

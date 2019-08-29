@@ -3,8 +3,10 @@ import { get } from 'lodash'
 
 import { AppConfig, WidgetConfig } from '../interfaces/app-config'
 
+import Body from './body'
 import Button from './button'
 import Checkbox from './checkbox'
+import Head from './head'
 import Input from './input'
 import Radio from './radio'
 import Select from './select'
@@ -19,6 +21,14 @@ const enum Widgets {
 
 export default class WidgetFactory {
 	constructor(private _config: AppConfig) {}
+
+	createHead(): Head {
+		return new Head(this._config)
+	}
+
+	createBody(widgets: Widget[]): Body {
+		return new Body(widgets)
+	}
 
 	create(element: UiElement): Widget {
 		switch (element.widget) {

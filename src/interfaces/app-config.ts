@@ -3,6 +3,8 @@ export interface AppConfig {
 	widgets?: {
 		[key: string]: WidgetConfig,
 	}
+	externalLinks?: string[],
+	externalScripts?: string[]
 }
 
 export interface WidgetConfig {

@@ -34,7 +34,8 @@ class HtmlWidget extends concordialang_ui_core_1.Widget {
 			props,
 		})
 		const template =
-			this._config.template || '{{&widget.opening}}{{&widget.closure}}'
+			this._config.template ||
+			'{{&widget.opening}}{{value}}{{&widget.closure}}'
 		return Mustache.render(template, config)
 	}
 	renderOneWidgetPerValue(values) {
